@@ -1,0 +1,13 @@
+https://arxiv.org/abs/2504.03160
+
+*DeepResearcher: Scaling Deep Research via Reinforcement Learning in Real-world Environments* (Yuxiang Zheng, Dayuan Fu, Xiangkun Hu, Xiaojie Cai, Lyumanshan Ye, Pengrui Lu, Pengfei Liu)
+
+> Large Language Models (LLMs) equipped with web search capabilities have demonstrated impressive potential for deep research tasks. However, current approaches predominantly rely on either manually engineered prompts (prompt engineering-based) with brittle performance or reinforcement learning within controlled Retrieval-Augmented Generation (RAG) environments (RAG-based) that fail to capture the complexities of real-world interaction. In this paper, we introduce DeepResearcher, the first comprehensive framework for end-to-end training of LLM-based deep research agents through scaling reinforcement learning (RL) in real-world environments with authentic web search interactions. Unlike RAG-based approaches that assume all necessary information exists within a fixed corpus, our method trains agents to navigate the noisy, unstructured, and dynamic nature of the open web. We implement a specialized multi-agent architecture where browsing agents extract relevant information from various webpage structures and overcoming significant technical challenges. Extensive experiments on open-domain research tasks demonstrate that DeepResearcher achieves substantial improvements of up to 28.9 points over prompt engineering-based baselines and up to 7.2 points over RAG-based RL agents. Our qualitative analysis reveals emergent cognitive behaviors from end-to-end RL training, including the ability to formulate plans, cross-validate information from multiple sources, engage in self-reflection to redirect research, and maintain honesty when unable to find definitive answers. Our results highlight that end-to-end training in real-world web environments is not merely an implementation detail but a fundamental requirement for developing robust research capabilities aligned with real-world applications. We release DeepResearcher at https://github.com/GAIR-NLP/DeepResearcher.
+
+검색과 RL 추론을 결합해 검색을 통해 응답하는 에이전트를 학습시키는 연구는 계속 나오고 있네요. Deep Research의 특징 중 하나는 어마어마한 길이의 리포트인데 이것이 RL 파이프라인과 어떻게 결합할 수 있을지가 궁금한 부분입니다.
+
+<english>
+Study on building agents that able to search by combining search with RL reasoning is continuously appearing. One notable characteristics of Deep Research is very long reports, and I wonder how this can be combined with RL pipelines.
+</english>
+
+#rl #reasoning 

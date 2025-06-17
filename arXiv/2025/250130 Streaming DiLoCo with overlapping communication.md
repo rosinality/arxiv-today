@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2501.18512
+
+*Streaming DiLoCo with overlapping communication: Towards a Distributed Free Lunch* (Arthur Douillard, Yanislav Donchev, Keith Rush, Satyen Kale, Zachary Charles, Zachary Garrett, Gabriel Teston, Dave Lacey, Ross McIlroy, Jiajun Shen, Alexandre Ramé, Arthur Szlam, Marc'Aurelio Ranzato, Paul Barham)
+
+> Training of large language models (LLMs) is typically distributed across a large number of accelerators to reduce training time. Since internal states and parameter gradients need to be exchanged at each and every single gradient step, all devices need to be co-located using low-latency high-bandwidth communication links to support the required high volume of exchanged bits. Recently, distributed algorithms like DiLoCo have relaxed such co-location constraint: accelerators can be grouped into ``workers'', where synchronizations between workers only occur infrequently. This in turn means that workers can afford being connected by lower bandwidth communication links without affecting learning quality. However, in these methods, communication across workers still requires the same peak bandwidth as before, as the synchronizations require all parameters to be exchanged across all workers. In this paper, we improve DiLoCo in three ways. First, we synchronize only subsets of parameters in sequence, rather than all at once, which greatly reduces peak bandwidth. Second, we allow workers to continue training while synchronizing, which decreases wall clock time. Third, we quantize the data exchanged by workers, which further reduces bandwidth across workers. By properly combining these modifications, we show experimentally that we can distribute training of billion-scale parameters and reach similar quality as before, but reducing required bandwidth by two orders of magnitude.
+
+DiLoCo에서 그래디언트 전체를 동기화하는 것이 아니라 쪼갠 일부를 동기화하고, 연산과 중복시킨 시도. 본격적인 규모로 학습해서 동기화된 학습과 동등한 결과가 나오는지 관측되면 좋겠지만 그런 결과는 나와도 공개하지 않을지도 모르겠네요.
+
+Improving DiLoCo by synchronizing only part of the gradient instead of the whole, and overlaps communication with computation. It would be great to observe if this achieves results equivalent to fully synchronized training at a significant scale, but such results might not be published even if they were obtained.
+
+#efficient-training 

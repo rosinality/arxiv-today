@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2501.18585
+
+*Thoughts Are All Over the Place: On the Underthinking of o1-Like LLMs* (Yue Wang, Qiuzhi Liu, Jiahao Xu, Tian Liang, Xingyu Chen, Zhiwei He, Linfeng Song, Dian Yu, Juntao Li, Zhuosheng Zhang, Rui Wang, Zhaopeng Tu, Haitao Mi, Dong Yu)
+
+> Large language models (LLMs) such as OpenAI's o1 have demonstrated remarkable abilities in complex reasoning tasks by scaling test-time compute and exhibiting human-like deep thinking. However, we identify a phenomenon we term underthinking, where o1-like LLMs frequently switch between different reasoning thoughts without sufficiently exploring promising paths to reach a correct solution. This behavior leads to inadequate depth of reasoning and decreased performance, particularly on challenging mathematical problems. To systematically analyze this issue, we conduct experiments on three challenging test sets and two representative open-source o1-like models, revealing that frequent thought switching correlates with incorrect responses. We introduce a novel metric to quantify underthinking by measuring token efficiency in incorrect answers. To address underthinking, we propose a decoding strategy with thought switching penalty TIP that discourages premature transitions between thoughts, encouraging deeper exploration of each reasoning path. Experimental results demonstrate that our approach improves accuracy across challenging datasets without requiring model fine-tuning. Our findings contribute to understanding reasoning inefficiencies in o1-like LLMs and offer a practical solution to enhance their problem-solving capabilities.
+
+추론 모델들이 사고 과정에서 사고의 흐름을 자주 전환하는 현상이 나타나는데, 결과적으로는 맞는 방향이지만 충분히 생각하지 않고 전환하는 경우도 많다는 분석. 길이 페널티 등이 도움이 될지도 모르겠네요.
+
+Analysis shows that current reasoning models frequently switch different lines of thought. While some of these thoughts are on the right track toward the correct answer, the models often switch to different thoughts without exploring them deeply enough. Length penalties might be helpful in addressing this issue.
+
+#reasoning 

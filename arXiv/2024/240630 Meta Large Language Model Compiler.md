@@ -1,0 +1,11 @@
+https://ai.meta.com/research/publications/meta-large-language-model-compiler-foundation-models-of-compiler-optimization/
+
+*Meta Large Language Model Compiler: Foundation Models of Compiler Optimization* (Chris Cummins, Volker Seeker, Dejan Grubisic, Baptiste Rozière, Jonas Gehring, Gabriel Synnaeve, Hugh Leather)
+
+> Large Language Models (LLMs) have demonstrated remarkable capabilities across a variety of software engineering and coding tasks. However, their application in the domain of code and compiler optimization remains underexplored. Training LLMs is resource-intensive, requiring substantial GPU hours and extensive data collection, which can be prohibitive. To address this gap, we introduce Meta Large Language Model Compiler (LLM Compiler), a suite of robust, openly available, pre-trained models specifically designed for code optimization tasks. Built on the foundation of Code Llama, LLM Compiler enhances the understanding of compiler intermediate representations (IRs), assembly language, and optimization techniques. The model has been trained on a vast corpus of 546 billion tokens of LLVM-IR and assembly code and has undergone instruction fine-tuning to interpret compiler behavior. LLM Compiler is released under a bespoke commercial license to allow wide reuse and is available in two sizes: 7 billion and 13 billion parameters. We also present fine-tuned versions of the model, demonstrating its enhanced capabilities in optimizing code size and disassembling from x86_64 and ARM assembly back into LLVM-IR. These achieve 77% of the optimising potential of an autotuning search, and 45% disassembly round trip (14% exact match). This release aims to provide a scalable, cost-effective foundation for further research and development in compiler optimization by both academic researchers and industry practitioners.
+
+어셈블리와 IR로 학습한 다음 컴파일러의 최적화 결과, 코드에 대해 적용할 최적화 플래그, 디스어셈블리 등에 대해 Instruction Tuning을 적용한 모델. 
+
+IR을 사용하는 것은 The Stack v2 (https://arxiv.org/abs/2402.19173) 에서도 시도했었죠. 다른 과제들에 대해서 어떤 의미를 가질지 궁금하네요. 일반적으로는 추상화 수준이 높은 언어가 추론 능력에 도움이 되지 않을까 하는 생각은 듭니다.
+
+#llm #code 

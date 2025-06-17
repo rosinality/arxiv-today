@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2408.13359
+
+*Power Scheduler: A Batch Size and Token Number Agnostic Learning Rate Scheduler* (Yikang Shen, Matthew Stallone, Mayank Mishra, Gaoyuan Zhang, Shawn Tan, Aditya Prasad, Adriana Meza Soria, David D. Cox, Rameswar Panda)
+
+> Finding the optimal learning rate for language model pretraining is a challenging task. This is not only because there is a complicated correlation between learning rate, batch size, number of training tokens, model size, and other hyperparameters but also because it is prohibitively expensive to perform a hyperparameter search for large language models with Billions or Trillions of parameters. Recent studies propose using small proxy models and small corpus to perform hyperparameter searches and transposing the optimal parameters to large models and large corpus. While the zero-shot transferability is theoretically and empirically proven for model size related hyperparameters, like depth and width, the zero-shot transfer from small corpus to large corpus is underexplored. In this paper, we study the correlation between optimal learning rate, batch size, and number of training tokens for the recently proposed WSD scheduler. After thousands of small experiments, we found a power-law relationship between variables and demonstrated its transferability across model sizes. Based on the observation, we propose a new learning rate scheduler, Power scheduler, that is agnostic about the number of training tokens and batch size. The experiment shows that combining the Power scheduler with Maximum Update Parameterization (muP) can consistently achieve impressive performance with one set of hyperparameters regardless of the number of training tokens, batch size, model size, and even model architecture. Our 3B dense and MoE models trained with the Power scheduler achieve comparable performance as state-of-the-art small language models. We open-source these pretrained models at https://ibm.biz/BdKhLa.
+
+학습 토큰 수 및 배치 크기와 관계 없는 LR 스케줄러를 만든다는 아이디어. 배치 크기의 영향이야 자연스럽지만 학습 토큰 수 또한 문제라는 것이 되겠죠.
+
+결과적으로는 구글 스타일의 Inv-Power 스케줄과 비슷한데 배치 크기와 토큰 수 요인이 추가된 형태의 함수네요.
+
+#optimization 

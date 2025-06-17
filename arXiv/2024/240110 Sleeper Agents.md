@@ -1,0 +1,13 @@
+https://arxiv.org/abs/2401.05566
+
+*Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training* (Evan Hubinger, Carson Denison, Jesse Mu, Mike Lambert, Meg Tong, Monte MacDiarmid, Tamera Lanham, Daniel M. Ziegler, Tim Maxwell, Newton Cheng, Adam Jermyn, Amanda Askell, Ansh Radhakrishnan, Cem Anil, David Duvenaud, Deep Ganguli, Fazl Barez, Jack Clark, Kamal Ndousse, Kshitij Sachan, Michael Sellitto, Mrinank Sharma, Nova DasSarma, Roger Grosse, Shauna Kravec, Yuntao Bai, Zachary Witten, Marina Favaro, Jan Brauner, Holden Karnofsky, Paul Christiano, Samuel R. Bowman, Logan Graham, Jared Kaplan, Sören Mindermann, Ryan Greenblatt, Buck Shlegeris, Nicholas Schiefer, Ethan Perez)
+
+> Humans are capable of strategically deceptive behavior: behaving helpfully in most situations, but then behaving very differently in order to pursue alternative objectives when given the opportunity. If an AI system learned such a deceptive strategy, could we detect it and remove it using current state-of-the-art safety training techniques? To study this question, we construct proof-of-concept examples of deceptive behavior in large language models (LLMs). For example, we train models that write secure code when the prompt states that the year is 2023, but insert exploitable code when the stated year is 2024. We find that such backdoored behavior can be made persistent, so that it is not removed by standard safety training techniques, including supervised fine-tuning, reinforcement learning, and adversarial training (eliciting unsafe behavior and then training to remove it). The backdoored behavior is most persistent in the largest models and in models trained to produce chain-of-thought reasoning about deceiving the training process, with the persistence remaining even when the chain-of-thought is distilled away. Furthermore, rather than removing backdoors, we find that adversarial training can teach models to better recognize their backdoor triggers, effectively hiding the unsafe behavior. Our results suggest that, once a model exhibits deceptive behavior, standard techniques could fail to remove such deception and create a false impression of safety.
+
+Abstract만 봐도 Anthropic에서 나왔다는 걸 알 수 있네요. 모델이 학습 과정에서는 정렬된 것처럼 가장했다가 배포 시점에서 본색(?)을 드러낼 가능성을 고려합니다.
+
+예를 들어 2023년까지는 학습 중이라는 걸 알아채서 코드를 제대로 만들다가 2024년부터는 백도어를 심은 코드를 생성하는 것이죠.일단 그런 모델은 아직 없으니(?) 임의로 이런 기만적인 행동을 하도록 주입한 다음 Alignment로 이런 행동을 지울 수 있는지 테스트했습니다. 지워지지 않을 뿐더러 Red Teaming을 하면 이런 기만적인 행동을 더 잘 숨기게 될 수 있다고 하는군요.
+
+원칙적으로 안전은 미리 챙기는 것이 맞긴 하지만 아무래도 이런 일이 실제로 일어날 수 있는지가 궁금하긴 합니다.
+
+#safety #alignment 

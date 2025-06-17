@@ -1,0 +1,17 @@
+https://openreview.net/forum?id=BGnm7Lo8oW
+
+*On Reward Functions for Self-Improving General-Purpose Reasoning* (Anonymous authors)
+
+기심> Prompting a Large Language Model (LLM) to output Chain-of-Thought (CoT) reasoning improves performance on complex problem-solving tasks. Further, several popular approaches exist to “self-improve” the abilities of LLMs to use CoT on tasks where supervised (question, answer) datasets are available. However, an emerging line of work explores whether self-improvement is possible without supervised datasets, instead utilizing the same large, general-purpose text corpora as used during pre-training. These pre-training datasets encompass large parts of human knowledge and dwarf all finetuning datasets in size. Self-improving CoT abilities on such general datasets could enhance reasoning for any general-purpose text generation task, and doing so at pre-training scale may unlock unprecedented reasoning abilities. In this paper, we outline the path towards self-improving CoT reasoning at pre-training scale and address fundamental challenges in this direction. We start by framing this as a reinforcement learning problem: given the first n tokens from a large pre-training corpus, the model generates a CoT and receives a reward based on how well the CoT helps predict the following m tokens. We then investigate a fundamental question: What constitutes a suitable reward function for learning to reason during general language modelling? We outline the desirable qualities of such a reward function and empirically demonstrate how different functions affect what reasoning is learnt and where reasoning is rewarded. Using these insights, we introduce a novel reward function called Reasoning Advantage (RA) that facilitates self-improving CoT reasoning on freeform question-answering (QA) data, where answers are unstructured and difficult to verify. Equipped with a suitable reward function, we explore the optimisation of it on general-purpose text using offline RL. Our analysis indicates that future work should investigate more powerful optimisation algorithms, potentially moving towards more online algorithms that better explore the space of CoT generations.
+
+웹 텍스트와 같이 특별히 정답이 지정되지 않은 텍스트를 사용해 CoT를 생성하고 추론하는 능력을 학습시킬 수 있는가? 그를 위해서는 어떤 Reward를 사용해야 하는가? 여기에서 제안하는 것은 CoT가 주어졌을 때의 Likelihood를 Reward로 사용하되 CoT가 없는 경우의 Likelihood를 베이스라인으로 사용하고 Normalization/Clipping을 적용하는 것이군요.
+
+추론 능력은 지금 LLM 업계에서 가장 중요한 화두인 것 같네요. 다만 이를 어떻게 모델에 주입할 수 있는지에 대해서 알려진 것이 없죠. OpenAI도 여러 시도들 중에서 성공한 시도가 o1으로 이어졌다고 했으니 많이 탐색하는 수밖에 없을 것 같네요.
+
+<english>
+Can we train the capability of generating CoT and doing reasoning using texts without specific solutions or answers, like plain web texts? For that what reward should be used? This study suggests reward which uses likelihood of suffixes given CoT but using likelihood without CoT as baseline and applies normalization and clipping.
+
+Reasoning capability is not hottest topic among field of LLMs. But it is not well known about how we can inject this capabilities into the model. As OpenAI also said that o1 is successor of one attempt among various tries, I think we just need to explore on this problem a lot.
+</english>
+
+#reasoning #synthetic-data 

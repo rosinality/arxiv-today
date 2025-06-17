@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2406.12016
+
+*Prefixing Attention Sinks can Mitigate Activation Outliers for Large Language Model Quantization* (Seungwoo Son, Wonpyo Park, Woohyun Han, Kyuyeun Kim, Jaeho Lee)
+
+> Despite recent advances in LLM quantization, activation quantization remains to be challenging due to the activation outliers. Conventional remedies, e.g., mixing precisions for different channels, introduce extra overhead and reduce the speedup. In this work, we develop a simple yet effective strategy to facilitate per-tensor activation quantization by preventing the generation of problematic tokens. Precisely, we propose a method to find a set of key-value cache, coined CushionCache, which mitigates outliers in subsequent tokens when inserted as a prefix. CushionCache works in two steps: First, we greedily search for a prompt token sequence that minimizes the maximum activation values in subsequent tokens. Then, we further tune the token cache to regularize the activations of subsequent tokens to be more quantization-friendly. The proposed method successfully addresses activation outliers of LLMs, providing a substantial performance boost for per-tensor activation quantization methods. We thoroughly evaluate our method over a wide range of models and benchmarks and find that it significantly surpasses the established baseline of per-tensor W8A8 quantization and can be seamlessly integrated with the recent activation quantization method.
+
+Attention Sink를 만들어 Quantization에 도움을 주겠다는 아이디어. Quantization Loss를 줄여주는 토큰들을 찾아낸 다음 이 토큰을 앞에 붙이고 파인튜닝을 하는 형태입니다. Attention Sink는 아웃라이어들의 위치만 옮겨주게 되지 않을까 싶었는데 꽤 의미가 있을 수 있는 것 같네요.
+
+#quantization 

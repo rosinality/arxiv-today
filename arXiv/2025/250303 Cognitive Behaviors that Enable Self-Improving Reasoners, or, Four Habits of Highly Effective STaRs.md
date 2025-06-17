@@ -1,0 +1,13 @@
+https://arxiv.org/abs/2503.01307
+
+*Cognitive Behaviors that Enable Self-Improving Reasoners, or, Four Habits of Highly Effective STaRs* (Kanishk Gandhi, Ayush Chakravarthy, Anikait Singh, Nathan Lile, Noah D. Goodman)
+
+> Test-time inference has emerged as a powerful paradigm for enabling language models to ``think'' longer and more carefully about complex challenges, much like skilled human experts. While reinforcement learning (RL) can drive self-improvement in language models on verifiable tasks, some models exhibit substantial gains while others quickly plateau. For instance, we find that Qwen-2.5-3B far exceeds Llama-3.2-3B under identical RL training for the game of Countdown. This discrepancy raises a critical question: what intrinsic properties enable effective self-improvement? We introduce a framework to investigate this question by analyzing four key cognitive behaviors -- verification, backtracking, subgoal setting, and backward chaining -- that both expert human problem solvers and successful language models employ. Our study reveals that Qwen naturally exhibits these reasoning behaviors, whereas Llama initially lacks them. In systematic experimentation with controlled behavioral datasets, we find that priming Llama with examples containing these reasoning behaviors enables substantial improvements during RL, matching or exceeding Qwen's performance. Importantly, the presence of reasoning behaviors, rather than correctness of answers, proves to be the critical factor -- models primed with incorrect solutions containing proper reasoning patterns achieve comparable performance to those trained on correct solutions. Finally, leveraging continued pretraining with OpenWebMath data, filtered to amplify reasoning behaviors, enables the Llama model to match Qwen's self-improvement trajectory. Our findings establish a fundamental relationship between initial reasoning behaviors and the capacity for improvement, explaining why some language models effectively utilize additional computation while others plateau.
+
+추론 RL이 Qwen 2.5에서는 작은 규모에서도 잘 되지만 (3B) Llama 3에서는 잘 되지 않는 이유에 대한 분석. 백트래킹과 같은 추론 관련 능력이 Llama 3에서는 잘 나타나지 않았다고 하네요. SFT나 프리트레이닝을 통해 이 패턴을 주입하면 Llama 3에서도 잘 되기 시작했다고. 아마 Qwen에서 사용된 합성 데이터의 영향이지 않을까 싶네요.
+
+<english>
+Analysis on reasoning RL works well with Qwen 2.5 on 3B scale but not Llama 3. They insists reasoning related skills like backtracking does not appear well on Llama 3. After injecting these patterns by SFT or pretraining then Llama 3 starts to work well. Maybe this is the result from synthetic data used in Qwen pretraining.
+</english>
+
+#reasoning #rl 

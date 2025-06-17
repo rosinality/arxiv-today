@@ -1,0 +1,6 @@
+https://arxiv.org/abs/2401.06954
+
+*Bridging the Preference Gap between Retrievers and LLMs* (Zixuan Ke, Weize Kong, Cheng Li, Mingyang Zhang, Qiaozhu Mei, Michael Bendersky)
+
+> Large Language Models (LLMs) have demonstrated superior results across a wide range of tasks, while retrieval has long been established as an effective means of obtaining task-relevant information for humans. Retrieval-augmented Generation (RAG) are known for their effectiveness in knowledge-intensive tasks by locating relevant information and placing it within the context window of the LLM. However, the relationship between retrievers and LLMs is still under-investigated. Most existing work treats the retriever and the LLM as independent components and leaves a gap between retrieving human-friendly information and assembling a LLM-friendly context. In this work, we examine a novel bridge model, validate the ranking and selection assumptions in retrievers in the context of RAG, and propose a training framework that chains together supervised and reinforcement learning to learn a bridge model. Empirical results demonstrate the effectiveness of our method in both question-answering and personalized generation tasks.
+

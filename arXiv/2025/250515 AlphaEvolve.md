@@ -1,0 +1,17 @@
+https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/AlphaEvolve.pdf
+
+*AlphaEvolve: A coding agent for scientific and algorithmic discovery* (Alexander Novikov, Ngân V ̃u, Marvin Eisenberger, Emilien Dupont, Po-Sen Huang, Adam Zsolt Wagner, Sergey Shirobokov, Borislav Kozlovskii, Francisco J. R. Ruiz, Abbas Mehrabian, M. Pawan Kumar, Abigail See, Swarat Chaudhuri, George Holland, Alex Davies, Sebastian Nowozin, Pushmeet Kohli and Matej Balog)
+
+> In this white paper, we present AlphaEvolve, an evolutionary coding agent that substantially enhances capabilities of state-of-the-art LLMs on highly challenging tasks such as tackling open scientific problems or optimizing critical pieces of computational infrastructure. AlphaEvolve orchestrates an autonomous pipeline of LLMs, whose task is to improve an algorithm by making direct changes to the code. Using an evolutionary approach, continuously receiving feedback from one or more evaluators, AlphaEvolve iteratively improves the algorithm, potentially leading to new scientific and practical discoveries. We demonstrate the broad applicability of this approach by applying it to a number of important computational problems. When applied to optimizing critical components of large-scale computational stacks at Google, AlphaEvolve developed a more efficient scheduling algorithm for data centers, found a functionally equivalent simplification in the circuit design of hardware accelerators, and accelerated the training of the LLM underpinning AlphaEvolve itself. Furthermore, AlphaEvolve discovered novel, provably correct algorithms that surpass state-of-the-art solutions on a spectrum of problems in mathematics and computer science, significantly expanding the scope of prior automated discovery methods (Romera-Paredes et al., 2023). Notably, AlphaEvolve developed a search algorithm that found a procedure to multiply two 4 × 4 complex-valued matrices using 48 scalar multiplications; offering the first improvement, after 56 years, over Strassen’s algorithm in this setting. We believe AlphaEvolve and coding agents like it can have a significant impact in improving solutions of problems across many areas of science and computation.
+
+LLM을 사용한 알고리즘 최적화. 이전의 함수 최적화와 비슷한 시도군요 (https://deepmind.google/discover/blog/funsearch-making-new-discoveries-in-mathematical-sciences-using-large-language-models/). 프로그램과 프롬프트를 샘플링해서 LLM으로 수정하고 평가한다는 비교적 단순한 구조. 생성한 프로그램들 중 다음 시도를 위해 어떤 프로그램을 선택할 것인가를 통해 전반적인 과정을 통제한다고 생각할 수 있겠네요.
+
+평가할 수 있다면 무엇이든 최적화가 가능하다는 사례겠죠. 추론과 이어서 생각하면 한 번 결과를 얻는 것으로 끝나는 것이 아니라 지속적으로 반복해서 개선을 시도하는 루프를 진행할 수 있어야 한다는 의미일 겁니다.
+
+<english>
+Algorithm optimization using LLM. It is similar attempt to previous function optimization (https://deepmind.google/discover/blog/funsearch-making-new-discoveries-in-mathematical-sciences-using-large-language-models/). It is simple structure of sampling programs and prompts, and modify it using LLM, and evaluating. Overall process is controlled by how specific program is selected among generated programs for next attempt.
+
+It would be a example that we can optimize anything if we evaluate it. Also, if we connect it to reasoning, it would mean that we should be able to run a loop of continuously iterates and improves, not doing single attempts and then get a results.
+</english>
+
+#search 

@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2405.14813
+
+*Scalable Optimization in the Modular Norm* (Tim Large, Yang Liu, Minyoung Huh, Hyojin Bahng, Phillip Isola, Jeremy Bernstein)
+
+> To improve performance in contemporary deep learning, one is interested in scaling up the neural network in terms of both the number and the size of the layers. When ramping up the width of a single layer, graceful scaling of training has been linked to the need to normalize the weights and their updates in the "natural norm" particular to that layer. In this paper, we significantly generalize this idea by defining the modular norm, which is the natural norm on the full weight space of any neural network architecture. The modular norm is defined recursively in tandem with the network architecture itself. We show that the modular norm has several promising applications. On the practical side, the modular norm can be used to normalize the updates of any base optimizer so that the learning rate becomes transferable across width and depth. This means that the user does not need to compute optimizer-specific scale factors in order to scale training. On the theoretical side, we show that for any neural network built from "well-behaved" atomic modules, the gradient of the network is Lipschitz-continuous in the modular norm, with the Lipschitz constant admitting a simple recursive formula. This characterization opens the door to porting standard ideas in optimization theory over to deep learning. We have created a Python package called Modula that automatically normalizes weight updates in the modular norm of the architecture. The package is available via "pip install modula" with source code at https://github.com/jxbz/modula.
+
+Loss가 Weight에 대해 Lipschitz Continuous하도록 하는 Norm을 구성하는 것, 특히 다양한 모듈로 구성된 Neural Network에 대해 쉽게 계산할 수 있는 Norm을 설계했습니다. 실용적으로는 이 Norm을 사용해 Weight Update를 정규화하면 서로 다른 깊이와 너비의 모델에 대해 하이퍼파라미터를 Transfer 하는 것이 가능하네요.
+
+#optimization #neural-network

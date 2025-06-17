@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2405.17915
+
+*Long Context is Not Long at All: A Prospector of Long-Dependency Data for Large Language Models* (Longze Chen, Ziqiang Liu, Wanwei He, Yunshui Li, Run Luo, Min Yang)
+
+> Long-context modeling capabilities are important for large language models (LLMs) in various applications. However, directly training LLMs with long context windows is insufficient to enhance this capability since some training samples do not exhibit strong semantic dependencies across long contexts. In this study, we propose a data mining framework \textbf{ProLong} that can assign each training sample with a long dependency score, which can be used to rank and filter samples that are more advantageous for enhancing long-context modeling abilities in LLM training. Specifically, we first use delta perplexity scores to measure the \textit{Dependency Strength} between text segments in a given document. Then we refine this metric based on the \textit{Dependency Distance} of these segments to incorporate spatial relationships across long-contexts. Final results are calibrated with a \textit{Dependency Specificity} metric to prevent trivial dependencies introduced by repetitive patterns. Moreover, a random sampling approach is proposed to optimize the computational efficiency of ProLong. Comprehensive experiments on multiple benchmarks indicate that ProLong effectively identifies documents that carry long dependencies and LLMs trained on these documents exhibit significantly enhanced long-context modeling capabilities.
+
+텍스트 내 부분들 사이의 의존 관계가 높은 데이터들이 Long Context 튜닝에 더 유용한 높은 퀄리티의 텍스트일 것이라는 아이디어.
+
+#long-context 

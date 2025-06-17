@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2401.10241
+
+*Zero Bubble Pipeline Parallelism* (Penghui Qi, Xinyi Wan, Guangxing Huang, Min Lin)
+
+> Pipeline parallelism is one of the key components for large-scale distributed training, yet its efficiency suffers from pipeline bubbles which were deemed inevitable. In this work, we introduce a scheduling strategy that, to our knowledge, is the first to successfully achieve zero pipeline bubbles under synchronous training semantics. The key idea behind this improvement is to split the backward computation into two parts, one that computes gradient for the input and another that computes for the parameters. Based on this idea, we handcraft novel pipeline schedules that significantly outperform the baseline methods. We further develop an algorithm that automatically finds an optimal schedule based on specific model configuration and memory limit. Additionally, to truly achieve zero bubble, we introduce a novel technique to bypass synchronizations during the optimizer step. Experimental evaluations show that our method outperforms the 1F1B schedule up to 23% in throughput under a similar memory limit. This number can be further pushed to 31% when the memory constraint is relaxed. We believe our results mark a major step forward in harnessing the true potential of pipeline parallelism. We open sourced our implementation based on the popular Megatron-LM repository on https://github.com/sail-sg/zero-bubble-pipeline-parallelism.
+
+Pipeline Parallel에서 버블을 없애는 방법. Weight에 대한 그래디언트 계산을 분리해서 위치를 바꾸고 Optimizer에서의 Synchronization(Gradient Norm, Overflow 체크)을 없애고 문제가 생기면 롤백하는 방식을 채택했습니다. 현실적인 시나리오에서 효과가 좋을지 궁금하긴 하네요.
+
+#efficient_training 

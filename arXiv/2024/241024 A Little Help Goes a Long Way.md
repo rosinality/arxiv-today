@@ -1,0 +1,13 @@
+https://arxiv.org/abs/2410.18779
+
+*A Little Help Goes a Long Way: Efficient LLM Training by Leveraging Small LMs* (Ankit Singh Rawat, Veeranjaneyulu Sadhanala, Afshin Rostamizadeh, Ayan Chakrabarti, Wittawat Jitkrittum, Vladimir Feinberg, Seungyeon Kim, Hrayr Harutyunyan, Nikunj Saunshi, Zachary Nado, Rakesh Shivanna, Sashank J. Reddi, Aditya Krishna Menon, Rohan Anil, Sanjiv Kumar)
+
+> A primary challenge in large language model (LLM) development is their onerous pre-training cost. Typically, such pre-training involves optimizing a self-supervised objective (such as next-token prediction) over a large corpus. This paper explores a promising paradigm to improve LLM pre-training efficiency and quality by suitably leveraging a small language model (SLM). In particular, this paradigm relies on an SLM to both (1) provide soft labels as additional training supervision, and (2) select a small subset of valuable ("informative" and "hard") training examples. Put together, this enables an effective transfer of the SLM's predictive distribution to the LLM, while prioritizing specific regions of the training data distribution. Empirically, this leads to reduced LLM training time compared to standard training, while improving the overall quality. Theoretically, we develop a statistical framework to systematically study the utility of SLMs in enabling efficient training of high-quality LLMs. In particular, our framework characterizes how the SLM's seemingly low-quality supervision can enhance the training of a much more capable LLM. Furthermore, it also highlights the need for an adaptive utilization of such supervision, by striking a balance between the bias and variance introduced by the SLM-provided soft labels. We corroborate our theoretical framework by improving the pre-training of an LLM with 2.8B parameters by utilizing a smaller LM with 1.5B parameters on the Pile dataset.
+
+학습 초반에는 작은 모델로 Distill을 한 다음 일반적인 학습을 시작하는 방법. 작은 모델로 Distill을 하면 쉽게 학습할 수 있는 것에 우선순위가 주어지게 되고 어려운 토큰들은 후반의 학습으로 미룰 수 있다는 아이디어네요. 추가적으로 작은 모델에서 Loss가 높은 샘플들 중에서 예측 가능한 토큰들을 사용해 필터링을 하는 방법도 생각했습니다. 전반적으로 커리큘럼이나 Learnability 문제와 관련해서 생각할 수 있을 것 같네요.
+
+<english>
+The method that starts training with distillation from small models, and then train the model with standard objectives. If you distill with small models then data easier to learn would get a priority, and tokens hard to learn will be postponed to later stage of training. Additionally they devised the filtering method that selects predictable tokens from samples with high loss with small models. I think in general we can think this in relation of curriculum learning or learnability problems.
+</english>
+
+#distillation 

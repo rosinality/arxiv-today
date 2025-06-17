@@ -1,0 +1,6 @@
+https://arxiv.org/abs/2401.13782
+
+*Tweets to Citations: Unveiling the Impact of Social Media Influencers on AI Research Visibility* (Iain Xie Weissburg, Mehir Arora, Liangming Pan, William Yang Wang)
+
+> As the number of accepted papers at AI and ML conferences reaches into the thousands, it has become unclear how researchers access and read research publications. In this paper, we investigate the role of social media influencers in enhancing the visibility of machine learning research, particularly the citation counts of papers they share. We have compiled a comprehensive dataset of over 8,000 papers, spanning tweets from December 2018 to October 2023, alongside 1:1 matched controls based on publication year, venue, and abstract topics. Our analysis reveals a significant increase in citations for papers endorsed by these influencers, with median citation counts 2-3 times higher than those of the control group. Additionally, the study delves into the geographic, gender, and institutional diversity of highlighted authors. These findings highlight the expanding influence of social media in scholarly communication and underscore the importance of an evolving ecosystem in today's digital academic landscape.
+

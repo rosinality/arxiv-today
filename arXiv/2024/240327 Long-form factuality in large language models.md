@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2403.18802
+
+*Long-form factuality in large language models* (Jerry Wei, Chengrun Yang, Xinying Song, Yifeng Lu, Nathan Hu, Dustin Tran, Daiyi Peng, Ruibo Liu, Da Huang, Cosmo Du, Quoc V. Le)
+
+> Large language models (LLMs) often generate content that contains factual errors when responding to fact-seeking prompts on open-ended topics. To benchmark a model's long-form factuality in open domains, we first use GPT-4 to generate LongFact, a prompt set comprising thousands of questions spanning 38 topics. We then propose that LLM agents can be used as automated evaluators for long-form factuality through a method which we call Search-Augmented Factuality Evaluator (SAFE). SAFE utilizes an LLM to break down a long-form response into a set of individual facts and to evaluate the accuracy of each fact using a multi-step reasoning process comprising sending search queries to Google Search and determining whether a fact is supported by the search results. Furthermore, we propose extending F1 score as an aggregated metric for long-form factuality. To do so, we balance the percentage of supported facts in a response (precision) with the percentage of provided facts relative to a hyperparameter representing a user's preferred response length (recall). Empirically, we demonstrate that LLM agents can achieve superhuman rating performance - on a set of ~16k individual facts, SAFE agrees with crowdsourced human annotators 72% of the time, and on a random subset of 100 disagreement cases, SAFE wins 76% of the time. At the same time, SAFE is more than 20 times cheaper than human annotators. We also benchmark thirteen language models on LongFact across four model families (Gemini, GPT, Claude, and PaLM-2), finding that larger language models generally achieve better long-form factuality. LongFact, SAFE, and all experimental code are available at https://github.com/google-deepmind/long-form-factuality.
+
+생성된 긴 답변의 정확성을 평가하기 위한 방법. LLM으로 답변을 개별 사실로 쪼갠 다음 구글 검색을 용해 개별 사실을 검증하는 LLM 에이전트를 활용해 평가하는 흐름입니다. 사람이 그냥 하는 것보다 정확할 수 있다고 하는군요.
+
+큰 모델이 정확하다는 결론 이상으로 답변에 포함된 근거 있는 사실, 근거 없는 사실, 관계 없는 사실들의 절대적인 숫자 자체도 의미가 있을 수 있겠다 싶습니다. 답변의 스타일을 말해줄 수 있으니까요.
+
+#benchmark 

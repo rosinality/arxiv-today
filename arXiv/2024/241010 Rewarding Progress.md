@@ -1,0 +1,13 @@
+https://arxiv.org/abs/2410.08146
+
+*Rewarding Progress: Scaling Automated Process Verifiers for LLM Reasoning* (Amrith Setlur, Chirag Nagpal, Adam Fisch, Xinyang Geng, Jacob Eisenstein, Rishabh Agarwal, Alekh Agarwal, Jonathan Berant, Aviral Kumar)
+
+> A promising approach for improving reasoning in large language models is to use process reward models (PRMs). PRMs provide feedback at each step of a multi-step reasoning trace, potentially improving credit assignment over outcome reward models (ORMs) that only provide feedback at the final step. However, collecting dense, per-step human labels is not scalable, and training PRMs from automatically-labeled data has thus far led to limited gains. To improve a base policy by running search against a PRM or using it as dense rewards for reinforcement learning (RL), we ask: "How should we design process rewards?". Our key insight is that, to be effective, the process reward for a step should measure progress: a change in the likelihood of producing a correct response in the future, before and after taking the step, corresponding to the notion of step-level advantages in RL. Crucially, this progress should be measured under a prover policy distinct from the base policy. We theoretically characterize the set of good provers and our results show that optimizing process rewards from such provers improves exploration during test-time search and online RL. In fact, our characterization shows that weak prover policies can substantially improve a stronger base policy, which we also observe empirically. We validate our claims by training process advantage verifiers (PAVs) to predict progress under such provers, and show that compared to ORMs, test-time search against PAVs is $>8\%$ more accurate, and $1.5-5\times$ more compute-efficient. Online RL with dense rewards from PAVs enables one of the first results with $5-6\times$ gain in sample efficiency, and $>6\%$ gain in accuracy, over ORMs.
+
+굉장히 중요한 결과인 것 같네요. Scalable한 Process Reward Model은 어떠해야 할 것인가? 여기에 대해서 Q가 아니라 Advantage여야 한다고 합니다. 그리고 이 Advantage 계산에 사용되는 Prover Policy는 Base Policy는 달라야 하지만 동시에 큰 차이가 있어서는 안 된다는 조건입니다. 그래서 선택한 것은 Base Policy + Best of K를 Prover Policy로 사용하는 것이네요.
+
+<english>
+Very important result. What is the condition of scalable process reward models? This paper suggest that it should advantage, not Q. And prover policy that will be used in calculation of advantage should be different from base policy, but simultaneously, it should aligned with base policy. So authors used base policy and best of K as a prover policy.
+</english>
+
+#rl #reasoning 

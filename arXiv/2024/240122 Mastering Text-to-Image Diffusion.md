@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2401.11708
+
+*Mastering Text-to-Image Diffusion: Recaptioning, Planning, and Generating with Multimodal LLMs* (Ling Yang, Zhaochen Yu, Chenlin Meng, Minkai Xu, Stefano Ermon, Bin Cui)
+
+> Diffusion models have exhibit exceptional performance in text-to-image generation and editing. However, existing methods often face challenges when handling complex text prompts that involve multiple objects with multiple attributes and relationships. In this paper, we propose a brand new training-free text-to-image generation/editing framework, namely Recaption, Plan and Generate (RPG), harnessing the powerful chain-of-thought reasoning ability of multimodal LLMs to enhance the compositionality of text-to-image diffusion models. Our approach employs the MLLM as a global planner to decompose the process of generating complex images into multiple simpler generation tasks within subregions. We propose complementary regional diffusion to enable region-wise compositional generation. Furthermore, we integrate text-guided image generation and editing within the proposed RPG in a closed-loop fashion, thereby enhancing generalization ability. Extensive experiments demonstrate our RPG outperforms state-of-the-art text-to-image diffusion models, including DALL-E 3 and SDXL, particularly in multi-category object composition and text-image semantic alignment. Notably, our RPG framework exhibits wide compatibility with various MLLM architectures (e.g., MiniGPT-4) and diffusion backbones (e.g., ControlNet). Our code is available at: https://github.com/YangLing0818/RPG-DiffusionMaster
+
+Compositional한 생성 과제를 Multimodal LM과의 조합으로 풀었네요. 일단 유저 입력을 정리한 다음 Recaptioning해서 상세하게 만들고, CoT를 사용해서 상세해진 Caption을 영역별로 부여합니다. 그리고 Diffusion 모델로 영역 기반의 Compositional Generation을 수행하네요. 이 과정에서 마스크를 만들어서 이미지 편집까지 가능하게 하면 이미지를 생성하고 편집해나가는 루프를 돌 수 있다...는 설계네요.
+
+#vision-language #text2img #image_editing 

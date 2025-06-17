@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2408.11029
+
+*Scaling Law with Learning Rate Annealing* (Howe Tissue, Venus Wang, Lu Wang)
+
+> We find that the cross-entropy loss curves of neural language models empirically adhere to a scaling law with learning rate (LR) annealing over training steps (s): L(s) = L_0 + A·S_1^-α - C·S_2 Where S_1 is forward area and S_2 is learning rate annealing area. This formulation takes into account two factors: (1) The forward scaling defined as typical scaling law, and (2) the additional loss drop brought by LR annealing. Therefore, this formulation can describe the full loss curve at each step, rather than the single loss point at the end of training. Applying the scaling law with LR annealing and fitting only one or two training curves, we can accurately predict the loss of language model training at any given step and across any learning rate scheduler (LRS). Furthermore, this equation accurately describes the dynamics during training process, and provides a theoretical verification and explanation for numerous experimental findings of previous studies, particularly those focusing on LR schedule and LR annealing. The resulting insights, also serve as a guide for researchers to select critical LRS in advance by prediction using our equation. Most significantly, since all the points in a full training curve follow the equation, we can achieve accurate loss prediction at any given step across any learning rate scheduler, while expending less than 1% of the computational cost required by the chinchilla scaling law to fit language modeling loss. This approach extremely democratizes scaling law fitting and predicting in developing large language models.
+
+이건 신박한 결과네요. Learning Rate Schedule에 따른 학습 과정의 Loss 변화를 Scaling Law로 예측할 수 있다는 결과입니다. 이 Scaling Law는 두 가지 요인, 하나는 Learning Rate의 합이 대표하는 총 학습량과 Learning Rate Decay로 인한 추가 Loss 감소 요인으로 구성됩니다.
+
+Learning Rate Schedule은 이 두 가지 요인의 균형을 잡는 문제가 됩니다. 이를 통해 WSD와 Cosine 스케줄을 비교하고 WSD 스케줄의 Annealing 비율이 어떻게 변화해야 하는지, 그리고 Annealing 구간의 커브의 개형이 어때야 하는지 등등을 예측했네요. 굉장히 재미있습니다.
+
+#scaling-law #optimization 

@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2404.03626
+
+*Training LLMs over Neurally Compressed Text* (Brian Lester, Jaehoon Lee, Alex Alemi, Jeffrey Pennington, Adam Roberts, Jascha Sohl-Dickstein, Noah Constant)
+
+> In this paper, we explore the idea of training large language models (LLMs) over highly compressed text. While standard subword tokenizers compress text by a small factor, neural text compressors can achieve much higher rates of compression. If it were possible to train LLMs directly over neurally compressed text, this would confer advantages in training and serving efficiency, as well as easier handling of long text spans. The main obstacle to this goal is that strong compression tends to produce opaque outputs that are not well-suited for learning. In particular, we find that text na\"ively compressed via Arithmetic Coding is not readily learnable by LLMs. To overcome this, we propose Equal-Info Windows, a novel compression technique whereby text is segmented into blocks that each compress to the same bit length. Using this method, we demonstrate effective learning over neurally compressed text that improves with scale, and outperforms byte-level baselines by a wide margin on perplexity and inference speed benchmarks. While our method delivers worse perplexity than subword tokenizers for models trained with the same parameter count, it has the benefit of shorter sequence lengths. Shorter sequence lengths require fewer autoregressive generation steps, and reduce latency. Finally, we provide extensive analysis of the properties that contribute to learnability, and offer concrete suggestions for how to further improve the performance of high-compression tokenizers.
+
+Byte LM과 Arithmetic Coding을 사용해서 시퀀스를 압축한 다음 압축 시퀀스 위에서 LM을 올리는 방법. SentencePiece 같은 방법보다 훨씬 높은 압축률을 확보할 수 있죠. 다만 그냥 압축해서 학습시키는 것으로는 안 되고 Arithmetic Coding으로 압축하다가 일정 비트가 출력되면 인코더를 리셋해서 다시 시작하는 형태로 하는 것 & N개 비트를 묶어 2^N Vocabulary로 구성하는 것이 효과적이었군요.
+
+이런 압축 방법이 압축률은 높지만 텍스트와 토큰 사이의 관계가 훨씬 복잡해지긴 합니다. 그렇지만 압축과 토큰화에서 재미있는 결과들이 나올 수 있겠다는 생각은 드네요.
+
+#tokenizer 

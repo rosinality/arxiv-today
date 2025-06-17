@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2406.16807
+
+*Beyond Thumbs Up/Down: Untangling Challenges of Fine-Grained Feedback for Text-to-Image Generation* (Katherine M. Collins, Najoung Kim, Yonatan Bitton, Verena Rieser, Shayegan Omidshafiei, Yushi Hu, Sherol Chen, Senjuti Dutta, Minsuk Chang, Kimin Lee, Youwei Liang, Georgina Evans, Sahil Singla, Gang Li, Adrian Weller, Junfeng He, Deepak Ramachandran, Krishnamurthy Dj Dvijotham)
+
+> Human feedback plays a critical role in learning and refining reward models for text-to-image generation, but the optimal form the feedback should take for learning an accurate reward function has not been conclusively established. This paper investigates the effectiveness of fine-grained feedback which captures nuanced distinctions in image quality and prompt-alignment, compared to traditional coarse-grained feedback (for example, thumbs up/down or ranking between a set of options). While fine-grained feedback holds promise, particularly for systems catering to diverse societal preferences, we show that demonstrating its superiority to coarse-grained feedback is not automatic. Through experiments on real and synthetic preference data, we surface the complexities of building effective models due to the interplay of model choice, feedback type, and the alignment between human judgment and computational interpretation. We identify key challenges in eliciting and utilizing fine-grained feedback, prompting a reassessment of its assumed benefits and practicality. Our findings -- e.g., that fine-grained feedback can lead to worse models for a fixed budget, in some settings; however, in controlled settings with known attributes, fine grained rewards can indeed be more helpful -- call for careful consideration of feedback attributes and potentially beckon novel modeling approaches to appropriately unlock the potential value of fine-grained feedback in-the-wild.
+
+전반적으로 좋다/나쁘다로 어노테이션 하는 것이 나은가 혹은 세분화된 범주로 나눠서 개별적으로 어노테이션 하는 것이 나은가. 어노테이션 비용을 고려했을 때, 심지어는 고려하지 않았을 때에도 전반적인 평가 하나가 나을 수도 있다는 분석.
+
+이런 범주화에는 각 범주들이 균등하지 않다는 것과 범주에 포착되지 않는 요소들이 있다는 것, 혹은 "나머지 전부"를 포괄하는 범주가 생긴다는 문제들이 있죠. 어쩌면 바이브가 생각보다 좋은 지표일 수 있습니다.
+
+#alignment #preference 

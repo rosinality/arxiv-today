@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2407.13647
+
+*Weak-to-Strong Reasoning* (Yuqing Yang, Yan Ma, Pengfei Liu)
+
+> When large language models (LLMs) exceed human-level capabilities, it becomes increasingly challenging to provide full-scale and accurate supervisions for these models. Weak-to-strong learning, which leverages a less capable model to unlock the latent abilities of a stronger model, proves valuable in this context. Yet, the efficacy of this approach for complex reasoning tasks is still untested. Furthermore, tackling reasoning tasks under the weak-to-strong setting currently lacks efficient methods to avoid blindly imitating the weak supervisor including its errors. In this paper, we introduce a progressive learning framework that enables the strong model to autonomously refine its training data, without requiring input from either a more advanced model or human-annotated data. This framework begins with supervised fine-tuning on a selective small but high-quality dataset, followed by preference optimization on contrastive samples identified by the strong model itself. Extensive experiments on the GSM8K and MATH datasets demonstrate that our method significantly enhances the reasoning capabilities of Llama2-70b using three separate weak models. This method is further validated in a forward-looking experimental setup, where Llama3-8b-instruct effectively supervises Llama3-70b on the highly challenging OlympicArena dataset. This work paves the way for a more scalable and sophisticated strategy to enhance AI reasoning powers. All relevant code and resources are available in \url{https://github.com/GAIR-NLP/weak-to-strong-reasoning}.
+
+약한 모델을 통해 강한 모델의 성능을 개선하는 방법. 약한 모델을 통해 응답을 생성하고 이 응답을 사용해 강한 모델에 In-context Learning을 적용해 응답 생성. 약한 모델과 강한 모델의 응답에서 답이 같은 경우를 사용해 튜닝. 이를 반복하고 강한 모델의 Confidence를 사용해 응답 페어를 만들어 DPO. 재미있네요.
+
+#alignment 

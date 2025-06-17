@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2406.17692
+
+*From Distributional to Overton Pluralism: Investigating Large Language Model Alignment* (Thom Lake, Eunsol Choi, Greg Durrett)
+
+> The alignment process changes several properties of a large language model's (LLM's) output distribution. We analyze two aspects of post-alignment distributional shift of LLM responses. First, we re-examine previously reported reductions in response diversity post-alignment. Our analysis suggests that an apparent drop in the diversity of responses is largely explained by quality control and information aggregation. Alignment suppresses irrelevant and unhelpful content while shifting the output distribution toward longer responses that cover information spanning several responses from the base LLM, essentially presenting diverse information in a single response. Finding little evidence that alignment suppresses useful information, it is natural to ask the opposite question: do aligned models surface information that cannot be recovered from base models? Our second investigation shows this is not the case and the behavior of aligned models is recoverable from base models without fine-tuning. A combination of in-context examples and lower-resolution semantic hints about response content can elicit responses from base LLMs that are as similar to alignment-tuned LLM responses as alignment-tuned LLM responses are to each other. Taken together, these results indicate that current alignment techniques capture but do not extend the useful subset of assistant-like base LLM behavior, providing further evidence for the Superficial Alignment Hypothesis. They also show that in-context alignment can go surprisingly far as a strategy for imitating aligned LLMs without fine-tuning. Our code and data is available at https://github.com/thomlake/investigating-alignment.
+
+정렬이 모델에 미치는 영향. 다양성이 감소하지만 하나의 응답에 다양한 정보를 포함하게 된다는 것. 그리고 정렬된 모델의 출력을 In-context Learning으로 재현할 수 있는지 실험. 상당 부분 재현이 가능한 것을 고려할 때 정렬은 베이스 모델에 있는 정보를 꺼내오도록 하는 메커니즘이라는 분석.
+
+정렬을 베이스 모델이 가진 능력을 꺼내오는 메커니즘이라는 분석은 많았죠. 보다 흥미로운 방향은 정렬 과정을 베이스 모델이 가진 능력을 꺼내오는 메커니즘으로 간주하고 그에 걸맞도록 설계하는 것이 더 나은 정렬로 이어지는가라고 생각합니다.
+
+#alignment #posttraining 

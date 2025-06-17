@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2407.14435
+
+*Jumping Ahead: Improving Reconstruction Fidelity with JumpReLU Sparse Autoencoders* (Senthooran Rajamanoharan, Tom Lieberum, Nicolas Sonnerat, Arthur Conmy, Vikrant Varma, János Kramár, Neel Nanda)
+
+> Sparse autoencoders (SAEs) are a promising unsupervised approach for identifying causally relevant and interpretable linear features in a language model's (LM) activations. To be useful for downstream tasks, SAEs need to decompose LM activations faithfully; yet to be interpretable the decomposition must be sparse -- two objectives that are in tension. In this paper, we introduce JumpReLU SAEs, which achieve state-of-the-art reconstruction fidelity at a given sparsity level on Gemma 2 9B activations, compared to other recent advances such as Gated and TopK SAEs. We also show that this improvement does not come at the cost of interpretability through manual and automated interpretability studies. JumpReLU SAEs are a simple modification of vanilla (ReLU) SAEs -- where we replace the ReLU with a discontinuous JumpReLU activation function -- and are similarly efficient to train and run. By utilising straight-through-estimators (STEs) in a principled manner, we show how it is possible to train JumpReLU SAEs effectively despite the discontinuous JumpReLU function introduced in the SAE's forward pass. Similarly, we use STEs to directly train L0 to be sparse, instead of training on proxies such as L1, avoiding problems like shrinkage.
+
+Mechanistic Interpretability라는 주제가 Sparse Autoencoder의 학습으로 모이기 시작하니 관련된 연구가 많이 나오네요. ReLU + Threshold로 Sparse Activation을 만들고 Threshold를 Straight-Through Estimator로 학습하는 방법입니다.
+
+#interpretability #sparsity 

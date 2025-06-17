@@ -1,0 +1,13 @@
+https://arxiv.org/abs/2411.03766
+
+*Number Cookbook: Number Understanding of Language Models and How to Improve It* (Haotong Yang, Yi Hu, Shijia Kang, Zhouchen Lin, Muhan Zhang)
+
+> Large language models (LLMs) can solve an increasing number of complex reasoning tasks while making surprising mistakes in basic numerical understanding and processing (such as 9.11 > 9.9). The latter ability is essential for tackling complex arithmetic and mathematical problems and serves as a foundation for most reasoning tasks, but previous work paid little attention to it or only discussed several restricted tasks (like integer addition). In this paper, we comprehensively investigate the numerical understanding and processing ability (NUPA) of LLMs. Firstly, we introduce a benchmark covering four common numerical representations and 17 distinct numerical tasks in four major categories, resulting in 41 meaningful combinations in total. These tasks are derived from primary and secondary education curricula, encompassing nearly all everyday numerical understanding and processing scenarios, and the rules of these tasks are very simple and clear. Through the benchmark, we find that current LLMs fail frequently in many of the tasks. To study the problem, we train small models with existing and potential techniques for enhancing NUPA (such as special tokenizers, PEs, and number formats), comprehensively evaluating their effectiveness using our testbed. We also finetune practical-scale LLMs on our proposed NUPA tasks and find that 1) naive finetuning can improve NUPA a lot on many but not all tasks, and 2) surprisingly, techniques designed to enhance NUPA prove ineffective for finetuning pretrained models. We further explore the impact of chain-of-thought techniques on NUPA. Our work takes a preliminary step towards understanding and improving NUPA of LLMs. Our benchmark and code are released at https://github.com/GraphPKU/number_cookbook.
+
+9.11 > 9.9 같은 숫자 관련된 문제들을 테스트하기 위한 과제들을 구성하고 토크나이저나 포맷 등이 미치는 영향, 그리고 파인튜닝으로 성능을 개선할 수 있는지를 분석. 결론적으로 토크나이저 등의 변경이 도움이 된다, 파인튜닝으로 성능을 올릴 수 있지만 한계가 있다, CoT 튜닝이 좀 더 도움이 된다는군요.
+
+<english>
+Design tasks that tests numerical reasoning problems of LLMs like 9.11 > 9.9. And the authors analyzed the effect of various tokenizer choices and formats, and whether it is possible to improve the performance with finetuning. Conclusion is modifications like tokenizers is beneficial, we can improve performance with finetuning but there are limitations, and CoT tunings is more helpful.
+</english>
+
+#llm #benchmark #reasoning 

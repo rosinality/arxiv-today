@@ -1,0 +1,13 @@
+https://arxiv.org/abs/2505.15034
+
+*RL Tango: Reinforcing Generator and Verifier Together for Language Reasoning* (Kaiwen Zha, Zhengqi Gao, Maohao Shen, Zhang-Wei Hong, Duane S. Boning, Dina Katabi)
+
+> Reinforcement learning (RL) has recently emerged as a compelling approach for enhancing the reasoning capabilities of large language models (LLMs), where an LLM generator serves as a policy guided by a verifier (reward model). However, current RL post-training methods for LLMs typically use verifiers that are fixed (rule-based or frozen pretrained) or trained discriminatively via supervised fine-tuning (SFT). Such designs are susceptible to reward hacking and generalize poorly beyond their training distributions. To overcome these limitations, we propose Tango, a novel framework that uses RL to concurrently train both an LLM generator and a verifier in an interleaved manner. A central innovation of Tango is its generative, process-level LLM verifier, which is trained via RL and co-evolves with the generator. Importantly, the verifier is trained solely based on outcome-level verification correctness rewards without requiring explicit process-level annotations. This generative RL-trained verifier exhibits improved robustness and superior generalization compared to deterministic or SFT-trained verifiers, fostering effective mutual reinforcement with the generator. Extensive experiments demonstrate that both components of Tango achieve state-of-the-art results among 7B/8B-scale models: the generator attains best-in-class performance across five competition-level math benchmarks and four challenging out-of-domain reasoning tasks, while the verifier leads on the ProcessBench dataset. Remarkably, both components exhibit particularly substantial improvements on the most difficult mathematical reasoning problems. Code is at: https://github.com/kaiwenzha/rl-tango.
+
+모델 기반 Verifier를 추론 모델에 대한 RL과 동시에 학습시킨다는 아이디어. Process 기반 Verifier이긴 합니다. 모델 기반 Verifier가 RL로 학습된다고 하면 추론 모델과 같이 학습시키는 것도 자연스럽긴 하네요. Verification을 동시에 학습시킨 시도처럼 (https://arxiv.org/abs/2505.13445).
+
+<english>
+The idead of training model based verifier along with reasoning model during RL. It is process based verifier, though. But if we train model based verifier using RL then it maybe natural choice to train it with reasoning models. Like attempt of training verification simultaneously to reasoning models (https://arxiv.org/abs/2505.13445).
+</english>
+
+#reward-model #rl #reasoning 

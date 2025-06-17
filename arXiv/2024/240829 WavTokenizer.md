@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2408.16532
+
+*WavTokenizer: an Efficient Acoustic Discrete Codec Tokenizer for Audio Language Modeling* (Shengpeng Ji, Ziyue Jiang, Xize Cheng, Yifu Chen, Minghui Fang, Jialong Zuo, Qian Yang, Ruiqi Li, Ziang Zhang, Xiaoda Yang, Rongjie Huang, Yidi Jiang, Qian Chen, Siqi Zheng, Wen Wang, Zhou Zhao)
+
+> Language models have been effectively applied to modeling natural signals, such as images, video, speech, and audio. A crucial component of these models is the codec tokenizer, which compresses high-dimensional natural signals into lower-dimensional discrete tokens. In this paper, we introduce WavTokenizer, which offers several advantages over previous SOTA acoustic codec models in the audio domain: 1)extreme compression. By compressing the layers of quantizers and the temporal dimension of the discrete codec, one-second audio of 24kHz sampling rate requires only a single quantizer with 40 or 75 tokens. 2)improved subjective quality. Despite the reduced number of tokens, WavTokenizer achieves state-of-the-art reconstruction quality with outstanding UTMOS scores and inherently contains richer semantic information. Specifically, we achieve these results by designing a broader VQ space, extended contextual windows, and improved attention networks, as well as introducing a powerful multi-scale discriminator and an inverse Fourier transform structure. We conducted extensive reconstruction experiments in the domains of speech, audio, and music. WavTokenizer exhibited strong performance across various objective and subjective metrics compared to state-of-the-art models. We also tested semantic information, VQ utilization, and adaptability to generative models. Comprehensive ablation studies confirm the necessity of each module in WavTokenizer. The related code, demos, and pre-trained models are available at https://github.com/jishengpeng/WavTokenizer.
+
+오디오 토크나이저. 오디오 1초를 75 토큰으로 변환합니다. 가장 주요한 것은 Vocabulary 크기를 2^12까지 높인 것일 것 같네요. 2^12 이상에서는 Utilization이 낮아지고 있는데 이를 개선하면 좀 더 나은 모델을 만들 수 있지 않을까 싶기도 합니다.
+
+이미지와 마찬가지로 오디오 또한 입출력을 어떤 형태로 해야 하는가가 문제가 되겠군요. Discrete Token을 사용하면서 발생하는 문제는 이미지보다는 나을 것 같기도 하네요.
+
+#audio #vq 

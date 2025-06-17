@@ -1,0 +1,13 @@
+https://arxiv.org/abs/2410.01359
+
+*FlashMask: Efficient and Rich Mask Extension of FlashAttention* (Guoxia Wang, Jinle Zeng, Xiyuan Xiao, Siming Wu, Jiabin Yang, Lujing Zheng, Zeyu Chen, Jiang Bian, Dianhai Yu, Haifeng Wang)
+
+> The computational and memory demands of vanilla attention scale quadratically with the sequence length $N$, posing significant challenges for processing long sequences in Transformer models. FlashAttention alleviates these challenges by eliminating the $O(N^2)$ memory dependency and reducing attention latency through IO-aware memory optimizations. However, its native support for certain attention mask types is limited, and it does not inherently accommodate more complex masking requirements. Previous approaches resort to using dense masks with $O(N^2)$ memory complexity, leading to inefficiencies. In this paper, we propose FlashMask, an extension of FlashAttention that introduces a column-wise sparse representation of attention masks. This approach efficiently represents a wide range of mask types and facilitates the development of optimized kernel implementations. By adopting this novel representation, FlashMask achieves linear memory complexity $O(N)$, suitable for modeling long-context sequences. Moreover, this representation enables kernel optimizations that eliminate unnecessary computations by leveraging sparsity in the attention mask, without sacrificing computational accuracy, resulting in higher computational efficiency. We evaluate FlashMask's performance in fine-tuning and alignment training of LLMs such as SFT, LoRA, DPO, and RM. FlashMask achieves significant throughput improvements, with end-to-end speedups ranging from 1.65x to 3.22x compared to existing FlashAttention dense method. Additionally, our kernel-level comparisons demonstrate that FlashMask surpasses the latest counterpart, FlexAttention, by 12.1% to 60.7% in terms of kernel TFLOPs/s, achieving 37.8% to 62.3% of the theoretical maximum FLOPs/s on the A100 GPU. The code is open-sourced on PaddlePaddle and integrated into PaddleNLP, supporting models with over 100 billion parameters for contexts up to 128K tokens.
+
+보다 유연한 Attention Mask를 지원하는 Attention 커널. FlexAttention과 비슷하군요. FlexAttention과 같은 도구 덕분에 Attention Mask를 여러모로 실험해볼 수 있는 여지가 생겼죠. Prefix LM이나 이미지 같은 모달리티에 대한 Bidirectional Attention이 가장 대표적이겠네요.
+
+<english>
+Attention kernel that support more flexible attention masks. It is similar to FlexAttention. Now it is posiible to experiment on various attention masks due to tools like FlexAttention. Most representative example would be Prefix LM or bidirectional attention on modalities like images.
+</english>
+
+#efficiency 

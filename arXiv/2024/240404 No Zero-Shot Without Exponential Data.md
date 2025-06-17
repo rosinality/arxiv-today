@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2404.04125
+
+*No "Zero-Shot" Without Exponential Data: Pretraining Concept Frequency Determines Multimodal Model Performance* (Vishaal Udandarao, Ameya Prabhu, Adhiraj Ghosh, Yash Sharma, Philip H.S. Torr, Adel Bibi, Samuel Albanie, Matthias Bethge)
+
+> Web-crawled pretraining datasets underlie the impressive "zero-shot" evaluation performance of multimodal models, such as CLIP for classification/retrieval and Stable-Diffusion for image generation. However, it is unclear how meaningful the notion of "zero-shot" generalization is for such multimodal models, as it is not known to what extent their pretraining datasets encompass the downstream concepts targeted for during "zero-shot" evaluation. In this work, we ask: How is the performance of multimodal models on downstream concepts influenced by the frequency of these concepts in their pretraining datasets? We comprehensively investigate this question across 34 models and five standard pretraining datasets (CC-3M, CC-12M, YFCC-15M, LAION-400M, LAION-Aesthetics), generating over 300GB of data artifacts. We consistently find that, far from exhibiting "zero-shot" generalization, multimodal models require exponentially more data to achieve linear improvements in downstream "zero-shot" performance, following a sample inefficient log-linear scaling trend. This trend persists even when controlling for sample-level similarity between pretraining and downstream datasets, and testing on purely synthetic data distributions. Furthermore, upon benchmarking models on long-tailed data sampled based on our analysis, we demonstrate that multimodal models across the board perform poorly. We contribute this long-tail test set as the "Let it Wag!" benchmark to further research in this direction. Taken together, our study reveals an exponential need for training data which implies that the key to "zero-shot" generalization capabilities under large-scale training paradigms remains to be found.
+
+이미지 텍스트 페어에서 이미지와 텍스트 모두에 같은 "개념"이 나타난 샘플들의 수를 구합니다. 그리고 이 샘플들의 수에 따른 성능 변화를 측정했네요. 여기서 Log Linear한 패턴이 나타났습니다. 즉 성능의 증가를 위해선 데이터 규모의 지수적 증가가 필요하다는 결론입니다.
+
+데이터의 지수적 증가가 필요하다는 주장은 지금 시점에서는 꽤 낯선 결론이긴 합니다. 생각해볼 필요가 있을 것 같네요.
+
+#scaling-law 

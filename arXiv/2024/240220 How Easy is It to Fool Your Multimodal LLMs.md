@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2402.13220
+
+*How Easy is It to Fool Your Multimodal LLMs? An Empirical Analysis on Deceptive Prompts* (Yusu Qian, Haotian Zhang, Yinfei Yang, Zhe Gan)
+
+> The remarkable advancements in Multimodal Large Language Models (MLLMs) have not rendered them immune to challenges, particularly in the context of handling deceptive information in prompts, thus producing hallucinated responses under such conditions. To quantitatively assess this vulnerability, we present MAD-Bench, a carefully curated benchmark that contains 850 test samples divided into 6 categories, such as non-existent objects, count of objects, spatial relationship, and visual confusion. We provide a comprehensive analysis of popular MLLMs, ranging from GPT-4V, Gemini-Pro, to open-sourced models, such as LLaVA-1.5 and CogVLM. Empirically, we observe significant performance gaps between GPT-4V and other models; and previous robust instruction-tuned models, such as LRV-Instruction and LLaVA-RLHF, are not effective on this new benchmark. While GPT-4V achieves 75.02% accuracy on MAD-Bench, the accuracy of any other model in our experiments ranges from 5% to 35%. We further propose a remedy that adds an additional paragraph to the deceptive prompts to encourage models to think twice before answering the question. Surprisingly, this simple method can even double the accuracy; however, the absolute numbers are still too low to be satisfactory. We hope MAD-Bench can serve as a valuable benchmark to stimulate further research to enhance models' resilience against deceptive prompts.
+
+이미지에 부합하지 않는 텍스트로 할루시네이션을 유발시키는 벤치마크. GPT-4V와 다른 모델들 사이의 차이가 많이 크네요.
+
+#hallucination #benchmark 

@@ -1,0 +1,13 @@
+https://arxiv.org/abs/2409.02326
+
+*Arctic-SnowCoder: Demystifying High-Quality Data in Code Pretraining* (Yuxiang Wei, Hojae Han, Rajhans Samdani)
+
+> Recent studies have been increasingly demonstrating that high-quality data is crucial for effective pretraining of language models. However, the precise definition of "high-quality" remains underexplored. Focusing on the code domain, we introduce Arctic-SnowCoder-1.3B, a data-efficient base code model pretrained on 555B tokens through three phases of progressively refined data: (1) general pretraining with 500B standard-quality code tokens, preprocessed through basic filtering, deduplication, and decontamination, (2) continued pretraining with 50B high-quality tokens, selected from phase one by a BERT-style quality annotator trained to distinguish good code from random data, using positive examples drawn from high-quality code files, along with instruction data from Magicoder and StarCoder2-Instruct, and (3) enhanced pretraining with 5B synthetic data created by Llama-3.1-70B using phase two data as seeds, adapting the Magicoder approach for pretraining. Despite being trained on a limited dataset, Arctic-SnowCoder achieves state-of-the-art performance on BigCodeBench, a coding benchmark focusing on practical and challenging programming tasks, compared to similarly sized models trained on no more than 1T tokens, outperforming Phi-1.5-1.3B by 36%. Across all evaluated benchmarks, Arctic-SnowCoder-1.3B beats StarCoderBase-3B pretrained on 1T tokens. Additionally, it matches the performance of leading small base code models trained on trillions of tokens. For example, Arctic-SnowCoder-1.3B surpasses StarCoder2-3B, pretrained on over 3.3T tokens, on HumanEval+, a benchmark that evaluates function-level code generation, and remains competitive on BigCodeBench. Our evaluation presents a comprehensive analysis justifying various design choices for Arctic-SnowCoder. Most importantly, we find that the key to high-quality data is its alignment with the distribution of downstream applications.
+
+Snowflake의 코드 LLM 연구. The Stack V1에 (주로 Instruction 계통의) 고품질 데이터를 사용했습니다. Instruction 데이터의 사용을 어떻게 생각할 것인가의 의견은 분분하긴 하죠. 그래도 이쪽에서는 Instruction 데이터에 있어 지나치게 단순해지고 Educational Value를 강조하는 것은 피하려고 시도했다고 합니다.
+
+코드 LLM 사례들은 계속해서 The Stack V1을 사용하고 있네요. V2에 이슈가 있는 걸까요?
+
+Dependency 기반 정렬은 하지 않았지만 레포 내에서 같은 언어끼리 묶는 것은 효과가 있었다고 합니다.
+
+#code #llm 

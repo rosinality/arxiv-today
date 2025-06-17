@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2408.03505
+
+*Optimus: Accelerating Large-Scale Multi-Modal LLM Training by Bubble Exploitation* (Weiqi Feng, Yangrui Chen, Shaoyu Wang, Yanghua Peng, Haibin Lin, Minlan Yu)
+
+> Multimodal large language models (MLLMs) have extended the success of large language models (LLMs) to multiple data types, such as image, text and audio, achieving significant performance in various domains, including multimodal translation, visual question answering and content generation. Nonetheless, existing systems are inefficient to train MLLMs due to substantial GPU bubbles caused by the heterogeneous modality models and complex data dependencies in 3D parallelism. This paper proposes Optimus, a distributed MLLM training system that reduces end-to-end MLLM training time. Optimus is based on our principled analysis that scheduling the encoder computation within the LLM bubbles can reduce bubbles in MLLM training. To make scheduling encoder computation possible for all GPUs, Optimus searches the separate parallel plans for encoder and LLM, and adopts a bubble scheduling algorithm to enable exploiting LLM bubbles without breaking the original data dependencies in the MLLM model architecture. We further decompose encoder layer computation into a series of kernels, and analyze the common bubble pattern of 3D parallelism to carefully optimize the sub-millisecond bubble scheduling, minimizing the overall training time. Our experiments in a production cluster show that Optimus accelerates MLLM training by 20.5%-21.3% with ViT-22B and GPT-175B model over 3072 GPUs compared to baselines.
+
+인코더를 사용하는 Multimodal LLM에 대한 학습 효율화. 인코더를 사용하는 경우 인코더의 연산 특성은 LLM과는 많이 다르죠. 여기서는 Multimodal LLM 학습에서 발생하는 버블이 대부분 LLM 쪽에서 발생하니 이 버블 속에 인코더를 끼워넣자는 아이디어입니다.
+
+#efficient-training #parallelism

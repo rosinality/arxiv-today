@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2403.08540
+
+*Language models scale reliably with over-training and on downstream tasks* (Samir Yitzhak Gadre, Georgios Smyrnis, Vaishaal Shankar, Suchin Gururangan, Mitchell Wortsman, Rulin Shao, Jean Mercat, Alex Fang, Jeffrey Li, Sedrick Keh, Rui Xin, Marianna Nezhurina, Igor Vasiljevic, Jenia Jitsev, Alexandros G. Dimakis, Gabriel Ilharco, Shuran Song, Thomas Kollar, Yair Carmon, Achal Dave, Reinhard Heckel, Niklas Muennighoff, Ludwig Schmidt)
+
+> Scaling laws are useful guides for developing language models, but there are still gaps between current scaling studies and how language models are ultimately trained and evaluated. For instance, scaling is usually studied in the compute-optimal training regime (i.e., "Chinchilla optimal" regime); however, in practice, models are often over-trained to reduce inference costs. Moreover, scaling laws mostly predict loss on next-token prediction, but ultimately models are compared based on downstream task performance. In this paper, we address both shortcomings. To do so, we create a testbed of 104 models with 0.011B to 6.9B parameters trained with various numbers of tokens on three data distributions. First, we investigate scaling in the over-trained regime. We fit scaling laws that extrapolate in both the number of model parameters and the ratio of training tokens to parameters. This enables us to predict the validation loss of a 1.4B parameter, 900B token run (i.e., 32$\times$ over-trained) and a 6.9B parameter, 138B token run$\unicode{x2014}$each from experiments that take 300$\times$ less compute. Second, we relate the perplexity of a language model to its downstream task performance via a power law. We use this law to predict top-1 error averaged over downstream tasks for the two aforementioned models using experiments that take 20$\times$ less compute. Our experiments are available at https://github.com/mlfoundations/scaling.
+
+Chinchilla Optimal을 넘어선 Overtraining에 대한 Scaling Law와 Perplexity와 Downstream Task 성능에 대한 Scaling Law. 여기서의 가정은 Token Multiplier 즉 학습 토큰 D / 모델 크기 N의 변동에 대해 Scaling Curve는 경사의 변동 없이 평행 이동 한다는 것입니다. 사실 Chinchilla의 Parametric Loss의 형태에서 나오는 결과이긴 하죠.
+
+저는 처음 봤을 때 상호작용이 있어야 하지 않을까 하는 생각을 했었는데 여전히 잘 들어맞네요.
+
+#scaling-law 

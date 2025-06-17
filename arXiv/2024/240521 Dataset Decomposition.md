@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2405.13226
+
+*Dataset Decomposition: Faster LLM Training with Variable Sequence Length Curriculum* (Hadi Pouransari, Chun-Liang Li, Jen-Hao Rick Chang, Pavan Kumar Anasosalu Vasu, Cem Koc, Vaishaal Shankar, Oncel Tuzel)
+
+> Large language models (LLMs) are commonly trained on datasets consisting of fixed-length token sequences. These datasets are created by randomly concatenating documents of various lengths and then chunking them into sequences of a predetermined target length. However, this method of concatenation can lead to cross-document attention within a sequence, which is neither a desirable learning signal nor computationally efficient. Additionally, training on long sequences becomes computationally prohibitive due to the quadratic cost of attention. In this study, we introduce dataset decomposition, a novel variable sequence length training technique, to tackle these challenges. We decompose a dataset into a union of buckets, each containing sequences of the same size extracted from a unique document. During training, we use variable sequence length and batch size, sampling simultaneously from all buckets with a curriculum. In contrast to the concat-and-chunk baseline, which incurs a fixed attention cost at every step of training, our proposed method incurs a penalty proportional to the actual document lengths at each step, resulting in significant savings in training time. We train an 8k context-length 1B model at the same cost as a 2k context-length model trained with the baseline approach. Experiments on a web-scale corpus demonstrate that our approach significantly enhances performance on standard language evaluations and long-context benchmarks, reaching target accuracy 3x faster compared to the baseline. Our method not only enables efficient pretraining on long sequences but also scales effectively with dataset size. Lastly, we shed light on a critical yet less studied aspect of training large language models: the distribution and curriculum of sequence lengths, which results in a non-negligible difference in performance.
+
+자주 나오는 프리트레이닝시 배치 구성 문제. 시퀀스를 일정 길이로 잘라서 비슷한 길이의 시퀀스끼리 묶어 버킷을 만들어 학습시키는 방식이군요. 학습 효율성을 확보하면서 문서간 Attention의 오염을 막기 위한 방법입니다. 버킷을 활용해 커리큘럼도 시도했네요.
+
+문서간 Attention을 막는 것에 집중한다면 Attention Mask를 효율적으로 적용하는 방향으로 고민하는 것 최종적으로는 답이 아닐까 싶긴 합니다.
+
+#efficient-training 

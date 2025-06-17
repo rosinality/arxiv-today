@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2405.02803
+
+*Is Flash Attention Stable?* (Alicia Golden, Samuel Hsia, Fei Sun, Bilge Acun, Basil Hosmer, Yejin Lee, Zachary DeVito, Jeff Johnson, Gu-Yeon Wei, David Brooks, Carole-Jean Wu)
+
+> Training large-scale machine learning models poses distinct system challenges, given both the size and complexity of today's workloads. Recently, many organizations training state-of-the-art Generative AI models have reported cases of instability during training, often taking the form of loss spikes. Numeric deviation has emerged as a potential cause of this training instability, although quantifying this is especially challenging given the costly nature of training runs. In this work, we develop a principled approach to understanding the effects of numeric deviation, and construct proxies to put observations into context when downstream effects are difficult to quantify. As a case study, we apply this framework to analyze the widely-adopted Flash Attention optimization. We find that Flash Attention sees roughly an order of magnitude more numeric deviation as compared to Baseline Attention at BF16 when measured during an isolated forward pass. We then use a data-driven analysis based on the Wasserstein Distance to provide upper bounds on how this numeric deviation impacts model weights during training, finding that the numerical deviation present in Flash Attention is 2-5 times less significant than low-precision training.
+
+Flash Attention과 Vanilla Attention의 수치 오차에 대한 분석. Flash Attention이 생각보다 큰 오차를 갖고 있네요. 학습에 미치는 영향으로서는 크지 않을 것 같다고 하고 있는데 이런 수치 오차가 온갖 곳에서 골치 아픈 문제를 발생시킬 수 있는 잠재성을 갖고 있겠죠.
+
+#efficient-training 

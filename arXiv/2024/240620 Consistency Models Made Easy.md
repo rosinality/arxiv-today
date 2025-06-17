@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2406.14548
+
+*Consistency Models Made Easy* (Zhengyang Geng, Ashwini Pokle, William Luo, Justin Lin, J. Zico Kolter)
+
+> Consistency models (CMs) are an emerging class of generative models that offer faster sampling than traditional diffusion models. CMs enforce that all points along a sampling trajectory are mapped to the same initial point. But this target leads to resource-intensive training: for example, as of 2024, training a SoTA CM on CIFAR-10 takes one week on 8 GPUs. In this work, we propose an alternative scheme for training CMs, vastly improving the efficiency of building such models. Specifically, by expressing CM trajectories via a particular differential equation, we argue that diffusion models can be viewed as a special case of CMs with a specific discretization. We can thus fine-tune a consistency model starting from a pre-trained diffusion model and progressively approximate the full consistency condition to stronger degrees over the training process. Our resulting method, which we term Easy Consistency Tuning (ECT), achieves vastly improved training times while indeed improving upon the quality of previous methods: for example, ECT achieves a 2-step FID of 2.73 on CIFAR10 within 1 hour on a single A100 GPU, matching Consistency Distillation trained of hundreds of GPU hours. Owing to this computational efficiency, we investigate the scaling law of CMs under ECT, showing that they seem to obey classic power law scaling, hinting at their ability to improve efficiency and performance at larger scales. Code (https://github.com/locuslab/ect) is available.
+
+Consistency Models의 학습 목표를 df/dt = 0, dt가 너무 작은 상태에서 학습하는 것이 학습의 어려움을 만든다는 아이디어. dt = t로 잡으면 Diffusion Model과 일치하기 때문에 dt = t에서 시작해서 dt를 감소시키는 형태로 학습을 하는 알고리즘이군요.
+
+#diffusion 

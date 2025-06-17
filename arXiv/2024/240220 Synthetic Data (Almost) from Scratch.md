@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2402.13064
+
+*Synthetic Data (Almost) from Scratch: Generalized Instruction Tuning for Language Models* (Haoran Li, Qingxiu Dong, Zhengyang Tang, Chaojun Wang, Xingxing Zhang, Haoyang Huang, Shaohan Huang, Xiaolong Huang, Zeqiang Huang, Dongdong Zhang, Yuxian Gu, Xin Cheng, Xun Wang, Si-Qing Chen, Li Dong, Wei Lu, Zhifang Sui, Benyou Wang, Wai Lam, Furu Wei)
+
+> We introduce Generalized Instruction Tuning (called GLAN), a general and scalable method for instruction tuning of Large Language Models (LLMs). Unlike prior work that relies on seed examples or existing datasets to construct instruction tuning data, GLAN exclusively utilizes a pre-curated taxonomy of human knowledge and capabilities as input and generates large-scale synthetic instruction data across all disciplines. Specifically, inspired by the systematic structure in human education system, we build the taxonomy by decomposing human knowledge and capabilities to various fields, sub-fields and ultimately, distinct disciplines semi-automatically, facilitated by LLMs. Subsequently, we generate a comprehensive list of subjects for every discipline and proceed to design a syllabus tailored to each subject, again utilizing LLMs. With the fine-grained key concepts detailed in every class session of the syllabus, we are able to generate diverse instructions with a broad coverage across the entire spectrum of human knowledge and skills. Extensive experiments on large language models (e.g., Mistral) demonstrate that GLAN excels in multiple dimensions from mathematical reasoning, coding, academic exams, logical reasoning to general instruction following without using task-specific training data of these tasks. In addition, GLAN allows for easy customization and new fields or skills can be added by simply incorporating a new node into our taxonomy.
+
+다양한 Instruction을 생성하기 위한 방법. ChatGPT에서 데이터를 뽑아내는 작업에 가장 뛰어난 성과를 보여주는 MS의 작업입니다.
+
+인간의 지식과 능력에 대한 분류군을 만들고, 각 분류에서 학습해야 할 주제들을 생성하고, 각 주제에 대해 실라버스를 만들고, 이 실라버스에 포함된 수업들을 기반으로 숙제와 그에 대한 정답을 만들어 Instruction 샘플을 만드는 형태입니다.
+
+#instruction 

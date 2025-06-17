@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2401.16420
+
+*InternLM-XComposer2: Mastering Free-form Text-Image Composition and Comprehension in Vision-Language Large Model* (Xiaoyi Dong, Pan Zhang, Yuhang Zang, Yuhang Cao, Bin Wang, Linke Ouyang, Xilin Wei, Songyang Zhang, Haodong Duan, Maosong Cao, Wenwei Zhang, Yining Li, Hang Yan, Yang Gao, Xinyue Zhang, Wei Li, Jingwen Li, Kai Chen, Conghui He, Xingcheng Zhang, Yu Qiao, Dahua Lin, Jiaqi Wang)
+
+> We introduce InternLM-XComposer2, a cutting-edge vision-language model excelling in free-form text-image composition and comprehension. This model goes beyond conventional vision-language understanding, adeptly crafting interleaved text-image content from diverse inputs like outlines, detailed textual specifications, and reference images, enabling highly customizable content creation. InternLM-XComposer2 proposes a Partial LoRA (PLoRA) approach that applies additional LoRA parameters exclusively to image tokens to preserve the integrity of pre-trained language knowledge, striking a balance between precise vision understanding and text composition with literary talent. Experimental results demonstrate the superiority of InternLM-XComposer2 based on InternLM2-7B in producing high-quality long-text multi-modal content and its exceptional vision-language understanding performance across various benchmarks, where it not only significantly outperforms existing multimodal models but also matches or even surpasses GPT-4V and Gemini Pro in certain assessments. This highlights its remarkable proficiency in the realm of multimodal understanding. The InternLM-XComposer2 model series with 7B parameters are publicly available at https://github.com/InternLM/InternLM-XComposer.
+
+지금도 그렇지만 앞으로도 온갖 VLM들이 등장할 것 같네요. 눈에 띄는 부분은 이미지 토큰에만 LoRA를 적용하는 것과 Free-form Text-Image Composition이라는 이미지와 텍스트의 Interleaved 데이터셋입니다. 사용자가 제공한 이미지나 혹은 Retrieval한 이미지를 응답에 끼워넣을 수 있도록 구성한 데이터셋이네요.
+
+#vision-language 
+
+There will be flooding amout of VLMs like this these days. Interesting parts of this paper is that the method applies LoRA to solely on image tokens, and interleaved image-text dataset called Free-form Text-Image Composition. This dataset enables model to respond with retrieved or user supplied images interleaved with the text.

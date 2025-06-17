@@ -1,0 +1,17 @@
+https://arxiv.org/abs/2410.05192
+
+*Understanding Warmup-Stable-Decay Learning Rates: A River Valley Loss Landscape Perspective* (Kaiyue Wen, Zhiyuan Li, Jason Wang, David Hall, Percy Liang, Tengyu Ma)
+
+> Training language models currently requires pre-determining a fixed compute budget because the typical cosine learning rate schedule depends on the total number of steps. In contrast, the Warmup-Stable-Decay (WSD) schedule uses a constant learning rate to produce a main branch of iterates that can in principle continue indefinitely without a pre-specified compute budget. Then, given any compute budget, one can branch out from the main branch at a proper at any time with a rapidly decaying learning rate to produce a strong model. Empirically, WSD generates a non-traditional loss curve: the loss remains elevated during the stable phase but sharply declines during the decay phase. Towards explaining this phenomenon, we conjecture that pretraining loss exhibits a river valley landscape, which resembles a deep valley with a river at its bottom. Under this assumption, we show that during the stable phase, the iterate undergoes large oscillations due to the high learning rate, yet it progresses swiftly along the river. During the decay phase, the rapidly dropping learning rate minimizes the iterate's oscillations, moving it closer to the river and revealing true optimization progress. Therefore, the sustained high learning rate phase and fast decaying phase are responsible for progress in the river and the mountain directions respectively, and are both critical. Our analysis predicts phenomenons consistent with empirical observations and shows that this landscape can emerge from pretraining on a simple bi-gram dataset. Inspired by the theory, we introduce WSD-S, a variant of WSD that reuses previous checkpoints' decay phases and keeps only one main branch, where we resume from a decayed checkpoint. WSD-S empirically outperforms WSD and Cyclic-Cosine in obtaining multiple language model checkpoints across various compute budgets in a single run for parameters scaling from 0.1B to 1.2B.
+
+Warmup-Stable-Decay LR 스케줄에 대한 분석. Stable LR에서는 LR이 높기 때문에 골짜기로 진입하지 못하고 산 위에 있지만 여전히 전진은 하고 있는 상황이고, Decay 페이즈에서 LR이 낮아지면서 전진한 위치에서 골짜기로 진입한다는 형태의 그림입니다. 이 아이디어에 기반해서 WSD로 Continual Pretraining을 할 때 굳이 Stable 페이즈의 체크포인트에서 시작할 필요 없이 Decay 체크포인트를 가져와 Stable LR로 바로 학습시켜도 된다는 결과를 냈네요.
+
+여기서는 이 산과 골짜기 형태의 Loss Landscape가 발생하는 이유를 토큰의 Uncertainty와 연결했네요. 산 방향은 Uncertainty가 낮은 방향이고 골짜기 방향은 Uncertainty가 높은 방향이라는 아이디어입니다. 그렇게 생각하면 어떤 LR 스케줄을 사용하는가가 모델이 학습한 내용을 변화시킬 수 있다고 생각할 수도 있을 것 같네요. 그게 무엇인지는 수치로는 잘 드러나지 않습니다만.
+
+<english>
+Analysis on Warmup-Stable-Decay LR schedules. In stable lr phase high lr prevents to entering valleys, staying on top of the mountains, but proceeds anyway. In decay phases lowered lr allows to enter the valleys from the proceeded mountains. Based on this idea they showed the results that we don't need to start from stable phase for continual pretraining with WSD, instead we can just start from decay checkpoints and training with stable lr.
+
+In this paper the authors suggested that the reason of loss landscape with mountains and vallyes is origin from uncertainty of tokens. Direction of mountains is where uncertainity is low, and direction of valleys is where uncertainty is high. If we think like this it may suggest that which lr schedule we employ affects what contents models has learnt. It is not evident in the metrics, though.
+</english>
+
+#optimization 

@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2409.06691
+
+*Geometric-Averaged Preference Optimization for Soft Preference Labels* (Hiroki Furuta, Kuang-Huei Lee, Shixiang Shane Gu, Yutaka Matsuo, Aleksandra Faust, Heiga Zen, Izzeddin Gur)
+
+> Many algorithms for aligning LLMs with human preferences assume that human preferences are binary and deterministic. However, it is reasonable to think that they can vary with different individuals, and thus should be distributional to reflect the fine-grained relationship between the responses. In this work, we introduce the distributional soft preference labels and improve Direct Preference Optimization (DPO) with a weighted geometric average of the LLM output likelihood in the loss function. In doing so, the scale of learning loss is adjusted based on the soft labels, and the loss with equally preferred responses would be close to zero. This simple modification can be easily applied to any DPO family and helps the models escape from the over-optimization and objective mismatch prior works suffer from. In our experiments, we simulate the soft preference labels with AI feedback from LLMs and demonstrate that geometric averaging consistently improves performance on standard benchmarks for alignment research. In particular, we observe more preferable responses than binary labels and significant improvements with data where modestly-confident labels are in the majority.
+
+Preference Label이 0, 1이 아니라 Soft Label인 경우에 대해 DPO를 적용하려는 시도. 여기서 Soft Preference Label은 모델이 학습 과정에서 추정한다거나 하는 형태는 아니고 LLM을 통해 기존 데이터를 Relabeling 하는 식으로 수집했습니다. 즉 Soft Label 형태의 Ground Truth가 있는 상황에 대한 방법이라고 할 수 있겠네요.
+
+#alignment #rl 

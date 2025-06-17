@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2404.01367
+
+*Bigger is not Always Better: Scaling Properties of Latent Diffusion Models* (Kangfu Mei, Zhengzhong Tu, Mauricio Delbracio, Hossein Talebi, Vishal M. Patel, Peyman Milanfar)
+
+> We study the scaling properties of latent diffusion models (LDMs) with an emphasis on their sampling efficiency. While improved network architecture and inference algorithms have shown to effectively boost sampling efficiency of diffusion models, the role of model size -- a critical determinant of sampling efficiency -- has not been thoroughly examined. Through empirical analysis of established text-to-image diffusion models, we conduct an in-depth investigation into how model size influences sampling efficiency across varying sampling steps. Our findings unveil a surprising trend: when operating under a given inference budget, smaller models frequently outperform their larger equivalents in generating high-quality results. Moreover, we extend our study to demonstrate the generalizability of the these findings by applying various diffusion samplers, exploring diverse downstream tasks, evaluating post-distilled models, as well as comparing performance relative to training compute. These findings open up new pathways for the development of LDM scaling strategies which can be employed to enhance generative capabilities within limited inference budgets.
+
+Diffusion 모델은 샘플링 스텝의 수를 바꿀 수 있으니 작은 모델을 더 많이 돌리기 vs 큰 모델을 더 적게 돌리기라는 비교가 가능하군요. Text-Image 모델에서는 고정된 샘플링 비용에 대해서는 작은 모델이 낫고 큰 모델은 사용 비용이 높아졌을 때의 고점이 높다는 느낌이네요. Super Resolution이나 Dreambooth로 넘어가면 큰 모델 쪽의 메리트가 더 커지는 듯 합니다.
+
+#diffusion 

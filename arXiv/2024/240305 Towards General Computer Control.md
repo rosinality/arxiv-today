@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2403.03186
+
+*Towards General Computer Control: A Multimodal Agent for Red Dead Redemption II as a Case Study* (Weihao Tan, Ziluo Ding, Wentao Zhang, Boyu Li, Bohan Zhou, Junpeng Yue, Haochong Xia, Jiechuan Jiang, Longtao Zheng, Xinrun Xu, Yifei Bi, Pengjie Gu, Xinrun Wang, Börje F. Karlsson, Bo An, Zongqing Lu)
+
+> Recent studies have demonstrated the success of foundation agents in specific tasks or scenarios. However, existing agents cannot generalize across different scenarios, mainly due to their diverse observation and action spaces and semantic gaps, or reliance on task-specific resources. In this work, we propose the General Computer Control (GCC) setting: building foundation agents that can master any computer task by taking only screen images (and possibly audio) of the computer as input, and producing keyboard and mouse operations as output, similar to human-computer interaction. To target GCC, we propose Cradle, an agent framework with strong reasoning abilities, including self-reflection, task inference, and skill curation, to ensure generalizability and self-improvement across various tasks. To demonstrate the capabilities of Cradle, we deploy it in the complex AAA game Red Dead Redemption II, serving as a preliminary attempt towards GCC with a challenging target. Our agent can follow the main storyline and finish real missions in this complex AAA game, with minimal reliance on prior knowledge and application-specific resources. The project website is at https://baai-agents.github.io/Cradle/.
+
+Vision Language 모델과 코드 생성으로 레데리 플레이하기. 화면에 나타난 단서를 찾아서 키보드나 마우스 입력을 하는 함수를 만들고 그걸 도구로 사용하는 형태군요.
+
+#agent 

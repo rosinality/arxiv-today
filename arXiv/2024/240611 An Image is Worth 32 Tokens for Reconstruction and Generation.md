@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2406.07550
+
+*An Image is Worth 32 Tokens for Reconstruction and Generation* (Qihang Yu, Mark Weber, Xueqing Deng, Xiaohui Shen, Daniel Cremers, Liang-Chieh Chen)
+
+> Recent advancements in generative models have highlighted the crucial role of image tokenization in the efficient synthesis of high-resolution images. Tokenization, which transforms images into latent representations, reduces computational demands compared to directly processing pixels and enhances the effectiveness and efficiency of the generation process. Prior methods, such as VQGAN, typically utilize 2D latent grids with fixed downsampling factors. However, these 2D tokenizations face challenges in managing the inherent redundancies present in images, where adjacent regions frequently display similarities. To overcome this issue, we introduce Transformer-based 1-Dimensional Tokenizer (TiTok), an innovative approach that tokenizes images into 1D latent sequences. TiTok provides a more compact latent representation, yielding substantially more efficient and effective representations than conventional techniques. For example, a 256 x 256 x 3 image can be reduced to just 32 discrete tokens, a significant reduction from the 256 or 1024 tokens obtained by prior methods. Despite its compact nature, TiTok achieves competitive performance to state-of-the-art approaches. Specifically, using the same generator framework, TiTok attains 1.97 gFID, outperforming MaskGIT baseline significantly by 4.21 at ImageNet 256 x 256 benchmark. The advantages of TiTok become even more significant when it comes to higher resolution. At ImageNet 512 x 512 benchmark, TiTok not only outperforms state-of-the-art diffusion model DiT-XL/2 (gFID 2.74 vs. 3.04), but also reduces the image tokens by 64x, leading to 410x faster generation process. Our best-performing variant can significantly surpasses DiT-XL/2 (gFID 2.13 vs. 3.04) while still generating high-quality samples 74x faster.
+
+픽셀 패치 기반 VQ 대신 Semantic Latent 기반 토큰화로 필요 토큰 수를 줄일 수 있다는 아이디어. ViT에 레지스터 토큰을 입력한 다음 이 레지스터 토큰을 Latent로 사용하는 방법입니다. 재미있네요.
+
+다만 Latent 토큰들 사이에 순서가 있지는 않을 것이라 Autoregressive 세팅과는 불일치가 있을 듯 합니다. (물론 Raster Order가 딱히 훨씬 더 나은 것은 아니겠지만요.) 그리고 이런 토큰화 방법들에 대해서는 OCR과 텍스트 생성이 잘 되는가라는 질문을 하게 되죠.
+
+#image-generation #vq 

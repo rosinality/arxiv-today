@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2402.04833
+
+*Long Is More for Alignment: A Simple but Tough-to-Beat Baseline for Instruction Fine-Tuning* (Hao Zhao, Maksym Andriushchenko, Francesco Croce, Nicolas Flammarion)
+
+> There is a consensus that instruction fine-tuning of LLMs requires high-quality data, but what are they? LIMA (NeurIPS 2023) and AlpaGasus (ICLR 2024) are state-of-the-art methods for selecting such high-quality examples, either via manual curation or using GPT-3.5-Turbo as a quality scorer. We show that the extremely simple baseline of selecting the 1,000 instructions with longest responses from standard datasets can consistently outperform these sophisticated methods according to GPT-4 and PaLM-2 as judges, while remaining competitive on the OpenLLM benchmarks that test factual knowledge. We demonstrate this for several state-of-the-art LLMs (Llama-2-7B, Llama-2-13B, and Mistral-7B) and datasets (Alpaca-52k and Evol-Instruct-70k). In addition, a lightweight refinement of such long instructions can further improve the abilities of the fine-tuned LLMs, and allows us to obtain the 2nd highest-ranked Llama-2-7B-based model on AlpacaEval 2.0 while training on only 1,000 examples and no extra preference data. We also conduct a thorough analysis of our models to ensure that their enhanced performance is not simply due to GPT-4's preference for longer responses, thus ruling out any artificial improvement. In conclusion, our findings suggest that fine-tuning on the longest instructions should be the default baseline for any research on instruction fine-tuning.
+
+좋은 Instruction Tuning 샘플들을 어떻게 필터링할 것인가? 그냥 응답이 가장 긴 샘플들을 뽑는 것으로도 되더라는 결과. 뒤집어서 보면 Automatic Evaluation이 길이에 취약하다는 증거도 될 수 있는데 그에 대한 분석이 그렇게 충분하지는 않은 듯 합니다.
+
+#instruction-tuning 

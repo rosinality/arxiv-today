@@ -1,0 +1,13 @@
+https://arxiv.org/abs/2409.19951
+
+*Law of the Weakest Link: Cross Capabilities of Large Language Models* (Ming Zhong, Aston Zhang, Xuewei Wang, Rui Hou, Wenhan Xiong, Chenguang Zhu, Zhengxing Chen, Liang Tan, Chloe Bi, Mike Lewis, Sravya Popuri, Sharan Narang, Melanie Kambadur, Dhruv Mahajan, Sergey Edunov, Jiawei Han, Laurens van der Maaten)
+
+> The development and evaluation of Large Language Models (LLMs) have largely focused on individual capabilities. However, this overlooks the intersection of multiple abilities across different types of expertise that are often required for real-world tasks, which we term cross capabilities. To systematically explore this concept, we first define seven core individual capabilities and then pair them to form seven common cross capabilities, each supported by a manually constructed taxonomy. Building on these definitions, we introduce CrossEval, a benchmark comprising 1,400 human-annotated prompts, with 100 prompts for each individual and cross capability. To ensure reliable evaluation, we involve expert annotators to assess 4,200 model responses, gathering 8,400 human ratings with detailed explanations to serve as reference examples. Our findings reveal that, in both static evaluations and attempts to enhance specific abilities, current LLMs consistently exhibit the "Law of the Weakest Link," where cross-capability performance is significantly constrained by the weakest component. Specifically, across 58 cross-capability scores from 17 models, 38 scores are lower than all individual capabilities, while 20 fall between strong and weak, but closer to the weaker ability. These results highlight the under-performance of LLMs in cross-capability tasks, making the identification and improvement of the weakest capabilities a critical priority for future research to optimize performance in complex, multi-dimensional scenarios.
+
+추론이나 코딩 같은 개별 능력들과 두 가지 능력이 동시에 필요한 과제들을 통한 벤치마크. 능력의 조합이 필요한 경우 개별 능력에 대한 성능보다 성능이 낮거나 혹은 두 능력 중 모델이 약한 능력의 성능과 비슷한 성능이 나온다는 것이 주된 발견입니다. 이런 능력의 결합 문제에 대한 지적 뿐만 아니라 벤치마크 자체로서도 흥미롭네요.
+
+<english>
+Benchmark for individual capabilities like reasoning and conding, and composition of multiple capabilities. Main finding is that for the tasks requires composition of capabilities performance is weaker that both of the capabilities, or similar to the performance of the weaker capabilities among the pair. Beside of the problem of composition of capabilities, benchmark itself is interesting for model evaluation.
+</english>
+
+#llm #benchmark 

@@ -1,0 +1,13 @@
+https://arxiv.org/abs/2504.02495
+
+*Inference-Time Scaling for Generalist Reward Modeling* (Zijun Liu, Peiyi Wang, Runxin Xu, Shirong Ma, Chong Ruan, Peng Li, Yang Liu, Yu Wu)
+
+> Reinforcement learning (RL) has been widely adopted in post-training for large language models (LLMs) at scale. Recently, the incentivization of reasoning capabilities in LLMs from RL indicates that $\textit{proper learning methods could enable effective inference-time scalability}$. A key challenge of RL is to obtain accurate reward signals for LLMs in various domains beyond verifiable questions or artificial rules. In this work, we investigate how to improve reward modeling (RM) with more inference compute for general queries, i.e. the $\textbf{inference-time scalability of generalist RM}$, and further, how to improve the effectiveness of performance-compute scaling with proper learning methods. For the RM approach, we adopt pointwise generative reward modeling (GRM) to enable flexibility for different input types and potential for inference-time scaling. For the learning method, we propose Self-Principled Critique Tuning (SPCT) to foster scalable reward generation behaviors in GRMs through online RL, to generate principles adaptively and critiques accurately, resulting in $\textbf{DeepSeek-GRM}$ models. Furthermore, for effective inference-time scaling, we use parallel sampling to expand compute usage, and introduce a meta RM to guide voting process for better scaling performance. Empirically, we show that SPCT significantly improves the quality and scalability of GRMs, outperforming existing methods and models in various RM benchmarks without severe biases, and could achieve better performance compared to training-time scaling. DeepSeek-GRM still meets challenges in some tasks, which we believe can be addressed by future efforts in generalist reward systems. The models will be released and open-sourced.
+
+Generative, Pointwise (vs. Pairwise) Reward Model이군요. Principle을 사용하는데 Principle을 모델이 생성할 수 있도록 했습니다. 그리고 RL로 학습시켰군요. 이를 통해 Reward Model을 Inference Time Scaling 할 수 있도록 만들었네요. 새로운 세대의 Reward Model의 디자인이 점점 드러나고 있네요.
+
+<english>
+Generative, pointwise (vs. pairwise) reward model. It employs principle, but they allowed model to generate principle by itself. And then it is trained with RL. By this reward model is able to do inference time scaling. Design of next generation reward models is emerging.
+</english>
+
+#inference-time-scaling #reward-model #rl 

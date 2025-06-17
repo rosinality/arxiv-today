@@ -1,0 +1,13 @@
+https://arxiv.org/abs/2412.04315
+
+*Densing Law of LLMs* (Chaojun Xiao, Jie Cai, Weilin Zhao, Guoyang Zeng, Xu Han, Zhiyuan Liu, Maosong Sun)
+
+> Large Language Models (LLMs) have emerged as a milestone in artificial intelligence, and their performance can improve as the model size increases. However, this scaling brings great challenges to training and inference efficiency, particularly for deploying LLMs in resource-constrained environments, and the scaling trend is becoming increasingly unsustainable. This paper introduces the concept of ``\textit{capacity density}'' as a new metric to evaluate the quality of the LLMs across different scales and describes the trend of LLMs in terms of both effectiveness and efficiency. To calculate the capacity density of a given target LLM, we first introduce a set of reference models and develop a scaling law to predict the downstream performance of these reference models based on their parameter sizes. We then define the \textit{effective parameter size} of the target LLM as the parameter size required by a reference model to achieve equivalent performance, and formalize the capacity density as the ratio of the effective parameter size to the actual parameter size of the target LLM. Capacity density provides a unified framework for assessing both model effectiveness and efficiency. Our further analysis of recent open-source base LLMs reveals an empirical law (the densing law)that the capacity density of LLMs grows exponentially over time. More specifically, using some widely used benchmarks for evaluation, the capacity density of LLMs doubles approximately every three months. The law provides new perspectives to guide future LLM development, emphasizing the importance of improving capacity density to achieve optimal results with minimal computational overhead.
+
+기본적으로는 LLM의 발전 트렌드에 대한 연구입니다만 그 발전을 측정하기 위한 방법이 재미있네요. Capacity Density라는 지표를 사용하는데 모델의 파라미터 대비 실질적인 파라미터의 수를 측정합니다. 여기서 실질적인 파라미터의 수는 특정한 수준의 성능을 달성하기 위해 필요한 레퍼런스 모델의 크기입니다. 그리고 이 레퍼런스 모델의 규모와 성능을 연결하기 위해 Llama 3 스타일의 Task Scaling Law를 추정했습니다.
+
+<english>
+Overall this is study on trend of advance of LLM, but the method they employed to measure that progress is interesting. They uses a metric called capacity density, which measures ratio of actual model parameter to effective parameter. What effective parameter means here is the size of reference model to achieve specific performances. And they estimated Llama 3 style task scaling law to connect the size of reference models with performances.
+</english>
+
+#llm #scaling-law 

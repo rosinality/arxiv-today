@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2403.02178
+
+*Masked Thought: Simply Masking Partial Reasoning Steps Can Improve Mathematical Reasoning Learning of Language Models* (Changyu Chen, Xiting Wang, Ting-En Lin, Ang Lv, Yuchuan Wu, Xin Gao, Ji-Rong Wen, Rui Yan, Yongbin Li)
+
+> In reasoning tasks, even a minor error can cascade into inaccurate results, leading to suboptimal performance of large language models in such domains. Earlier fine-tuning approaches sought to mitigate this by leveraging more precise supervisory signals from human labeling, larger models, or self-sampling, although at a high cost. Conversely, we develop a method that avoids external resources, relying instead on introducing perturbations to the input. Our training approach randomly masks certain tokens within the chain of thought, a technique we found to be particularly effective for reasoning tasks. When applied to fine-tuning with GSM8K, this method achieved a 5% improvement in accuracy over standard supervised fine-tuning with a few codes modified and no additional labeling effort. Furthermore, it is complementary to existing methods. When integrated with related data augmentation methods, it leads to an average improvement of 3% improvement in GSM8K accuracy and 1% improvement in MATH accuracy across five datasets of various quality and size, as well as two base models. We further investigate the mechanisms behind this improvement through case studies and quantitative analysis, suggesting that our approach may provide superior support for the model in capturing long-distance dependencies, especially those related to questions. This enhancement could deepen understanding of premises in questions and prior steps. Our code is available at Github.
+
+Chain of Thought 샘플로 파인튜닝을 할 때 응답 시퀀스에서 일부 토큰에 강한 노이즈를 주면 성능이 향상된다는 결과. 인접 토큰에 대한 지나친 의존성을 감소시킨다는 분석. 학습-추론 갭을 감소시키는 효과도 있을 수 있겠죠. (Scheduled Sampling, Temperature = 1로는 충분하지는 않습니다만.)
+
+마스킹의 활용이 흥미로운 방향이라는 생각을 합니다. 가끔 사실 Autoregressive LM은 지나치게 쉬운 Objective인 것이 아닌가 하는 생각을 하게 되네요.
+
+#regularization #instruction-tuning 

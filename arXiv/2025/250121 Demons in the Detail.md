@@ -1,0 +1,13 @@
+https://arxiv.org/abs/2501.11873
+
+*Demons in the Detail: On Implementing Load Balancing Loss for Training Specialized Mixture-of-Expert Models* (Zihan Qiu, Zeyu Huang, Bo Zheng, Kaiyue Wen, Zekun Wang, Rui Men, Ivan Titov, Dayiheng Liu, Jingren Zhou, Junyang Lin)
+
+> This paper revisits the implementation of $\textbf{L}$oad-$\textbf{b}$alancing $\textbf{L}$oss (LBL) when training Mixture-of-Experts (MoEs) models. Specifically, LBL for MoEs is defined as $N_E \sum_{i=1}^{N_E} f_i p_i$, where $N_E$ is the total number of experts, $f_i$ represents the frequency of expert $i$ being selected, and $p_i$ denotes the average gating score of the expert $i$. Existing MoE training frameworks usually employ the parallel training strategy so that $f_i$ and the LBL are calculated within a $\textbf{micro-batch}$ and then averaged across parallel groups. In essence, a micro-batch for training billion-scale LLMs normally contains very few sequences. So, the micro-batch LBL is almost at the sequence level, and the router is pushed to distribute the token evenly within each sequence. Under this strict constraint, even tokens from a domain-specific sequence ($\textit{e.g.}$, code) are uniformly routed to all experts, thereby inhibiting expert specialization. In this work, we propose calculating LBL using a $\textbf{global-batch}$ to loose this constraint. Because a global-batch contains much more diverse sequences than a micro-batch, which will encourage load balance at the corpus level. Specifically, we introduce an extra communication step to synchronize $f_i$ across micro-batches and then use it to calculate the LBL. Through experiments on training MoEs-based LLMs (up to $\textbf{42.8B}$ total parameters and $\textbf{400B}$ tokens), we surprisingly find that the global-batch LBL strategy yields excellent performance gains in both pre-training perplexity and downstream tasks. Our analysis reveals that the global-batch LBL also greatly improves the domain specialization of MoE experts.
+
+분산 학습으로 인해 마이크로 배치 크기가 줄어든 상태에서 Load Balancing Loss를 마이크로 배치 내에서 계산하면 사실상 시퀀스 내에서 Expert가 균등하게 할당되도록 강제하는 효과가 발생한다는 발견. 따라서 전체 배치에 대해서 Load Balancing을 하자는 결론. 이건 일종의 버그라고 해야겠네요. 물론 DeepSeek V3에서 사용한 것처럼 시퀀스 내의 Load Balancing도 유용하긴 하겠습니다만 명시적인 통제 하에서 해야겠죠.
+
+<english>
+The observation that if we calculate load balancing loss within microbatches when it became small due to distributed training it effectively forces experts to uniformly assigned in sequences. So it is better to do load balancing along global batches. Actually we can say this is a kind of bug. While intra sequence load balancing could be useful as in DeepSeek V3 but we should do it under explicit control.
+</english>
+
+#moe #parallelism 

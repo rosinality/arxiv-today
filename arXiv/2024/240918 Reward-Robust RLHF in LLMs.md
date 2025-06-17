@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2409.15360
+
+*Reward-Robust RLHF in LLMs* (Yuzi Yan, Xingzhou Lou, Jialian Li, Yiping Zhang, Jian Xie, Chao Yu, Yu Wang, Dong Yan, Yuan Shen)
+
+> As Large Language Models (LLMs) continue to progress toward more advanced forms of intelligence, Reinforcement Learning from Human Feedback (RLHF) is increasingly seen as a key pathway toward achieving Artificial General Intelligence (AGI). However, the reliance on reward-model-based (RM-based) alignment methods introduces significant challenges due to the inherent instability and imperfections of Reward Models (RMs), which can lead to critical issues such as reward hacking and misalignment with human intentions. In this paper, we introduce a reward-robust RLHF framework aimed at addressing these fundamental challenges, paving the way for more reliable and resilient learning in LLMs. Our approach introduces a novel optimization objective that carefully balances performance and robustness by incorporating Bayesian Reward Model Ensembles (BRME) to model the uncertainty set of reward functions. This allows the framework to integrate both nominal performance and minimum reward signals, ensuring more stable learning even with imperfect reward models. Empirical results demonstrate that our framework consistently outperforms traditional RLHF across diverse benchmarks, showing improved accuracy and long-term stability. We also provide a theoretical analysis, demonstrating that reward-robust RLHF approaches the stability of constant reward settings, which proves to be effective in a stochastic-case analysis. Together, these contributions highlight the framework potential to enhance both the performance and stability of LLM alignment with RLHF.
+
+Reward Model을 노이즈에 강인하게 만들기 위해 일단 헤드 하나짜리 Reward Model을 만들고, 베이스 모델을 유지한 상태로 헤드를 추가해서 기존 헤드의 출력에 대한 Regression으로 학습시켜 앙상블 효과를 낸다는 아이디어군요.
+
+#reward-model 

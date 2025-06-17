@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2403.02513
+
+*Balancing Enhancement, Harmlessness, and General Capabilities: Enhancing Conversational LLMs with Direct RLHF* (Chen Zheng, Ke Sun, Hang Wu, Chenguang Xi, Xun Zhou)
+
+> In recent advancements in Conversational Large Language Models (LLMs), a concerning trend has emerged, showing that many new base LLMs experience a knowledge reduction in their foundational capabilities following Supervised Fine-Tuning (SFT). This process often leads to issues such as forgetting or a decrease in the base model's abilities. Moreover, fine-tuned models struggle to align with user preferences, inadvertently increasing the generation of toxic outputs when specifically prompted. To overcome these challenges, we adopted an innovative approach by completely bypassing SFT and directly implementing Harmless Reinforcement Learning from Human Feedback (RLHF). Our method not only preserves the base model's general capabilities but also significantly enhances its conversational abilities, while notably reducing the generation of toxic outputs. Our approach holds significant implications for fields that demand a nuanced understanding and generation of responses, such as customer service. We applied this methodology to Mistral, the most popular base model, thereby creating Mistral-Plus. Our validation across 11 general tasks demonstrates that Mistral-Plus outperforms similarly sized open-source base models and their corresponding instruct versions. Importantly, the conversational abilities of Mistral-Plus were significantly improved, indicating a substantial advancement over traditional SFT models in both safety and user preference alignment.
+
+SFT 없이 RLHF만으로 정렬해보기. 사실 Constitutional AI에서 Anthropic이 쓰고 있다고 했던 방법이기도 하죠.
+
+#alignment #rlhf 

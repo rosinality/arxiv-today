@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2406.16793
+
+*Adam-mini: Use Fewer Learning Rates To Gain More* (Yushun Zhang, Congliang Chen, Ziniu Li, Tian Ding, Chenwei Wu, Yinyu Ye, Zhi-Quan Luo, Ruoyu Sun)
+
+> We propose Adam-mini, an optimizer that achieves on-par or better performance than AdamW with 45% to 50% less memory footprint. Adam-mini reduces memory by cutting down the number of learning rates in Adam: Instead of assigning an individual learning rate for each parameter using $1/\sqrt{v}$, Adam-mini uses the average of $v$ within a pre-defined parameter block as the learning rate for that block. Such a design is inspired by two empirical findings. First, the Hessian of Transformers exhibits a near-block diagonal structure with different sizes of dense sub-blocks. Second, for each of these dense sub-blocks, there exists a single high-quality learning rate that can outperform Adam, provided that sufficient resources are available to search it out. Adam-mini provides one cost-effective way to find these good learning rates and manage to cut down ≥ 90% v in Adam. Empirically, we verify that Adam-mini performs on par or better than AdamW on various language models sized from 125M to 7B for pre-training, supervised fine-tuning, and RLHF. The reduced memory footprint of Adam-mini also alleviates communication overheads among GPUs and CPUs, thereby increasing throughput. For instance, Adam-mini achieves 49.6% higher throughput than AdamW when pre-training Llama2-7B on 2x A800-80GB GPUs, which saves 33% wall-clock time for pre-training.
+
+Hessian의 Block diagonal 구조를 사용해 Adam의 Second order momentum을 스칼라로 대체해버렸습니다. 트랜스포머 특화로 임베딩은 제외하고 Attention의 헤드는 서로 다른 블록으로 취급했네요. 큰 모델에서도 되는가 하는 질문이 들어올 것이 뻔하기에 7B 규모의 프리트레이닝(2B 토큰 정도이긴 합니다만)도 진행했습니다.
+
+#optimizer #transformer 

@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2403.18167
+
+*Mechanisms of non-factual hallucinations in language models* (Lei Yu, Meng Cao, Jackie Chi Kit Cheung, Yue Dong)
+
+> State-of-the-art language models (LMs) sometimes generate non-factual hallucinations that misalign with world knowledge. Despite extensive efforts to detect and mitigate hallucinations, understanding their internal mechanisms remains elusive. Our study investigates the mechanistic causes of hallucination, specifically non-factual ones where the LM incorrectly predicts object attributes in response to subject-relation queries. With causal mediation analysis and embedding space projection, we identify two general mechanistic causes of hallucinations shared across LMs of various scales and designs: 1) insufficient subject attribute knowledge in lower layer MLPs, and 2) failing to select the correct object attribute in upper layer attention heads and MLPs. These two mechanisms exhibit varying degrees of subject-object association, predictive uncertainty and perturbation robustness. Additionally, we scrutinize LM pre-training checkpoints, revealing distinct learning dynamics for the two mechanistic causes of hallucinations. We also highlight how attribution features from our causal analysis can effectively construct hallucination detectors. Our work proposes a mechanistic understanding of LM factual errors.
+
+할루시네이션이 발생하는 메커니즘을 분석해보니 모델의 레이어 초반에서 발생하는 할루시네이션과 후반에서 발생하는 할루시네이션이 다르다는 결과. 모델 초반의 MLP에서 발생하는 할루시네이션은 모델에 정보가 없어서이고 따라서 이런 할루시네이션은 전혀 엉뚱한 답을 만듭니다. 모델 후반의 Attention과 MLP에서 발생하는 할루시네이션은 모델 초반에서 인출된 사실들 중에서 맥락과 관련된 사실을 골라내지 못하기 때문에 발생합니다. 따라서 이런 할루시네이션은 맥락과 관련이 있는 답들이 나온다는 분석입니다. 재미있네요.
+
+#hallucination 

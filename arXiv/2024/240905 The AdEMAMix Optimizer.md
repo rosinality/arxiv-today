@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2409.03137
+
+*The AdEMAMix Optimizer: Better, Faster, Older* (Matteo Pagliardini, Pierre Ablin, David Grangier)
+
+> Momentum based optimizers are central to a wide range of machine learning applications. These typically rely on an Exponential Moving Average (EMA) of gradients, which decays exponentially the present contribution of older gradients. This accounts for gradients being local linear approximations which lose their relevance as the iterate moves along the loss landscape. This work questions the use of a single EMA to accumulate past gradients and empirically demonstrates how this choice can be sub-optimal: a single EMA cannot simultaneously give a high weight to the immediate past, and a non-negligible weight to older gradients. Building on this observation, we propose AdEMAMix, a simple modification of the Adam optimizer with a mixture of two EMAs to better take advantage of past gradients. Our experiments on language modeling and image classification show -- quite surprisingly -- that gradients can stay relevant for tens of thousands of steps. They help to converge faster, and often to lower minima: e.g., a $1.3$B parameter AdEMAMix LLM trained on $101$B tokens performs comparably to an AdamW model trained on $197$B tokens ($+95\%$). Moreover, our method significantly slows-down model forgetting during training. Our work motivates further exploration of different types of functions to leverage past gradients, beyond EMAs.
+
+Adam을 이겼다는 Optimizer 연구는 믿지 않는 것이 유리한 스탠스입니다만 새로운 Optimizer가 나올 때마다 한 번만 더 믿어볼까 싶어지죠. Adam에 느리게 변화하는 Momentum을 추가한 형태네요. Optimizer가 새로 나오면 시도해보는 사람들이 많아서 곧 결과를 알 수 있을 듯 하네요.
+
+#optimizer 

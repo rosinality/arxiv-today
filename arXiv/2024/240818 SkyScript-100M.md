@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2408.09333
+
+*SkyScript-100M: 1,000,000,000 Pairs of Scripts and Shooting Scripts for Short Drama* (Jing Tang, Quanlu Jia, Yuqiang Xie, Zeyu Gong, Xiang Wen, Jiayi Zhang, Yalong Guo, Guibin Chen, Jiangping Yang)
+
+> Generating high-quality shooting scripts containing information such as scene and shot language is essential for short drama script generation. We collect 6,660 popular short drama episodes from the Internet, each with an average of 100 short episodes, and the total number of short episodes is about 80,000, with a total duration of about 2,000 hours and totaling 10 terabytes (TB). We perform keyframe extraction and annotation on each episode to obtain about 10,000,000 shooting scripts. We perform 100 script restorations on the extracted shooting scripts based on our self-developed large short drama generation model SkyReels. This leads to a dataset containing 1,000,000,000 pairs of scripts and shooting scripts for short dramas, called SkyScript-100M. We compare SkyScript-100M with the existing dataset in detail and demonstrate some deeper insights that can be achieved based on SkyScript-100M. Based on SkyScript-100M, researchers can achieve several deeper and more far-reaching script optimization goals, which may drive a paradigm shift in the entire field of text-to-video and significantly advance the field of short drama video generation. The data and code are available at https://github.com/vaew/SkyScript-100M.
+
+드라마 대본 데이터셋. 이 대본에는 장면에 대한 설명과 카메라, 각 객체에 대한 배치 및 촬영에 대한 정보를 모두 기술하고 있네요. 비디오에서 정보를 추출하는 작업에도 혹은 비디오 생성을 위한 조건을 입력하는 용도로도 사용이 가능할 듯 합니다. 비디오 생성과 관련해서 이 문제에 대한 관심이 높은 듯 하네요.
+
+#dataset 

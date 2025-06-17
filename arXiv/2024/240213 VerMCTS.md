@@ -1,0 +1,6 @@
+https://arxiv.org/abs/2402.08147
+
+*VerMCTS: Synthesizing Multi-Step Programs using a Verifier, a Large Language Model, and Tree Search* (David Brandfonbrener, Simon Henniger, Sibi Raja, Tarun Prasad, Chloe Loughridge, Federico Cassano, Sabrina Ruixin Hu, Jianang Yang, William E. Byrd, Robert Zinkov, Nada Amin)
+
+> Large Language Models (LLMs) can generate useful code, but often the code they generate cannot be trusted to be sound. In this paper, we present VerMCTS, an approach to begin to resolve this issue by generating verified programs in Dafny and Coq. VerMCTS uses a logical verifier in concert with an LLM to guide a modified Monte Carlo Tree Search (MCTS). This approach leverages the verifier to gain intermediate feedback inside the search algorithm by checking partial programs at each step to estimate an upper bound on the value function. To measure the performance of VerMCTS, we develop a new suite of multi-step verified programming problems in Dafny and Coq. In terms of pass@T, a new metric which computes the pass rate given a budget of T tokens sampled from the LLM, VerMCTS leads to more than a 30% absolute increase in average pass@5000 across the suite over repeated sampling from the base language model. Our code and benchmarks are available at https://github.com/namin/llm-verified-with-monte-carlo-tree-search .
+

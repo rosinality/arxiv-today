@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2502.20388
+
+*Beyond Next-Token: Next-X Prediction for Autoregressive Visual Generation* (Sucheng Ren, Qihang Yu, Ju He, Xiaohui Shen, Alan Yuille, Liang-Chieh Chen)
+
+> Autoregressive (AR) modeling, known for its next-token prediction paradigm, underpins state-of-the-art language and visual generative models. Traditionally, a ``token'' is treated as the smallest prediction unit, often a discrete symbol in language or a quantized patch in vision. However, the optimal token definition for 2D image structures remains an open question. Moreover, AR models suffer from exposure bias, where teacher forcing during training leads to error accumulation at inference. In this paper, we propose xAR, a generalized AR framework that extends the notion of a token to an entity X, which can represent an individual patch token, a cell (a $k\times k$ grouping of neighboring patches), a subsample (a non-local grouping of distant patches), a scale (coarse-to-fine resolution), or even a whole image. Additionally, we reformulate discrete token classification as \textbf{continuous entity regression}, leveraging flow-matching methods at each AR step. This approach conditions training on noisy entities instead of ground truth tokens, leading to Noisy Context Learning, which effectively alleviates exposure bias. As a result, xAR offers two key advantages: (1) it enables flexible prediction units that capture different contextual granularity and spatial structures, and (2) it mitigates exposure bias by avoiding reliance on teacher forcing. On ImageNet-256 generation benchmark, our base model, xAR-B (172M), outperforms DiT-XL/SiT-XL (675M) while achieving 20$\times$ faster inference. Meanwhile, xAR-H sets a new state-of-the-art with an FID of 1.24, running 2.2$\times$ faster than the previous best-performing model without relying on vision foundation modules (\eg, DINOv2) or advanced guidance interval sampling.
+
+다양한 형태의 Autoregression에 Flow Matching을 결합한 방법. 여기서는 N개 패치 단위의 Autoregression에 정착했군요.
+
+A method combining flow matching with various forms of autoregression. They settled on autoregression at the N-patche level.
+
+#autoregressive-model #diffusion 

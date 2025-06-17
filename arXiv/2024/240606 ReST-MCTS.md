@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2406.03816
+
+*ReST-MCTS*: LLM Self-Training via Process Reward Guided Tree Search* (Dan Zhang, Sining Zhoubian, Yisong Yue, Yuxiao Dong, Jie Tang)
+
+> Recent methodologies in LLM self-training mostly rely on LLM generating responses and filtering those with correct output answers as training data. This approach often yields a low-quality fine-tuning training set (e.g., incorrect plans or intermediate reasoning). In this paper, we develop a reinforced self-training approach, called ReST-MCTS*, based on integrating process reward guidance with tree search MCTS* for collecting higher-quality reasoning traces as well as per-step value to train policy and reward models. ReST-MCTS* circumvents the per-step manual annotation typically used to train process rewards by tree-search-based reinforcement learning: Given oracle final correct answers, ReST-MCTS* is able to infer the correct process rewards by estimating the probability this step can help lead to the correct answer. These inferred rewards serve dual purposes: they act as value targets for further refining the process reward model and also facilitate the selection of high-quality traces for policy model self-training. We first show that the tree-search policy in ReST-MCTS* achieves higher accuracy compared with prior LLM reasoning baselines such as Best-of-N and Tree-of-Thought, within the same search budget. We then show that by using traces searched by this tree-search policy as training data, we can continuously enhance the three language models for multiple iterations, and outperform other self-training algorithms such as ReST$^\text{EM}$ and Self-Rewarding LM.
+
+MCTS 기반 탐색 및 개선 방법이 하나 더 나왔군요. 강력한 LLM을 기반으로 이런 탐색 방법들을 대규모로 실험하면 지금 단계에서도 유의미한 결과가 나올 수도 있지 않을까 하는 생각도 있습니다.
+
+#search 

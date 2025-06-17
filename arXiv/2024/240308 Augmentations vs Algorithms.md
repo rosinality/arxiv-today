@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2403.05726
+
+*Augmentations vs Algorithms: What Works in Self-Supervised Learning* (Warren Morningstar, Alex Bijamov, Chris Duvarney, Luke Friedman, Neha Kalibhat, Luyang Liu, Philip Mansfield, Renan Rojas-Gomez, Karan Singhal, Bradley Green, Sushant Prakash)
+
+> We study the relative effects of data augmentations, pretraining algorithms, and model architectures in Self-Supervised Learning (SSL). While the recent literature in this space leaves the impression that the pretraining algorithm is of critical importance to performance, understanding its effect is complicated by the difficulty in making objective and direct comparisons between methods. We propose a new framework which unifies many seemingly disparate SSL methods into a single shared template. Using this framework, we identify aspects in which methods differ and observe that in addition to changing the pretraining algorithm, many works also use new data augmentations or more powerful model architectures. We compare several popular SSL methods using our framework and find that many algorithmic additions, such as prediction networks or new losses, have a minor impact on downstream task performance (often less than $1\%$), while enhanced augmentation techniques offer more significant performance improvements ($2-4\%$). Our findings challenge the premise that SSL is being driven primarily by algorithmic improvements, and suggest instead a bitter lesson for SSL: that augmentation diversity and data / model scale are more critical contributors to recent advances in self-supervised learning.
+
+Contrastive Learning 알고리즘들을 하나의 프레임워크에서 살펴봤을 때 모델이나 Momentum Encoder 사용 등의 조건들을 맞추고 나면 알고리즘의 차이가 감소하고 Augmentation의 차이가 부각된다는 결과.
+
+#contrastive-learning #self-supervision 

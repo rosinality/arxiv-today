@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2405.00332
+
+*A Careful Examination of Large Language Model Performance on Grade School Arithmetic* (Hugh Zhang, Jeff Da, Dean Lee, Vaughn Robinson, Catherine Wu, Will Song, Tiffany Zhao, Pranav Raja, Dylan Slack, Qin Lyu, Sean Hendryx, Russell Kaplan, Michele (Mike)Lunati, Summer Yue)
+
+> Large language models (LLMs) have achieved impressive success on many benchmarks for mathematical reasoning. However, there is growing concern that some of this performance actually reflects dataset contamination, where data closely resembling benchmark questions leaks into the training data, instead of true reasoning ability. To investigate this claim rigorously, we commission Grade School Math 1000 (GSM1k). GSM1k is designed to mirror the style and complexity of the established GSM8k benchmark, the gold standard for measuring elementary mathematical reasoning. We ensure that the two benchmarks are comparable across important metrics such as human solve rates, number of steps in solution, answer magnitude, and more. When evaluating leading open- and closed-source LLMs on GSM1k, we observe accuracy drops of up to 13%, with several families of models (e.g., Phi and Mistral) showing evidence of systematic overfitting across almost all model sizes. At the same time, many models, especially those on the frontier, (e.g., Gemini/GPT/Claude) show minimal signs of overfitting. Further analysis suggests a positive relationship (Spearman's r^2=0.32) between a model's probability of generating an example from GSM8k and its performance gap between GSM8k and GSM1k, suggesting that many models may have partially memorized GSM8k.
+
+GSM8K와 유사한 데이터를 1250개 새로 만들어서 테스트. 그룹이 극적으로 갈리네요. 굳이 오염이 아니더라도 비슷한 데이터가 들어갔을 수 있다는 추측을 하고 있는데 굉장히 유사한 데이터를 구축했다는 것을 고려하면 이쪽도 설명이 충분하지는 않다는 느낌이네요.
+
+#benchmark #contamination

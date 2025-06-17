@@ -1,0 +1,15 @@
+https://arxiv.org/abs/2403.20330
+
+*Are We on the Right Way for Evaluating Large Vision-Language Models?* (Lin Chen, Jinsong Li, Xiaoyi Dong, Pan Zhang, Yuhang Zang, Zehui Chen, Haodong Duan, Jiaqi Wang, Yu Qiao, Dahua Lin, Feng Zhao)
+
+> Large vision-language models (LVLMs) have recently achieved rapid progress, sparking numerous studies to evaluate their multi-modal capabilities. However, we dig into current evaluation works and identify two primary issues: 1) Visual content is unnecessary for many samples. The answers can be directly inferred from the questions and options, or the world knowledge embedded in LLMs. This phenomenon is prevalent across current benchmarks. For instance, GeminiPro achieves 42.9% on the MMMU benchmark without any visual input, and outperforms the random choice baseline across six benchmarks over 20% on average. 2) Unintentional data leakage exists in LLM and LVLM training. LLM and LVLM could still answer some visual-necessary questions without visual content, indicating the memorizing of these samples within large-scale training data. For example, Sphinx-X-MoE gets 43.6% on MMMU without accessing images, surpassing its LLM backbone with 17.9%. Both problems lead to misjudgments of actual multi-modal gains and potentially misguide the study of LVLM. To this end, we present MMStar, an elite vision-indispensable multi-modal benchmark comprising 1,500 samples meticulously selected by humans. MMStar benchmarks 6 core capabilities and 18 detailed axes, aiming to evaluate LVLMs' multi-modal capacities with carefully balanced and purified samples. These samples are first roughly selected from current benchmarks with an automated pipeline, human review is then involved to ensure each curated sample exhibits visual dependency, minimal data leakage, and requires advanced multi-modal capabilities. Moreover, two metrics are developed to measure data leakage and actual performance gain in multi-modal training. We evaluate 16 leading LVLMs on MMStar to assess their multi-modal capabilities, and on 7 benchmarks with the proposed metrics to investigate their data leakage and actual multi-modal gain.
+
+Vision Language Model들의 레이더 차트를 정리할 시점이 왔군요. 현 벤치마크에서 두 가지 문제를 지적합니다. 1. 텍스트만으로도 풀 수 있는 문제가 많다. 예를 들어 여기 있는 원형 지대의 모양은 어떤 모양인가? 답: 원형 이런 문제들이 있습니다. 2. 대규모 데이터를 학습하니 발생하는 데이터셋 오염.
+
+이를 테스트하기 위해 LLM으로 답을 할 수 없는 샘플들만 걸러낸 다음 다시 검수를 거쳐서 벤치마크를 만들었습니다. 텍스트만으로도 풀 수 있는 사례에 대해서는 VLM에 이미지를 준 경우와 주지 않은 경우의 차이를 사용해서, 데이터셋 오염에 대해서는 이미지를 주지 않은 경우의 VLM과 베이스 LLM의 성능 차이를 통해 측정합니다.
+
+재미있네요. 이런 모델들은 실제로 이미지를 얼마나 잘 활용하고 있는가를 체크하는 것이 중요하죠. 그리고 이 정도의 차이가 할루시네이션 같은 문제에 대한 퍼포먼스로 이어질 수도 있겠죠.
+
+조금 더 덧붙이자면 개인적으로는 Vision-Language 모델에서 할루시네이션이 발생하는 원인을 추적해보면 꽤 재미있지 않을까 싶습니다. 데이터셋의 노이즈와 이미지를 제대로 활용하지 못하는 Underfit (그리고 이쪽은 노이즈에서 연원할 수 있겠죠)이 기본적인 문제가 아닐까 하는 게 바로 드는 추측이긴 합니다. 그런 의미에서 얼마나 이미지를 사용해 답을 하고 있는가를 측정하는 것이 문제의 진단 도움이 되지 않을까 싶습니다.
+
+#vision-language #multimodal #benchmark 

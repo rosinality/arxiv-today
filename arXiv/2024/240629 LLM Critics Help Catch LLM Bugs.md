@@ -1,0 +1,9 @@
+https://cdn.openai.com/llm-critics-help-catch-llm-bugs-paper.pdf
+
+*LLM Critics Help Catch LLM Bugs* (Nat McAleese, Rai (Michael Pokorny), Juan Felipe Cerón Uribe, Evgenia Nitishinskaya, Maja Tr ̨ebacz, Jan Leike)
+
+> Reinforcement learning from human feedback (RLHF) is fundamentally limited by the capacity of humans to correctly evaluate model output. To improve human evaluation ability and overcome that limitation this work trains “critic” models that help humans to more accurately evaluate model-written code. These critics are themselves LLMs trained with RLHF to write natural language feedback highlighting problems in code from real-world assistant tasks. On code containing naturally occurring LLM errors model-written critiques are preferred over human critiques in 63% of cases, and human evaluation finds that models catch more bugs than human contractors paid for code review. We further confirm that our fine-tuned LLM critics can successfully identify hundreds of errors in ChatGPT training data rated as “flawless”, even though the majority of those tasks are non-code tasks and thus out-of-distribution for the critic model. Critics can have limitations of their own, including hallucinated bugs that could mislead humans into making mistakes they might have otherwise avoided, but human-machine teams of critics and contractors catch similar numbers of bugs to LLM critics while hallucinating less than LLMs alone.
+
+LLM이 생성한 코드의 버그를 잡는 LLM. 전형적인 RLHF 과정을 거쳤습니다만 중요한 차이라면 LLM이 생성한 응답을 수정해서 일부러 버그를 삽입하는 과정을 거쳤고, LLM이 잘 포착하지 못하는 버그를 작성하도록 Adversarial한 어노테이션을 했다는 것이겠네요.
+
+#rlhf #feedback 

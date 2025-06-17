@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2408.04810
+
+*UniBench: Visual Reasoning Requires Rethinking Vision-Language Beyond Scaling* (Haider Al-Tahan, Quentin Garrido, Randall Balestriero, Diane Bouchacourt, Caner Hazirbas, Mark Ibrahim)
+
+> Significant research efforts have been made to scale and improve vision-language model (VLM) training approaches. Yet, with an ever-growing number of benchmarks, researchers are tasked with the heavy burden of implementing each protocol, bearing a non-trivial computational cost, and making sense of how all these benchmarks translate into meaningful axes of progress. To facilitate a systematic evaluation of VLM progress, we introduce UniBench: a unified implementation of 50+ VLM benchmarks spanning a comprehensive range of carefully categorized capabilities from object recognition to spatial awareness, counting, and much more. We showcase the utility of UniBench for measuring progress by evaluating nearly 60 publicly available vision-language models, trained on scales of up to 12.8B samples. We find that while scaling training data or model size can boost many vision-language model capabilities, scaling offers little benefit for reasoning or relations. Surprisingly, we also discover today's best VLMs struggle on simple digit recognition and counting tasks, e.g. MNIST, which much simpler networks can solve. Where scale falls short, we find that more precise interventions, such as data quality or tailored-learning objectives offer more promise. For practitioners, we also offer guidance on selecting a suitable VLM for a given application. Finally, we release an easy-to-run UniBench code-base with the full set of 50+ benchmarks and comparisons across 59 models as well as a distilled, representative set of benchmarks that runs in 5 minutes on a single GPU.
+
+Vision Language 모델에 대한 벤치마크 수트와 CLIP류 모델에 대한 테스트 결과. 숫자 관련 샘플들이 많이 있는데도 MNIST를 제대로 풀지 못한다는 결과. 데이터의 품질과 효과적인 Training Objective가 중요하다는 이야기를 합니다.
+
+Contrastive 모델이 아니라 Generative 모델은 어떨까요. 중요한 문제인 듯 싶습니다.
+
+#clip #vision-language #benchmark 

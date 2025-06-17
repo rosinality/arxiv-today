@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2402.16444
+
+*ShieldLM: Empowering LLMs as Aligned, Customizable and Explainable Safety Detectors* (Zhexin Zhang, Yida Lu, Jingyuan Ma, Di Zhang, Rui Li, Pei Ke, Hao Sun, Lei Sha, Zhifang Sui, Hongning Wang, Minlie Huang)
+
+> The safety of Large Language Models (LLMs) has gained increasing attention in recent years, but there still lacks a comprehensive approach for detecting safety issues within LLMs' responses in an aligned, customizable and explainable manner. In this paper, we propose ShieldLM, an LLM-based safety detector, which aligns with general human safety standards, supports customizable detection rules, and provides explanations for its decisions. To train ShieldLM, we compile a large bilingual dataset comprising 14,387 query-response pairs, annotating the safety of responses based on various safety standards. Through extensive experiments, we demonstrate that ShieldLM surpasses strong baselines across four test sets, showcasing remarkable customizability and explainability. Besides performing well on standard detection datasets, ShieldLM has also been shown to be effective in real-world situations as a safety evaluator for advanced LLMs. We release ShieldLM at \url{https://github.com/thu-coai/ShieldLM} to support accurate and explainable safety detection under various safety standards, contributing to the ongoing efforts to enhance the safety of LLMs.
+
+레드 티밍 쿼리를 사용해 응답을 생성하고, 이 응답에 대해서 위반한 안전 카테고리를 레이블링하고 (사람), 이 레이블에 대해 위반 원인을 작성한 다음 (GPT-4) 다른 해당 안전 카테고리/규칙과 다른 규칙을 섞어 튜닝한다는 흐름이군요. 안전에 대한 분류, 판단 이유에 대한 근거를 제공하고 새로운 규칙을 주입할 수도 있다는 디자인입니다.
+
+#safety 

@@ -1,0 +1,13 @@
+https://arxiv.org/abs/2501.03575
+
+*Cosmos World Foundation Model Platform for Physical AI* (NVIDIA: Niket Agarwal, Arslan Ali, Maciej Bala, Yogesh Balaji, Erik Barker, Tiffany Cai, Prithvijit Chattopadhyay, Yongxin Chen, Yin Cui, Yifan Ding, Daniel Dworakowski, Jiaojiao Fan, Michele Fenzi, Francesco Ferroni, Sanja Fidler, Dieter Fox, Songwei Ge, Yunhao Ge, Jinwei Gu, Siddharth Gururani, Ethan He, Jiahui Huang, Jacob Huffman, Pooya Jannaty, Jingyi Jin, Seung Wook Kim, Gergely Klár, Grace Lam, Shiyi Lan, Laura Leal-Taixe, Anqi Li, Zhaoshuo Li, Chen-Hsuan Lin, Tsung-Yi Lin, Huan Ling, Ming-Yu Liu, Xian Liu, Alice Luo, Qianli Ma, Hanzi Mao, Kaichun Mo, Arsalan Mousavian, Seungjun Nah, Sriharsha Niverty, David Page, Despoina Paschalidou, Zeeshan Patel, Lindsey Pavao, Morteza Ramezanali, Fitsum Reda, Xiaowei Ren, Vasanth Rao Naik Sabavat, Ed Schmerling, Stella Shi, Bartosz Stefaniak, Shitao Tang, Lyne Tchapmi, Przemek Tredak, Wei-Cheng Tseng, Jibin Varghese, Hao Wang, Haoxiang Wang, Heng Wang, Ting-Chun Wang, Fangyin Wei, Xinyue Wei, Jay Zhangjie Wu, Jiashu Xu, Wei Yang, Lin Yen-Chen, Xiaohui Zeng, Yu Zeng, Jing Zhang, Qinsheng Zhang, Yuxuan Zhang, Qingqing Zhao, Artur Zolkowski)
+
+> Physical AI needs to be trained digitally first. It needs a digital twin of itself, the policy model, and a digital twin of the world, the world model. In this paper, we present the Cosmos World Foundation Model Platform to help developers build customized world models for their Physical AI setups. We position a world foundation model as a general-purpose world model that can be fine-tuned into customized world models for downstream applications. Our platform covers a video curation pipeline, pre-trained world foundation models, examples of post-training of pre-trained world foundation models, and video tokenizers. To help Physical AI builders solve the most critical problems of our society, we make our platform open-source and our models open-weight with permissive licenses available via https://github.com/NVIDIA/Cosmos.
+
+NVIDIA의 월드 모델. 기본적으로는 Text-to-Video 모델을 학습하고 포스트트레이닝으로 상호작용이 가능한 월드 모델을 구축한다는 아이디어군요. Diffusion과 Autoregressive 모델을 모두 학습했고 얼마 전 공개한 Cosmos Tokenizer를 (https://research.nvidia.com/labs/dir/cosmos-tokenizer/) 사용했네요. 무엇보다 비디오 데이터 구축 과정에 대한 디테일이 흥미롭습니다.
+
+<english>
+World model from NVIDIA. Basically it is text-to-video model, then converted into world models that allows interaction by post-training. They trained both diffusion and autoregressive models, and used Cosmos tokenizer that they released recently (https://research.nvidia.com/labs/dir/cosmos-tokenizer/). Details around video data construction is very intersting.
+</english>
+
+#world-models #text-to-video 

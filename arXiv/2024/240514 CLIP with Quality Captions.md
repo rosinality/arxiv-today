@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2405.08911
+
+*CLIP with Quality Captions: A Strong Pretraining for Vision Tasks* (Pavan Kumar Anasosalu Vasu, Hadi Pouransari, Fartash Faghri, Oncel Tuzel)
+
+> CLIP models perform remarkably well on zero-shot classification and retrieval tasks. But recent studies have shown that learnt representations in CLIP are not well suited for dense prediction tasks like object detection, semantic segmentation or depth estimation. More recently, multi-stage training methods for CLIP models was introduced to mitigate the weak performance of CLIP on downstream tasks. In this work, we find that simply improving the quality of captions in image-text datasets improves the quality of CLIP's visual representations, resulting in significant improvement on downstream dense prediction vision tasks. In fact, we find that CLIP pretraining with good quality captions can surpass recent supervised, self-supervised and weakly supervised pretraining methods. We show that when CLIP model with ViT-B/16 as image encoder is trained on well aligned image-text pairs it obtains 12.1% higher mIoU and 11.5% lower RMSE on semantic segmentation and depth estimation tasks over recent state-of-the-art Masked Image Modeling (MIM) pretraining methods like Masked Autoencoder (MAE). We find that mobile architectures also benefit significantly from CLIP pretraining. A recent mobile vision architecture, MCi2, with CLIP pretraining obtains similar performance as Swin-L, pretrained on ImageNet-22k for semantic segmentation task while being 6.1$\times$ smaller. Moreover, we show that improving caption quality results in $10\times$ data efficiency when finetuning for dense prediction tasks.
+
+CLIP + Recaptioning된 데이터셋으로 Detection/Segmentatio/Depth Estimation 같은 Dense Prediction 과제에 대한 성능을 높일 수 있다는 결과. 최근 훨씬 더 상세한 캡션도 생성이 가능하다는 것을 고려하면 성능을 더 끌어올릴 수도 있을 것 같네요.
+
+#clip #captioning 

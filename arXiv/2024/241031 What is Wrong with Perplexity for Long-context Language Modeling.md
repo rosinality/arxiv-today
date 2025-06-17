@@ -1,0 +1,13 @@
+https://arxiv.org/abs/2410.23771
+
+*What is Wrong with Perplexity for Long-context Language Modeling?* (Lizhe Fang, Yifei Wang, Zhaoyang Liu, Chenheng Zhang, Stefanie Jegelka, Jinyang Gao, Bolin Ding, Yisen Wang)
+
+> Handling long-context inputs is crucial for large language models (LLMs) in tasks such as extended conversations, document summarization, and many-shot in-context learning. While recent approaches have extended the context windows of LLMs and employed perplexity (PPL) as a standard evaluation metric, PPL has proven unreliable for assessing long-context capabilities. The underlying cause of this limitation has remained unclear. In this work, we provide a comprehensive explanation for this issue. We find that PPL overlooks key tokens, which are essential for long-context understanding, by averaging across all tokens and thereby obscuring the true performance of models in long-context scenarios. To address this, we propose \textbf{LongPPL}, a novel metric that focuses on key tokens by employing a long-short context contrastive method to identify them. Our experiments demonstrate that LongPPL strongly correlates with performance on various long-context benchmarks (e.g., Pearson correlation of -0.96), significantly outperforming traditional PPL in predictive accuracy. Additionally, we introduce \textbf{LongCE} (Long-context Cross-Entropy) loss, a re-weighting strategy for fine-tuning that prioritizes key tokens, leading to consistent improvements across diverse benchmarks. In summary, these contributions offer deeper insights into the limitations of PPL and present effective solutions for accurately evaluating and enhancing the long-context capabilities of LLMs. Code is available at https://github.com/PKU-ML/LongPPL.
+
+Perplexity를 Long Context에 대한 평가 지표로 사용할 수 있도록 개선. Long Context가 주어졌을 때의 각 토큰의 Loss와 Short Context 하에서의 Loss의 차이를 통해 예측에 실제로 Long Context 정보가 필요한 토큰을 걸러내는 방법. Long Context 벤치마크와 높은 상관관계를 달성했군요. 반대로 이렇게 토큰을 걸러내서 학습하는 Long Context 튜닝 방법도 생각할 수 있습니다. 다만 Loss를 계산할 모델이 따로 필요하다는 것이 문제이긴 합니다.
+
+<english>
+Improving perplexity to be evaluatin metric for long context. Filtering the tokens which actually needs long context informations by loss difference between conditioned on long or short contexts. It shows high correlation between long context benchmarks. And we can also think long context tuning methods that trains on these filtered tokens. But it would be limitation that we need a model to calculates the loss.
+</english>
+
+#long-context 

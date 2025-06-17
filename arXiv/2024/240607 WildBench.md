@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2406.04770
+
+*WildBench: Benchmarking LLMs with Challenging Tasks from Real Users in the Wild* (Bill Yuchen Lin, Yuntian Deng, Khyathi Chandu, Faeze Brahman, Abhilasha Ravichander, Valentina Pyatkin, Nouha Dziri, Ronan Le Bras, Yejin Choi)
+
+> We introduce WildBench, an automated evaluation framework designed to benchmark large language models (LLMs) using challenging, real-world user queries. WildBench consists of 1,024 tasks carefully selected from over one million human-chatbot conversation logs. For automated evaluation with WildBench, we have developed two metrics, WB-Reward and WB-Score, which are computable using advanced LLMs such as GPT-4-turbo. WildBench evaluation uses task-specific checklists to evaluate model outputs systematically and provides structured explanations that justify the scores and comparisons, resulting in more reliable and interpretable automatic judgments. WB-Reward employs fine-grained pairwise comparisons between model responses, generating five potential outcomes: much better, slightly better, slightly worse, much worse, or a tie. Unlike previous evaluations that employed a single baseline model, we selected three baseline models at varying performance levels to ensure a comprehensive pairwise evaluation. Additionally, we propose a simple method to mitigate length bias, by converting outcomes of ``slightly better/worse'' to ``tie'' if the winner response exceeds the loser one by more than $K$ characters. WB-Score evaluates the quality of model outputs individually, making it a fast and cost-efficient evaluation metric. WildBench results demonstrate a strong correlation with the human-voted Elo ratings from Chatbot Arena on hard tasks. Specifically, WB-Reward achieves a Pearson correlation of 0.98 with top-ranking models. Additionally, WB-Score reaches 0.95, surpassing both ArenaHard's 0.91 and AlpacaEval2.0's 0.89 for length-controlled win rates, as well as the 0.87 for regular win rates.
+
+WildChat의 1M 대화 로그에서 난이도가 높은 사례를 추출해서 벤치마크를 구성.
+
+포스트트레이닝을 거친 모델들은 LLM의 기본적인 능력에 대해 스타일적인 요인까지 결합되기 때문에 평가가 더 까다롭긴 하네요. 점점 더 쉬운 프롬프트에 대해서는 변별력이 사라지는 경향까지 나타나고 있죠. 난이도가 높은 프롬프트를 선별하는 것, 그리고 Scale AI의 시도처럼 체계화된 프롬프트와 평가 체계를 사용하는 평가의 결합이 가장 유망한 방법이 아닐까 싶습니다.
+
+#benchmark 

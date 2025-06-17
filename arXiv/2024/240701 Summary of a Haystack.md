@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2407.01370
+
+*Summary of a Haystack: A Challenge to Long-Context LLMs and RAG Systems* (Philippe Laban, Alexander R. Fabbri, Caiming Xiong, Chien-Sheng Wu)
+
+> LLMs and RAG systems are now capable of handling millions of input tokens or more. However, evaluating the output quality of such systems on long-context tasks remains challenging, as tasks like Needle-in-a-Haystack lack complexity. In this work, we argue that summarization can play a central role in such evaluation. We design a procedure to synthesize Haystacks of documents, ensuring that specific \textit{insights} repeat across documents. The "Summary of a Haystack" (SummHay) task then requires a system to process the Haystack and generate, given a query, a summary that identifies the relevant insights and precisely cites the source documents. Since we have precise knowledge of what insights should appear in a haystack summary and what documents should be cited, we implement a highly reproducible automatic evaluation that can score summaries on two aspects - Coverage and Citation. We generate Haystacks in two domains (conversation, news), and perform a large-scale evaluation of 10 LLMs and corresponding 50 RAG systems. Our findings indicate that SummHay is an open challenge for current systems, as even systems provided with an Oracle signal of document relevance lag our estimate of human performance (56\%) by 10+ points on a Joint Score. Without a retriever, long-context LLMs like GPT-4o and Claude 3 Opus score below 20% on SummHay. We show SummHay can also be used to study enterprise RAG systems and position bias in long-context models. We hope future systems can equal and surpass human performance on SummHay.
+
+쿼리와 컨텍스트, Haystack이 주어졌을 때 주어진 정보를 통해 관련된 컨텍스트를 찾아 요약하고 적절하게 인용하는 능력을 점검하는 벤치마크. 사실 이 과제는 벤치마크 이상으로 RAG 측면에서 그 자체로 가치가 높은 과제라고 할 수 있겠네요. Cohere 모델들이 이런 능력을 탑재하고 있죠.
+
+#benchmark #long-context 

@@ -1,0 +1,13 @@
+https://arxiv.org/abs/2505.04588
+
+*ZeroSearch: Incentivize the Search Capability of LLMs without Searching* (Hao Sun, Zile Qiao, Jiayan Guo, Xuanbo Fan, Yingyan Hou, Yong Jiang, Pengjun Xie, Fei Huang, Yan Zhang)
+
+> Effective information searching is essential for enhancing the reasoning and generation capabilities of large language models (LLMs). Recent research has explored using reinforcement learning (RL) to improve LLMs' search capabilities by interacting with live search engines in real-world environments. While these approaches show promising results, they face two major challenges: (1) Uncontrolled Document Quality: The quality of documents returned by search engines is often unpredictable, introducing noise and instability into the training process. (2) Prohibitively High API Costs: RL training requires frequent rollouts, potentially involving hundreds of thousands of search requests, which incur substantial API expenses and severely constrain scalability. To address these challenges, we introduce ZeroSearch, a reinforcement learning framework that incentivizes the search capabilities of LLMs without interacting with real search engines. Our approach begins with lightweight supervised fine-tuning to transform the LLM into a retrieval module capable of generating both relevant and noisy documents in response to a query. During RL training, we employ a curriculum-based rollout strategy that incrementally degrades the quality of generated documents, progressively eliciting the model's reasoning ability by exposing it to increasingly challenging retrieval scenarios. Extensive experiments demonstrate that ZeroSearch effectively incentivizes the search capabilities of LLMs using a 3B LLM as the retrieval module. Remarkably, a 7B retrieval module achieves comparable performance to the real search engine, while a 14B retrieval module even surpasses it. Furthermore, it generalizes well across both base and instruction-tuned models of various parameter sizes and is compatible with a wide range of RL algorithms.
+
+LLM에 검색 능력을 탑재시킬 때 실제 검색 엔진 대신 LLM으로 문서를 생성하도록 시도. 실제 검색 엔진과의 차이가 문제겠죠. 물론 검색 엔진 자체도 시간에 따라 변화하는 타겟이긴 합니다만.
+
+<english>
+Attempt to instead of using search engine let LLM to generate documents, when training LLM to have search abilities. Difference from actual search engine would be main problem. Of course, search engine itself also moving target along with the time.
+</english>
+
+#rl #tool #reasoning 

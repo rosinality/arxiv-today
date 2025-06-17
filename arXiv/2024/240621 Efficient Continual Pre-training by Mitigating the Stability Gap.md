@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2406.14833
+
+*Efficient Continual Pre-training by Mitigating the Stability Gap* (Yiduo Guo, Jie Fu, Huishuai Zhang, Dongyan Zhao, Yikang Shen)
+
+> Continual pre-training has increasingly become the predominant approach for adapting Large Language Models (LLMs) to new domains. This process involves updating the pre-trained LLM with a corpus from a new domain, resulting in a shift in the training distribution. To study the behavior of LLMs during this shift, we measured the model's performance throughout the continual pre-training process. we observed a temporary performance drop at the beginning, followed by a recovery phase, a phenomenon known as the "stability gap," previously noted in vision models classifying new classes. To address this issue and enhance LLM performance within a fixed compute budget, we propose three effective strategies: (1) Continually pre-training the LLM on a subset with a proper size for multiple epochs, resulting in faster performance recovery than pre-training the LLM on a large corpus in a single epoch; (2) Pre-training the LLM only on high-quality sub-corpus, which rapidly boosts domain performance; and (3) Using a data mixture similar to the pre-training data to reduce distribution gap. We conduct various experiments on Llama-family models to validate the effectiveness of our strategies in both medical continual pre-training and instruction tuning. For example, our strategies improve the average medical task performance of the OpenLlama-3B model from 36.2% to 40.7% with only 40% of the original training budget and enhance the average general task performance without causing forgetting. Furthermore, we apply our strategies to the Llama-3-8B model. The resulting model, Llama-3-Physician, achieves the best medical performance among current open-source models, and performs comparably to or even better than GPT-4 on several medical benchmarks. We release our models at \url{https://huggingface.co/YiDuo1999/Llama-3-Physician-8B-Instruct}.
+
+Continual Pretraining을 하는 경우 성능이 감소했다가 올라가는 문제에 대한 설명과 대응. 그래디언트를 새로운 과제를 습득하려는 부분과 이전 과제를 유지하려는 부분으로 나눠서 이 균형이 문제라는 설명을 합니다. 새로운 과제를 습득하려는 부분을 억제하면 성능 감소를 줄일 수 있다는 것이죠.
+
+그 방법으로 제안하는 것이 1. 전체 데이터가 아니라 일부 데이터에 대해서만 여러 에폭 학습 2. 고품질 데이터만 사용 3. 데이터셋 구성을 프리트레이닝 데이터와 비슷하게 지정입니다. 전반적으로 프리트레이닝 전략이라기 보다는 파인튜닝 전략과 비슷해지네요.
+
+#pretraining #continual-learning 

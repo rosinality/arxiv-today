@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2401.16380
+
+*Rephrasing the Web: A Recipe for Compute and Data-Efficient Language Modeling* (Pratyush Maini, Skyler Seto, He Bai, David Grangier, Yizhe Zhang, Navdeep Jaitly)
+
+> Large language models are trained on massive scrapes of the web, which are often unstructured, noisy, and poorly phrased. Current scaling laws show that learning from such data requires an abundance of both compute and data, which grows with the size of the model being trained. This is infeasible both because of the large compute costs and duration associated with pre-training, and the impending scarcity of high-quality data on the web. In this work, we propose Web Rephrase Augmented Pre-training ($\textbf{WRAP}$) that uses an off-the-shelf instruction-tuned model prompted to paraphrase documents on the web in specific styles such as "like Wikipedia" or in "question-answer format" to jointly pre-train LLMs on real and synthetic rephrases. First, we show that using WRAP on the C4 dataset, which is naturally noisy, speeds up pre-training by $\sim3x$. At the same pre-training compute budget, it improves perplexity by more than 10% on average across different subsets of the Pile, and improves zero-shot question answer accuracy across 13 tasks by more than 2%. Second, we investigate the impact of the re-phrasing style on the performance of the model, offering insights into how the composition of the training data can impact the performance of LLMs in OOD settings. Our gains are attributed to the fact that re-phrased synthetic data has higher utility than just real data because it (i) incorporates style diversity that closely reflects downstream evaluation style, and (ii) has higher 'quality' than web-scraped data.
+
+웹 데이터를 LLM으로 다양한 스타일을 바꾼 다음 학습시키는 방법. 노이즈를 제거하기 위한 방법이라고 할 수 있겠습니다. 노이즈를 제거하는 만큼 학습 속도에 가속이 발생하네요. 완전히 생성하는 것보다는 정보를 되도록 유지하면서 노이즈를 제거한다는 것은 꽤 유의미한 방향이 아닐까 싶습니다.
+
+#dataset #llm #corpus 
+
+This study rephrases web corpus to various styles using llms, and training language model on it. It could be thought as denoising the corpus. As this method remove noises in the dataset, it accelerates training speed of the model. It could be interesting direction that preserves the information and just removes noise from the dataset, instead of generating entire corpus from the scratch using llms.

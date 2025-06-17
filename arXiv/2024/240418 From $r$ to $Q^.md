@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2404.12358
+
+*From $r$ to $Q^*$: Your Language Model is Secretly a Q-Function* (Rafael Rafailov, Joey Hejna, Ryan Park, Chelsea Finn)
+
+> Reinforcement Learning From Human Feedback (RLHF) has been a critical to the success of the latest generation of generative AI models. In response to the complex nature of the classical RLHF pipeline, direct alignment algorithms such as Direct Preference Optimization (DPO) have emerged as an alternative approach. Although DPO solves the same objective as the standard RLHF setup, there is a mismatch between the two approaches. Standard RLHF deploys reinforcement learning in a specific token-level MDP, while DPO is derived as a bandit problem in which the whole response of the model is treated as a single arm. In this work we rectify this difference, first we theoretically show that we can derive DPO in the token-level MDP as a general inverse Q-learning algorithm, which satisfies the Bellman equation. Using our theoretical results, we provide three concrete empirical insights. First, we show that because of its token level interpretation, DPO is able to perform some type of credit assignment. Next, we prove that under the token level formulation, classical search-based algorithms, such as MCTS, which have recently been applied to the language generation space, are equivalent to likelihood-based search on a DPO policy. Empirically we show that a simple beam search yields meaningful improvement over the base DPO policy. Finally, we show how the choice of reference policy causes implicit rewards to decline during training. We conclude by discussing applications of our work, including information elicitation in multi-tun dialogue, reasoning, agentic applications and end-to-end training of multi-model systems.
+
+MDP vs Contextual Bandit 문제가 DPO까지 넘어왔군요. 토큰 레벨 Reward r이 Q* 와 대응된다는 것을 기반으로 해서 토큰 레벨 DPO를 유도했습니다.
+
+이를 기반으로 몇 가지 재미있는 결과들을 만들었네요. 시퀀스 단위 Reward로 학습시켰을 때 각 토큰에 대해 Credit Assignment를 할 수 있다는 것과 디코딩 시 토큰 단위의 서치 과정에서 학습된 Policy를 사용할 수 있다는 것을 보였습니다. 재미있네요.
+
+#rlhf 

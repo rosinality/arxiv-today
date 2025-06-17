@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2409.14254
+
+*Instruction Following without Instruction Tuning* (John Hewitt, Nelson F. Liu, Percy Liang, Christopher D. Manning)
+
+> Instruction tuning commonly means finetuning a language model on instruction-response pairs. We discover two forms of adaptation (tuning) that are deficient compared to instruction tuning, yet still yield instruction following; we call this implicit instruction tuning. We first find that instruction-response pairs are not necessary: training solely on responses, without any corresponding instructions, yields instruction following. This suggests pretrained models have an instruction-response mapping which is revealed by teaching the model the desired distribution of responses. However, we then find it's not necessary to teach the desired distribution of responses: instruction-response training on narrow-domain data like poetry still leads to broad instruction-following behavior like recipe generation. In particular, when instructions are very different from those in the narrow finetuning domain, models' responses do not adhere to the style of the finetuning domain. To begin to explain implicit instruction tuning, we hypothesize that very simple changes to a language model's distribution yield instruction following. We support this by hand-writing a rule-based language model which yields instruction following in a product-of-experts with a pretrained model. The rules are to slowly increase the probability of ending the sequence, penalize repetition, and uniformly change 15 words' probabilities. In summary, adaptations made without being designed to yield instruction following can do so implicitly.
+
+Instruction 튜닝에서 Instruction 입력 없이 응답으로만 학습시켜도, 하나의 과제에만 학습시켜도 Instruction을 따르는 능력이 생긴다는 결과. 더 나아가 단어의 분포를 규칙 기반으로 변형하는 것으로도 Instruction Following 능력이 등장한다고.
+
+#instruction-tuning #alignment 

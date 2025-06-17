@@ -1,0 +1,13 @@
+https://arxiv.org/abs/2412.06769
+
+*Training Large Language Models to Reason in a Continuous Latent Space* (Shibo Hao, Sainbayar Sukhbaatar, DiJia Su, Xian Li, Zhiting Hu, Jason Weston, Yuandong Tian)
+
+> Large language models (LLMs) are restricted to reason in the "language space", where they typically express the reasoning process with a chain-of-thought (CoT) to solve a complex reasoning problem. However, we argue that language space may not always be optimal for reasoning. For example, most word tokens are primarily for textual coherence and not essential for reasoning, while some critical tokens require complex planning and pose huge challenges to LLMs. To explore the potential of LLM reasoning in an unrestricted latent space instead of using natural language, we introduce a new paradigm Coconut (Chain of Continuous Thought). We utilize the last hidden state of the LLM as a representation of the reasoning state (termed "continuous thought"). Rather than decoding this into a word token, we feed it back to the LLM as the subsequent input embedding directly in the continuous space. Experiments show that Coconut can effectively augment the LLM on several reasoning tasks. This novel latent reasoning paradigm leads to emergent advanced reasoning patterns: the continuous thought can encode multiple alternative next reasoning steps, allowing the model to perform a breadth-first search (BFS) to solve the problem, rather than prematurely committing to a single deterministic path like CoT. Coconut outperforms CoT in certain logical reasoning tasks that require substantial backtracking during planning, with fewer thinking tokens during inference. These findings demonstrate the promise of latent reasoning and offer valuable insights for future research.
+
+트랜스포머의 임베딩 출력을 토큰으로 바꾸는 대신 그대로 다음 시점의 입력으로 사용해 Continuous 토큰으로 Chain of Thought를 하도록 한다는 아이디어. Continuous 토큰을 사용하면 하나의 체인이 아니라 잠재적으로 다양한 경로가 토큰 안에 포함될 수 있죠. 다만 학습할 때 Chain of Thought 토큰으로 Supervision을 주면서 점진적으로 Continuous 토큰으로 바꿔나가야만 작동하는군요.
+
+<english>
+The idea that doing chain of thoughts in continuous tokens by using embedding outputs of transformer directly as an input of the next step, instead of convert it into tokens. If we use continuous tokens then many possible path could be contained into the tokens, not just one chains. But it only works when we gradually convert model to use continous tokens while giving supervision by chain of thought tokens.
+</english>
+
+#reasoning 

@@ -1,0 +1,13 @@
+https://arxiv.org/abs/2409.19256
+
+*HybridFlow: A Flexible and Efficient RLHF Framework* (Guangming Sheng, Chi Zhang, Zilingfeng Ye, Xibin Wu, Wang Zhang, Ru Zhang, Yanghua Peng, Haibin Lin, Chuan Wu)
+
+> Reinforcement Learning from Human Feedback (RLHF) is widely used in Large Language Model (LLM) alignment. Traditional RL can be modeled as a dataflow, where each node represents computation of a neural network (NN) and each edge denotes data dependencies between the NNs. RLHF complicates the dataflow by expanding each node into a distributed LLM training or generation program, and each edge into a many-to-many multicast. Traditional RL frameworks execute the dataflow using a single controller to instruct both intra-node computation and inter-node communication, which can be inefficient in RLHF due to large control dispatch overhead for distributed intra-node computation. Existing RLHF systems adopt a multi-controller paradigm, which can be inflexible due to nesting distributed computation and data communication. We propose HybridFlow, which combines single-controller and multi-controller paradigms in a hybrid manner to enable flexible representation and efficient execution of the RLHF dataflow. We carefully design a set of hierarchical APIs that decouple and encapsulate computation and data dependencies in the complex RLHF dataflow, allowing efficient operation orchestration to implement RLHF algorithms and flexible mapping of the computation onto various devices. We further design a 3D-HybridEngine for efficient actor model resharding between training and generation phases, with zero memory redundancy and significantly reduced communication overhead. Our experimental results demonstrate 1.53$\times$~20.57$\times$ throughput improvement when running various RLHF algorithms using HybridFlow, as compared with state-of-the-art baselines. HybridFlow source code is available at https://github.com/volcengine/verl.
+
+RLHF 과정을 효율화하기 위한 프레임워크도 종종 나오는군요. RLHF는 다양한 모델을 다양한 방법으로 사용하니 그만큼 최적화의 여지가 있다고 생각할 수도 있겠네요. (또 그만큼 난이도가 높아지기도 하죠.) 대규모 RL이 LLM에서 중요한 패러다임이 되고 있는 이상 그만큼 인프라의 효율성에 신경을 써야할지도 모르겠습니다.
+
+<english>
+Frameworks that accelerating RLHF process is often came out recently. As RLHF utilizes various models in various way, we can think there are vast areas for optimization (and also it increase difficulties of it.) As large scale RL became important paradigm for LLMs, maybe we need to invest more on efficiency of infrastructure.
+</english>
+
+#rlhf #framework 

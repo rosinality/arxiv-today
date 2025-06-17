@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2407.17467
+
+*CMR Scaling Law: Predicting Critical Mixture Ratios for Continual Pre-training of Language Models* (Jiawei Gu, Zacc Yang, Chuanghao Ding, Rui Zhao, Fei Tan)
+
+> Large Language Models (LLMs) excel in diverse tasks but often underperform in specialized fields due to limited domain-specific or proprietary corpus. Continual pre-training (CPT) enhances LLM capabilities by imbuing new domain-specific or proprietary knowledge while replaying general corpus to prevent catastrophic forgetting. The data mixture ratio of general corpus and domain-specific corpus, however, has been chosen heuristically, leading to sub-optimal training efficiency in practice. In this context, we attempt to re-visit the scaling behavior of LLMs under the hood of CPT, and discover a power-law relationship between loss, mixture ratio, and training tokens scale. We formalize the trade-off between general and domain-specific capabilities, leading to a well-defined Critical Mixture Ratio (CMR) of general and domain data. By striking the balance, CMR maintains the model's general ability and achieves the desired domain transfer, ensuring the highest utilization of available resources. Therefore, if we value the balance between efficiency and effectiveness, CMR can be consider as the optimal mixture ratio.Through extensive experiments, we ascertain the predictability of CMR, and propose CMR scaling law and have substantiated its generalization. These findings offer practical guidelines for optimizing LLM training in specialized domains, ensuring both general and domain-specific performance while efficiently managing training resources.
+
+Continual Pretraining 상황에서 주어진 학습량과 모델 크기에 대해서 원 도메인에 대한 Loss의 감소를 최소화하면서 새로운 도메인에 대한 성능 향상을 최대화하는 원 도메인 데이터와 새로운 도메인 데이터의 비율을 추정할 수 있는가 하는 문제.
+
+#continual-learning #pretraining #scaling-law 

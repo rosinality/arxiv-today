@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2408.02657
+
+*Lumina-mGPT: Illuminate Flexible Photorealistic Text-to-Image Generation with Multimodal Generative Pretraining* (Dongyang Liu, Shitian Zhao, Le Zhuo, Weifeng Lin, Yu Qiao, Hongsheng Li, Peng Gao)
+
+> We present Lumina-mGPT, a family of multimodal autoregressive models capable of various vision and language tasks, particularly excelling in generating flexible photorealistic images from text descriptions. Unlike existing autoregressive image generation approaches, Lumina-mGPT employs a pretrained decoder-only transformer as a unified framework for modeling multimodal token sequences. Our key insight is that a simple decoder-only transformer with multimodal Generative PreTraining (mGPT), utilizing the next-token prediction objective on massive interleaved text-image sequences, can learn broad and general multimodal capabilities, thereby illuminating photorealistic text-to-image generation. Building on these pretrained models, we propose Flexible Progressive Supervised Finetuning (FP-SFT) on high-quality image-text pairs to fully unlock their potential for high-aesthetic image synthesis at any resolution while maintaining their general multimodal capabilities. Furthermore, we introduce Ominiponent Supervised Finetuning (Omni-SFT), transforming Lumina-mGPT into a foundation model that seamlessly achieves omnipotent task unification. The resulting model demonstrates versatile multimodal capabilities, including visual generation tasks like flexible text-to-image generation and controllable generation, visual recognition tasks like segmentation and depth estimation, and vision-language tasks like multiturn visual question answering. Additionally, we analyze the differences and similarities between diffusion-based and autoregressive methods in a direct comparison.
+
+Chameleon 체크포인트에서 시작한 Autoregressive Decoder only Text to Image. Multi Resolution 대응을 위해 해상도를 지시하는 토큰과 라인을 구분하기 위한 토큰을 사용했군요. 낮은 해상도에서 높은 해상도로 점진적 학습을 하면서 텍스트, 이미지-텍스트, 텍스트-이미지, 멀티 턴 이미지 편집, Dense Prediction 과제들을 사용해 학습시켰네요.
+
+한 가지 신기한 것은 이미지를 넣고 편집하지 말라는 지시를 준 다음 생성하면 VQ에 의한 노이즈가 감소된 이미지를 생성할 수 있는 능력이 있다는 것입니다. 통계적으로 얼마나 더 나아지는지가 문제겠지만 생각 해 볼만한 부분이 있는 듯 하네요.
+
+#text-to-image #vision-language #autoregressive-model F

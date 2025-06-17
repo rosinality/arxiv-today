@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2408.00539
+
+*Intermittent Semi-working Mask: A New Masking Paradigm for LLMs* (Mingcong Lu, Jiangcai Zhu, Wang Hao, Zheng Li, Shusheng Zhang, Kailai Shao, Chao Chen, Nan Li, Feng Wang, Xin Lu)
+
+> Multi-turn dialogues are a key interaction method between humans and Large Language Models (LLMs), as conversations extend over multiple rounds, keeping LLMs' high generation quality and low latency is a challenge. Mainstream LLMs can be grouped into two categories based on masking strategy: causal LLM and prefix LLM. Several works have demonstrated that prefix LLMs tend to outperform causal ones in scenarios that heavily depend on historical context such as multi-turn dialogues or in-context learning, thanks to their bidirectional attention on prefix sequences. However, prefix LLMs have an inherent inefficient training problem in multi-turn dialogue datasets. In addition, the attention mechanism of prefix LLM makes it unable to reuse Key-Value Cache (KV Cache) across dialogue rounds to reduce generation latency. In this paper, we propose a novel masking scheme called Intermittent Semi-working Mask (ISM) to address these problems. Specifically, we apply alternate bidirectional and unidirectional attention on queries and answers in the dialogue history. In this way, ISM is able to maintain the high quality of prefix LLM and low generation latency of causal LLM, simultaneously. Extensive experiments illustrate that our ISM achieves significant performance.
+
+Prefix LM을 효율적으로 쓰기 위한 방법. Question 부분에만 Bidirectional Attention을 사용한다는 느낌이군요. Prefix LM의 효과는 만년 떡밥이지만 일단 효율적으로 사용하는 것은 가능하다는 증거가 될 수 있겠네요. (이런 형태의 마스킹을 지원하는 Attention 커널을 구현하는 것이 성가시긴 하겠습니다만.)
+
+#lm #attention 

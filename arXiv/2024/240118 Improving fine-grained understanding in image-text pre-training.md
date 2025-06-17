@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2401.09865
+
+*Improving fine-grained understanding in image-text pre-training* (Ioana Bica, Anastasija Ilić, Matthias Bauer, Goker Erdogan, Matko Bošnjak, Christos Kaplanis, Alexey A. Gritsenko, Matthias Minderer, Charles Blundell, Razvan Pascanu, Jovana Mitrović)
+
+> We introduce SPARse Fine-grained Contrastive Alignment (SPARC), a simple method for pretraining more fine-grained multimodal representations from image-text pairs. Given that multiple image patches often correspond to single words, we propose to learn a grouping of image patches for every token in the caption. To achieve this, we use a sparse similarity metric between image patches and language tokens and compute for each token a language-grouped vision embedding as the weighted average of patches. The token and language-grouped vision embeddings are then contrasted through a fine-grained sequence-wise loss that only depends on individual samples and does not require other batch samples as negatives. This enables more detailed information to be learned in a computationally inexpensive manner. SPARC combines this fine-grained loss with a contrastive loss between global image and text embeddings to learn representations that simultaneously encode global and local information. We thoroughly evaluate our proposed method and show improved performance over competing approaches both on image-level tasks relying on coarse-grained information, e.g. classification, as well as region-level tasks relying on fine-grained information, e.g. retrieval, object detection, and segmentation. Moreover, SPARC improves model faithfulness and captioning in foundational vision-language models.
+
+이미지-텍스트 레벨의 Contrast에 추가로 패치-토큰 단위의 Contrast를 추가한 시도. 패치-토큰 임베딩에 대한 내적에 Threshold를 걸어 Sparse하게 만든 Weight로 패치 임베딩의 가중 평균을 구해 텍스트 토큰과 Contrast Loss를 걸어주는 방식입니다. 단순하게 토큰에 상응하는 이미지 패치들의 묶음을 찾아내는 방법이라고 할 수 있겠네요.
+
+#contrastive_learning #vision-language 

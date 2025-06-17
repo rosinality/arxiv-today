@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2401.16553
+
+*SelectLLM: Can LLMs Select Important Instructions to Annotate?* (Ritik Sachin Parkar, Jaehyung Kim, Jong Inn Park, Dongyeop Kang)
+
+> Training large language models (LLMs) with a large and diverse instruction dataset aligns the models to comprehend and follow human instructions. Recent works have shown that using a small set of high-quality instructions can outperform using large yet more noisy ones. Because instructions are unlabeled and their responses are natural text, traditional active learning schemes with the model's confidence cannot be directly applied to the selection of unlabeled instructions. In this work, we propose a novel method for instruction selection, called SelectLLM, that leverages LLMs for the selection of high-quality instructions. Our high-level idea is to use LLMs to estimate the usefulness and impactfulness of each instruction without the corresponding labels (i.e., responses), via prompting. SelectLLM involves two steps: dividing the unlabelled instructions using a clustering algorithm (e.g., CoreSet) to multiple clusters, and then prompting LLMs to choose high-quality instructions within each cluster. SelectLLM showed comparable or slightly better performance on the popular instruction benchmarks, compared to the recent state-of-the-art selection methods. All code and data are publicly available (https://github.com/minnesotanlp/select-llm).
+
+Active Learning 같은 세팅이라고 할 수 있겠네요. 응답을 아직 작성하지 않은 Instruction들 중 어떤 Instruction을 어노테이션할 것인가를 결정하는 문제입니다. 여기서는 파인튜닝을 할 건데 어떤 Instruction을 어노테이션하면 좋을지 LLM에게 물어봤습니다. 정확히는 Instruction에 대한 질적인 퀄리티를 LLM으로 분류했다고 할 수 있겠네요.
+
+#instruction-tuning 
+
+This paper presents a scenario akin to active learning. It is problem that determines which instructions should be annotated, where responses of it not yet annotated. This paper propose a method where LLMs are used to select instructions that should be annotated. Specifically, it can be said that qualtative characteristics of instructions are classified by LLMs.

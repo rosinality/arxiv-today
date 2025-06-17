@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2405.19332
+
+*Self-Exploring Language Models: Active Preference Elicitation for Online Alignment* (Shenao Zhang, Donghan Yu, Hiteshi Sharma, Ziyi Yang, Shuohang Wang, Hany Hassan, Zhaoran Wang)
+
+> Preference optimization, particularly through Reinforcement Learning from Human Feedback (RLHF), has achieved significant success in aligning Large Language Models (LLMs) to adhere to human intentions. Unlike offline alignment with a fixed dataset, online feedback collection from humans or AI on model generations typically leads to more capable reward models and better-aligned LLMs through an iterative process. However, achieving a globally accurate reward model requires systematic exploration to generate diverse responses that span the vast space of natural language. Random sampling from standard reward-maximizing LLMs alone is insufficient to fulfill this requirement. To address this issue, we propose a bilevel objective optimistically biased towards potentially high-reward responses to actively explore out-of-distribution regions. By solving the inner-level problem with the reparameterized reward function, the resulting algorithm, named Self-Exploring Language Models (SELM), eliminates the need for a separate RM and iteratively updates the LLM with a straightforward objective. Compared to Direct Preference Optimization (DPO), the SELM objective reduces indiscriminate favor of unseen extrapolations and enhances exploration efficiency. Our experimental results demonstrate that when finetuned on Zephyr-7B-SFT and Llama-3-8B-Instruct models, SELM significantly boosts the performance on instruction-following benchmarks such as MT-Bench and AlpacaEval 2.0, as well as various standard academic benchmarks in different settings. Our code and models are available at https://github.com/shenao-zhang/SELM.
+
+Iterative한 Online RLHF 시나리오에서 Reward Model이 Uncertain한 영역에서 Reward를 낮게 설정하기 때문에 이 영역에 대한 탐색이 제한된다는 아이디어. 이 영역에 대해 Reward를 높게 설정하도록 해서(Optimistic) 탐색을 촉진한다는 발상입니다.
+
+주로 Pessimism이 등장하던 판에 Optimism이 등장하니 흥미롭네요.
+
+#rlhf #alignment 

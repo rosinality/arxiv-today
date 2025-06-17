@@ -1,0 +1,13 @@
+https://arxiv.org/abs/2501.13106
+
+*VideoLLaMA 3: Frontier Multimodal Foundation Models for Image and Video Understanding* (Boqiang Zhang, Kehan Li, Zesen Cheng, Zhiqiang Hu, Yuqian Yuan, Guanzheng Chen, Sicong Leng, Yuming Jiang, Hang Zhang, Xin Li, Peng Jin, Wenqi Zhang, Fan Wang, Lidong Bing, Deli Zhao)
+
+> In this paper, we propose VideoLLaMA3, a more advanced multimodal foundation model for image and video understanding. The core design philosophy of VideoLLaMA3 is vision-centric. The meaning of "vision-centric" is two-fold: the vision-centric training paradigm and vision-centric framework design. The key insight of our vision-centric training paradigm is that high-quality image-text data is crucial for both image and video understanding. Instead of preparing massive video-text datasets, we focus on constructing large-scale and high-quality image-text datasets. VideoLLaMA3 has four training stages: 1) vision-centric alignment stage, which warms up the vision encoder and projector; 2) vision-language pretraining stage, which jointly tunes the vision encoder, projector, and LLM with large-scale image-text data covering multiple types (including scene images, documents, charts) as well as text-only data. 3) multi-task fine-tuning stage, which incorporates image-text SFT data for downstream tasks and video-text data to establish a foundation for video understanding. 4) video-centric fine-tuning, which further improves the model's capability in video understanding. As for the framework design, to better capture fine-grained details in images, the pretrained vision encoder is adapted to encode images of varying sizes into vision tokens with corresponding numbers, rather than a fixed number of tokens. For video inputs, we reduce the number of vision tokens according to their similarity so that the representation of videos will be more precise and compact. Benefit from vision-centric designs, VideoLLaMA3 achieves compelling performances in both image and video understanding benchmarks.
+
+이미지 및 비디오 인식 모델. 비디오 토큰을 줄이기 위해 이전 프레임과 차이가 크지 않는 토큰은 제거하는 방법을 사용했군요. 스트리밍을 위해 비디오와 텍스트 토큰이 Interleaved된 상황도 고려했군요.
+
+<english>
+Image and video recognition model. They use a method that drops a token without large difference with respect to previous frame. They also considered a situation with video and text tokens interleaved with each other for streaming.
+</english>
+
+#multimodal #video-language 

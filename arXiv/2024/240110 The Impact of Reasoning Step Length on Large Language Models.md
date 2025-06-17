@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2401.04925
+
+*The Impact of Reasoning Step Length on Large Language Models* (Mingyu Jin, Qinkai Yu, Dong shu, Haiyan Zhao, Wenyue Hua, Yanda Meng, Yongfeng Zhang, Mengnan Du)
+
+> Chain of Thought (CoT) is significant in improving the reasoning abilities of large language models (LLMs). However, the correlation between the effectiveness of CoT and the length of reasoning steps in prompts remains largely unknown. To shed light on this, we have conducted several empirical experiments to explore the relations. Specifically, we design experiments that expand and compress the rationale reasoning steps within CoT demonstrations, while keeping all other factors constant. We have the following key findings. First, the results indicate that lengthening the reasoning steps in prompts, even without adding new information into the prompt, considerably enhances LLMs' reasoning abilities across multiple datasets. Alternatively, shortening the reasoning steps, even while preserving the key information, significantly diminishes the reasoning abilities of models. This finding highlights the importance of the number of steps in CoT prompts and provides practical guidance to make better use of LLMs' potential in complex problem-solving scenarios. Second, we also investigated the relationship between the performance of CoT and the rationales used in demonstrations. Surprisingly, the result shows that even incorrect rationales can yield favorable outcomes if they maintain the requisite length of inference. Third, we observed that the advantages of increasing reasoning steps are task-dependent: simpler tasks require fewer steps, whereas complex tasks gain significantly from longer inference sequences.
+
+Chain of Thought에서 Reasoning chain의 길이를 의도적으로 늘리거나 줄여봤을 때의 성능 변화. 길이가 늘어나면 성능이 높아지고 줄어들면 성능이 낮아지면서, Reasoning step 자체의 정확도보다는 길이 자체에 영향을 받는 듯한 패턴이 나타납니다. 이런 이상한 모습들은 이전에도 관측되어 왔었죠.
+
+왜 그런지 원인을 아직 이해가 충분하지 않은 듯 하지만 필요한 연산을 진행하기 위한 시간이 필요하다는 의미가 아닐까 싶고 그렇다면 Adaptive Computation Time 같은 것이 필요하지 않을까 하는 생각도 있습니다.
+
+#llm #prompt 

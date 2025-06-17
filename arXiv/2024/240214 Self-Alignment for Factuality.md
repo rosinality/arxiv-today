@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2402.09267
+
+*Self-Alignment for Factuality: Mitigating Hallucinations in LLMs via Self-Evaluation* (Xiaoying Zhang, Baolin Peng, Ye Tian, Jingyan Zhou, Lifeng Jin, Linfeng Song, Haitao Mi, Helen Meng)
+
+> Despite showing increasingly human-like abilities, large language models (LLMs) often struggle with factual inaccuracies, i.e. "hallucinations", even when they hold relevant knowledge. To address these hallucinations, current approaches typically necessitate high-quality human factuality annotations. In this work, we explore Self-Alignment for Factuality, where we leverage the self-evaluation capability of an LLM to provide training signals that steer the model towards factuality. Specifically, we incorporate Self-Eval, a self-evaluation component, to prompt an LLM to validate the factuality of its own generated responses solely based on its internal knowledge. Additionally, we design Self-Knowledge Tuning (SK-Tuning) to augment the LLM's self-evaluation ability by improving the model's confidence estimation and calibration. We then utilize these self-annotated responses to fine-tune the model via Direct Preference Optimization algorithm. We show that the proposed self-alignment approach substantially enhances factual accuracy over Llama family models across three key knowledge-intensive tasks on TruthfulQA and BioGEN.
+
+LLM을 사용해 Factuality 피드백을 주는 방법입니다. 사실 작업이 꽤 필요하긴 하네요. 일단 GPT-3.5로 응답을 쪼개서 응답을 구성하고 있는 주장들을 추출하고 그 주장들에 대한 질문을 만듭니다. 이 질문과 주장을 LLM으로 분류하는데, 분류하는 LLM도 추가 튜닝이 들어가네요. 분류 튜닝용 데이터셋은 질문에 대해 응답을 샘플링한 다음 Golden Answer와 Entailment 체크를 해서 구축합니다.
+
+#hallucination #alignment #synthetic-data 

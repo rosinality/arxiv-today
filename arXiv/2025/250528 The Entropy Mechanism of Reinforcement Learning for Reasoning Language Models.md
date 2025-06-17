@@ -1,0 +1,13 @@
+https://arxiv.org/abs/2505.22617
+
+*The Entropy Mechanism of Reinforcement Learning for Reasoning Language Models* (Ganqu Cui, Yuchen Zhang, Jiacheng Chen, Lifan Yuan, Zhi Wang, Yuxin Zuo, Haozhan Li, Yuchen Fan, Huayu Chen, Weize Chen, Zhiyuan Liu, Hao Peng, Lei Bai, Wanli Ouyang, Yu Cheng, Bowen Zhou, Ning Ding)
+
+> This paper aims to overcome a major obstacle in scaling RL for reasoning with LLMs, namely the collapse of policy entropy. Such phenomenon is consistently observed across vast RL runs without entropy intervention, where the policy entropy dropped sharply at the early training stage, this diminished exploratory ability is always accompanied with the saturation of policy performance. In practice, we establish a transformation equation R=-a*e^H+b between entropy H and downstream performance R. This empirical law strongly indicates that, the policy performance is traded from policy entropy, thus bottlenecked by its exhaustion, and the ceiling is fully predictable H=0, R=-a+b. Our finding necessitates entropy management for continuous exploration toward scaling compute for RL. To this end, we investigate entropy dynamics both theoretically and empirically. Our derivation highlights that, the change in policy entropy is driven by the covariance between action probability and the change in logits, which is proportional to its advantage when using Policy Gradient-like algorithms. Empirical study shows that, the values of covariance term and entropy differences matched exactly, supporting the theoretical conclusion. Moreover, the covariance term stays mostly positive throughout training, further explaining why policy entropy would decrease monotonically. Through understanding the mechanism behind entropy dynamics, we motivate to control entropy by restricting the update of high-covariance tokens. Specifically, we propose two simple yet effective techniques, namely Clip-Cov and KL-Cov, which clip and apply KL penalty to tokens with high covariances respectively. Experiments show that these methods encourage exploration, thus helping policy escape entropy collapse and achieve better downstream performance.
+
+굉장히 흥미로운 결과네요. 추론 RL에서 Reward와 엔트로피가 맞교환 되는 패턴이 나타나고 이 곡선이 예측 가능하다고 합니다. 따라서 이 엔트로피의 감소를 통제해서 성능을 향상시킬 수 있다고 하네요. "진짜 RL"의 맛이 이제 좀 느껴지는군요.
+
+<english>
+Very intriguing result. This paper shows that there is apparent pattern that reward and entropy is interchanges during reasoning RL, and its curve is predictable. Thus we can improve the performance by controlling these entropy reduction. It gradually taste like "true RL".
+</english>
+
+#rl #reasoning 
