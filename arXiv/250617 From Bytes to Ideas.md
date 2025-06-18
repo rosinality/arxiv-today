@@ -6,4 +6,8 @@ https://arxiv.org/abs/2506.14761
 
 바이트 UNet 형태의 시퀀스 모델인데 풀링에서 시퀀스를 쪼개는 메커니즘을 요구하는군요. 여기서는 공백으로 쪼개고 있습니다.
 
+<english>
+Byte UNet style sequence models, but it requires a mechanism for splitting sequences for poolings. This study used space based splitter.
+</english>
+
 #transformer #llm 

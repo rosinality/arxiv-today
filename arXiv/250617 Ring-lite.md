@@ -6,4 +6,8 @@ https://arxiv.org/abs/2506.14731
 
 Ant Group의 추론 모델. 길이에 따른 업데이트 차이 문제를 해소하려고 시도했군요. 토큰 예산에 맞춰 잘라버리는 방식을 썼네요.
 
+<english>
+Ant Group's reasoning model. They tried to resolve update difference occurs due to length. The method is cutting sequences to adjust token budgets.
+</english>
+
 #rl #reasoning 

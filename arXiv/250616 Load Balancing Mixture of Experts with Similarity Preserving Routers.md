@@ -6,4 +6,8 @@ https://arxiv.org/abs/2506.14038
 
 MoE 라우터 가중치를 직교 행렬로 정규화하는 형태의 Load Balancing. 실제 Load Balancing이 얼마나 잘 되는지가 궁금하네요.
 
+<english>
+A load balancing method through regularizing weight of MoE router to be orthogonal matrix. I wounder how well this loss balances the loads.
+</english>
+
 #moe 

@@ -6,4 +6,8 @@ https://arxiv.org/abs/2506.14429
 
 Diffusion LM의 Long Context 상황에서의 특성 분석. Bidirectional Attention과 RoPE의 조합으로 인해 상당히 다른 특성이 나타나는군요. 
 
+<english>
+An analysis on the characteristics of diffusion LM on long context. It shows quite distinct characteristics due to bidirectional attention and RoPE.
+</english>
+
 #long-context #diffusion 

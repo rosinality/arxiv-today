@@ -6,4 +6,8 @@ https://arxiv.org/abs/2506.14111
 
 Common Crawl에서 추출한 24B 문서, 24T 토큰에 대해 카테고리를 부여해 큐레이션했네요. 요즘 대세인 LLM 기반 전처리에 대한 상세한 리포트군요.
 
+<english>
+The study that curated 24B documents, 24T tokens extracted from Common Crawl by assigning categories. It is a detailed report on LLM based preprocessing which is currently mainstream.
+</english>
+
 #pretraining #corpus 
