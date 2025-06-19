@@ -8,4 +8,9 @@ https://arxiv.org/abs/2506.15211
 
 하루키, 토우마, 세츠나가 대체 누구인가 했는데 꽤 고전적인 게임의 캐릭터들인 것 같군요.
 
+<english>
+The idea of training logical reasoning using languages like Prolog may develop transferable reasoning capabilities that could work on the other domains. It is nice thing to use diverse domains and verifiers. Of course, there could be an objective that unifies all of them.
+
+I wondered who is Haruki, Touma, Setsuna, and found ther
+
 #reasoning #rl 

@@ -6,4 +6,8 @@ https://arxiv.org/abs/2506.15050
 
 PPO의 학습 효율화. 생성이 끝나지 않은 궤적에 대해서도 Policy를 학습시키는 것이 요점이군요.
 
+<english>
+Improving training efficiency of PPO. The main point is training policy on trajectories that generation is not finished yet.
+</english>
+
 #rl #efficiency 
