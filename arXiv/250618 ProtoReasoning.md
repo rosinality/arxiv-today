@@ -11,6 +11,7 @@ https://arxiv.org/abs/2506.15211
 <english>
 The idea of training logical reasoning using languages like Prolog may develop transferable reasoning capabilities that could work on the other domains. It is nice thing to use diverse domains and verifiers. Of course, there could be an objective that unifies all of them.
 
-I wondered who is Haruki, Touma, Setsuna, and found ther
+I wondered who is Haruki, Touma, Setsuna, and found they are characters from quite classical game.
+</english>
 
 #reasoning #rl 

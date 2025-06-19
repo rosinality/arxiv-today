@@ -6,4 +6,8 @@ https://arxiv.org/abs/2506.14965
 
 다양한 도메인의 데이터로 RL을 진행했을 때 추론 능력이 다른 도메인에서 어떻게 나타나는지에 대한 연구. 프리트레이닝에 많이 포함된 수학, 코드, 과학의 경우에는 다른 도메인으로 학습해도 성능 향상이 뚜렷한데 많이 포함되지 않은 도메인은 그 도메인의 데이터가 필요하군요. 그런데 이걸 반대로 RL을 통해 프리트레이닝에 많이 포함되지 않은 도메인에 대해서도 능력을 함양할 수 있다는 증거로 분석했네요.
 
+<english>
+The study on when RL is done on diverse domains of data how reasoning ability emerges on the other domains. Domains like math, code, science, which is included a lot on pretraining has apparent performance improvements even when trained on the other domain data, but domains not much included in pretraining requires data with that specific domain. But the authors analyzed that, contrastly, it could be an evidence of it is possible to improve performances even on the domains not much included in pretraining with RL.
+</english>
+
 #rlhf #reasoning 

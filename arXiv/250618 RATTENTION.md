@@ -6,4 +6,8 @@ https://arxiv.org/abs/2506.15545
 
 Local-Global Attention의 하이브리드에서 최적 Local Window의 크기는 무엇인가? 여기서는 단순히 Local Attention을 쓰지는 않고 Linear Attention도 결합했군요.
 
+<english>
+What is the opitmal size of local window in local-global attention hybrids? This works did not used local attention simply, they also combined linear attention.
+</english>
+
 #transformer #efficiency 

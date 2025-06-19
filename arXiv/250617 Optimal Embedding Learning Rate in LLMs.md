@@ -6,4 +6,8 @@ https://arxiv.org/abs/2506.15025
  
 임베딩 LR을 sqrt(dim)으로 맞춰주는 것이 좋다는 연구. 이런 Parameterization을 보면 최초의 트랜스포머의 세팅에 대해 생각하게 되네요.
 
+<english>
+A study insists that using sqrt(dim) LR scaling is better for embedding LR. When looking these parameterizations I tend to think about very first settings of transformer.
+</english>
+
 #optimization 
