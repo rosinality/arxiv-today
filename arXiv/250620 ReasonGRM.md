@@ -6,4 +6,8 @@ https://arxiv.org/abs/2506.16712
 
 추론 Reward Model을 위한 시도. 중간에 좋은 추론 경로를 추출해서 학습시키는 단계가 들어갔군요.
 
+<english>
+Attempt to make reasoning reward models. This work added a stage that trains a model with extracted high quality reasoning trajectories.
+</english>
+
 #rl #reasoning #reward-model 

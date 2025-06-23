@@ -6,4 +6,8 @@ https://arxiv.org/abs/2506.16507
 
 Reward Model을 인과 추론의 문제로 접근하는 시도는 종종 나왔었죠. (https://arxiv.org/abs/2409.13156, https://arxiv.org/abs/2501.09620) 여기에서는 인과 변수들에 대한 Counterfactual을 LLM으로 생성해서 Augmentation 하는 방법을 추가했군요.
 
+<english>
+There was some attempt to approach reward modeling as a causal inference problem (https://arxiv.org/abs/2409.13156, https://arxiv.org/abs/2501.09620). This work added generating counterfactual with LLMs for each causal variables and augment data with it.
+</english>
+
 #reward-model #causality 

@@ -6,4 +6,8 @@ https://arxiv.org/abs/2506.17202
 
 이미지 생성과 인식이 서로 충돌하는 과제라는 분석이군요.
 
+<english>
+The analysis that image understanding and generation is conflicting task.
+</english>
+
 #multimodal #image-generation 
