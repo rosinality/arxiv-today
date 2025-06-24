@@ -6,4 +6,8 @@ https://arxiv.org/abs/2506.18896
 
 PRM. 각 단계가 일관된지, 추론의 템플릿이 적절한지 등을 평가하게 했군요.
 
+<english>
+A PRM. It evaluates such as whether each steps are coherent, and templates of reasoning are appropriate.
+</english>
+
 #rl #reasoning #reward-model 

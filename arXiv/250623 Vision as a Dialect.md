@@ -6,4 +6,8 @@ https://arxiv.org/abs/2506.18898
 
 텍스트 토큰과 정렬시킨 Discrete 이미지 토큰으로 인식과 생성을 수행하는 모델이군요.
 
+<english>
+Image understanding and generation model uses discrete image token that aligned with text tokens.
+</english>
+
 #multimodal #image-generation #autoregressive-model #diffusion 

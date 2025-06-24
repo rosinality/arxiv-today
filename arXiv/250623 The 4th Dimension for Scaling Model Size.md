@@ -6,4 +6,8 @@ https://arxiv.org/abs/2506.18233
 
 레이어 재사용으로 모델을 확장했을 때 저장하는 정보의 양은 고정하면서 추론의 능력을 향상시킬 수 있다는 연구.
 
+<english>
+A study insists that if we expand model by applying shared layers it is possible to improve reasoning capabilities while knowledge capacity is fixed.
+</english>
+
 #transformer 

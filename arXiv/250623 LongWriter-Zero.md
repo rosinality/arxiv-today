@@ -6,4 +6,8 @@ https://arxiv.org/abs/2506.18841
 
 SFT 없이 RL로 장문을 생성하는 추론 모델을 학습. Continual Pretraining도 사용했군요.
 
+<english>
+Training reasoning model for generating long text with RL, without SFT. This study also employed continual pretraining.
+</english>
+
 #reasoning #rl 
