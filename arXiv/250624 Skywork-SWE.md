@@ -6,4 +6,8 @@ https://arxiv.org/abs/2506.19290
 
 SWE 데이터셋. 여기서는 궤적을 다른 LLM으로 생성했는데 그래도 보통 일이 아니네요.
 
+<english>
+A SWE dataset. Though this work generated trajectories with external LLMs, it seems very hard work.
+</english>
+
 #dataset 

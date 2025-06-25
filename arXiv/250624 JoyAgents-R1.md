@@ -6,4 +6,8 @@ https://arxiv.org/abs/2506.19846
 
 멀티 에이전트를 RL로 학습. 최근 Noam Brown이 팟캐스트에서 멀티 에이전트에 대해 언급해서 관심이 가네요 (https://www.latent.space/p/noam-brown). 기존의 접근과는 다른 멀티 에이전트에 대한 접근이 뭘까요.
 
+<english>
+Training multi agent with RL. It tracts my interests as recently Noam Brown mentioned multi agent at podcast (https://www.latent.space/p/noam-brown). What would the approach he said that different from existing approaches?
+</english>
+
 #agent #rl #reasoning 
