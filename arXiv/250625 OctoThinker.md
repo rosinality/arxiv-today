@@ -6,4 +6,8 @@ https://arxiv.org/abs/2506.20512
 
 수학과 Instruction 데이터를 Mid-training에 투입해 추론 RL의 성능을 높인 연구. Mid-training은 중요한 부분이지만 벤치마크를 해킹하기에도 좋은 단계일 것이기 때문에 균형이 필요하겠죠.
 
+<english>
+A study that improves reasoning RL by using math and instruction data at mid-training. Mid-training would be crucial stage, but as it would be also useful for hacking the benchmarks, I think we will need to balance it.
+</english>
+
 #rl #reasoning #mid-training

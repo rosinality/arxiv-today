@@ -6,4 +6,8 @@ https://arxiv.org/abs/2506.20639
 
 애플도 Diffusion LLM을 만들었네요. Diffusion LLM이 Diffusion이지만 디코딩 순서가 Autoregressive스러운 것에 대한 분석이 있습니다.
 
+<english>
+Apple also made diffusion LLM. There is an analysis on diffusion LLM has similar decoding order with autoregressive models even when it is based on diffusion.
+</english>
+
 #diffusion #llm #code 
