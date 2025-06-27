@@ -6,4 +6,8 @@ https://arxiv.org/abs/2506.21495
 
 LLM에 대한 Online vs Offline RL 비교. Online RL이 낫다는 자연스러운 결론. 이전부터 Offline RL 좀 하지 말라는 사람들이 많았죠.
 
+<english>
+Comparison of online vs offline RL on LLMs. The conclusion is online RL is better, naturally. There was some people insists we should avoid offline RL even before.
+</english>
+
 #rl 

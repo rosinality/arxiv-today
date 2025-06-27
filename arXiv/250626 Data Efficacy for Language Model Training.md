@@ -8,4 +8,10 @@ LLM 학습의 데이터 Efficacy. Efficiency와는 다르게 같은 데이터의
 
 같은 데이터에서 더 많은 것을 학습하는 방법은 앞으로 더더욱 중요한 문제겠죠.
 
+<english>
+Data efficacy for LLM training. In contrast of efficiency, it is a viewpoint of enhancing performance by reordering of same data. This works tried a method of folding, which repeats same curriculum multiple times.
+
+I think the method to train a model more from same data would become more and more crucial.
+</english>
+
 #pretraining #llm 

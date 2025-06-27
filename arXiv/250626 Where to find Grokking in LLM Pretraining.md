@@ -6,4 +6,8 @@ https://arxiv.org/abs/2506.21551
 
 LLM 학습에서 Grokking이 일어나는가에 대한 연구. 여기서는 그런 현상을 발견했고, 일반화가 일어나는 시점에서 샘플 각각이 아니라 샘플들에 대한 공통 패턴으로 수렴하는 과정을 관찰했네요.
 
+<english>
+A research on whether grokking happens in LLM training. This work found evidence of it, and observed model converges shared patterns among samples, intead of fitting into individual samples, when generalization happens.
+</english>
+
 #generalization #llm 
