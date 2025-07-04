@@ -6,6 +6,6 @@ https://arxiv.org/abs/2507.02754
 
 Trilinear Attention. 고전적인 아이디어가 다시 등장했네요. 연산 증가는 피할 수 없으니 Local Attention을 사용했습니다.
 
-실험 세팅이 좀 특이합니다. Scaling Law 추정도 했는데
+실험 세팅이 좀 특이합니다. Scaling Law 추정도 했는데 경사가 변화했군요. Local Window에 대해 좀 더 연산을 재할당한 효과도 있지 않을까 싶습니다만 생각해봐야겠네요.
 
 #transformer #scaling-law 
