@@ -6,4 +6,8 @@ https://arxiv.org/abs/2507.02833
 
 IFEval의 확장. 그리고 Instruction Following에 대한 Verifiable Reward를 사용한 RL.
 
+<english>
+An expansion of IFEval. And RL using verifiable reward on instruction following.
+</english>
+
 #rl #reasoning #instruction 

@@ -6,4 +6,8 @@ https://arxiv.org/abs/2507.02119
 
 Compute Optimal한 모델의 학습 과정에서 최종 Loss로 Loss를 나눠주면 Loss의 커브의 개형이 모델 크기와는 관계 없이 거의 일치한다는 발견에 대한 분석.
 
+<english>
+An analysis on discovery of if we divide loss by final loss then regardless of model sizes overall form of loss curve is almost same, during compute optimal model training.
+</english>
+
 #scaling-law 

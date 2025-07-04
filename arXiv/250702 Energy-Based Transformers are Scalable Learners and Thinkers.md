@@ -6,4 +6,8 @@ https://arxiv.org/abs/2507.02092
 
 EBM으로 텍스트와 비디오 생성을 학습. 전반적으로 EBM 강의 같은 논문이네요.
 
+<english>
+Training a text, video generation model based on EBM. Overall, it is a paper like EBM lecture.
+</english>
+
 #energy-based-model

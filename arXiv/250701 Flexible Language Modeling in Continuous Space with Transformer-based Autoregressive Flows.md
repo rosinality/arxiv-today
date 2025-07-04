@@ -6,4 +6,8 @@ https://arxiv.org/abs/2507.00425
 
 Autoregressive Flow를 사용한 LM. 입출력은 VAE에 의존하네요. Diffusion도 그렇고 애플이 대안적 LM을 여럿 시도하는군요 (https://arxiv.org/abs/2506.20639).
 
+<english>
+A LM based on autoregressive flow. For inputs and outputs they used VAE. Like recent diffusion LMs, Apple tries various approaches for alternative LMs (https://arxiv.org/abs/2506.20639).
+</english>
+
 #flow #lm 

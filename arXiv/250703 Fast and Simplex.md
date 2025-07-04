@@ -8,4 +8,10 @@ Trilinear Attention. 고전적인 아이디어가 다시 등장했네요. 연산
 
 실험 세팅이 좀 특이합니다. Scaling Law 추정도 했는데 경사가 변화했군요. 추정치가 정확할지는 모르겠네요.
 
+<english>
+A trilinear attention. Classical idea is re-emerged. As it is not possible to avoid increase in computation, they used local attention.
+
+Experimental setting is somewhat special. They also estimated scaling law, found slope is changed. But I wonder estimated value would be accurate.
+</english>
+
 #transformer #scaling-law 

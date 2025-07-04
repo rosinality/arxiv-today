@@ -6,4 +6,8 @@ https://arxiv.org/abs/2507.00432
 
 수학에 대해 학습한 추론 모델이 다른 도메인에도 일반화가 되는가라는 질문. RL로 학습한 경우에는 되는데 SFT로 한 경우에는 안 된다고. RL을 하라던 사람들이 또다시 1승을 거두는군요.
 
+<english>
+Question of it is possible for model trained on math to generalize to the other domains. The result is RL allows, and SFT hinders. It is another one point for the people who always insists to adopt RL.
+</english>
+
 #generalization #rl #reasoning 

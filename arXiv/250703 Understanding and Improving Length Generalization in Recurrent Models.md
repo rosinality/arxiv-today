@@ -8,4 +8,9 @@ State Space Model의 길이 일반화 연구. 이전 시퀀스의 상태를 초�
 
 SSM이 초기 상태에 민감하다는 이야기도 있었습니다만 (https://arxiv.org/abs/2406.07887) 어떨지 모르겠네요.
 
+<english>
+A study on length generalization of state space model. It insists that we can improve it by exposing model to various states by using state from previous sequences as an initial state. Actually it is the method used in training LM in RNN era.
+
+There was a report that SSM is sensitive on initial states (https://arxiv.org/abs/2406.07887) thus I wonder this could 
+
 #state-space-model #long-context

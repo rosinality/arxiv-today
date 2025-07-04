@@ -6,4 +6,8 @@ https://arxiv.org/abs/2507.02856
 
 MCQ 벤치마크에서 선택지를 제외하고 정답을 생성하게 한 다음 LLM으로 검증. 벤치마크의 난이도도 높아지고 좀 더 실용적인 척도라는 점에서 쓸만하겠네요.
 
+<english>
+Remove choices from MCQ benchmarks and let model to generate answer, and then verify it with LLM. It could be useful as it increases difficulty of the benchmarks and at the same time it would be a metric that reflects practical applications more well.
+</english>
+
 #benchmark 
