@@ -6,4 +6,8 @@ https://arxiv.org/abs/2507.02592
 
 웹 에이전트. 난이도가 높은 문제를 생성해내는 것이 핵심이네요.
 
+<english>
+An web agent. The main point is generating questions with higher difficulty.
+</english>
+
 #agent #rl #reasoning 
