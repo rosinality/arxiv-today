@@ -6,4 +6,8 @@ https://arxiv.org/abs/2507.05197
 
 Reward Model Pretraining. 다양한 Policy에서 샘플링한 궤적을 구분하는 형태로 학습했습니다. 이걸 Trillion 단위로 했네요. 이미 정렬된 모델도 Policy Pool에 포함되어 있다는 것을 고려했을 때 이 Pool의 구성이 어떤 영향을 미치는지 궁금하네요.
 
+<english>
+A reward model pretraining. They trained a model to distinguish trajectories sampled from diverse policies. They did this in trillion token scale. Considering already-aligned models are included in policy pool, I wonder how the composition of these pools affects the results.
+</english>
+
 #reward-model #scaling-law 
