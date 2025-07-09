@@ -6,4 +6,8 @@ https://arxiv.org/abs/2507.06181
 
 Autoformalization의 결과를 검증하는 모델과 벤치마크.
 
+<english>
+A model and benchmark for verifying the result of autoformalization.
+</english>
+
 #math #benchmark #rl 

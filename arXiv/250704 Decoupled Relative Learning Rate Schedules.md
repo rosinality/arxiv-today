@@ -6,4 +6,7 @@ https://arxiv.org/abs/2507.03526
 
 모듈마다 다른 LR 스케줄을 부여하자는 아이디어. 작은 모델에서 스케줄을 찾은 다음 큰 모델에 적용하는 간단한 방식입니다.
 
+<english>
+An idea of assigning distinct L
+
 #optimization #moe 

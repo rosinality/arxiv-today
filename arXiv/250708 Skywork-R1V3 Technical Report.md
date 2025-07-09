@@ -6,4 +6,8 @@ https://arxiv.org/abs/2507.06167
 
 Skywork가 멀티모달 모델을 또 냈군요. 여기에서도 결정적인 토큰의 엔트로피가 중요하다는 분석을 합니다 (https://arxiv.org/abs/2506.01939).
 
+<english>
+Skywork released multimodal again. This paper also reports an analysis that entropy of critical token is important (https://arxiv.org/abs/2506.01939).
+</english>
+
 #multimodal #rl #reasoning 

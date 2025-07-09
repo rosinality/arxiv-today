@@ -6,4 +6,8 @@ https://arxiv.org/abs/2507.03253
 
 프로그램 생성 기반 프리트레이닝 데이터 재작성에 대한 개선 (https://arxiv.org/abs/2409.17115). LLM으로 프로그램을 직접 생성시키는 것이 아니라 재작성 후 프로그램을 추론하는 형태로 학습 데이터를 구성. 대신 프로그램을 삭제로 제약하긴 했네요.
 
+<english>
+An improvement on method of rewriting pretraining data based on program generation (https://arxiv.org/abs/2409.17115). Instead of let LLM to generate program directly to make training data, they let model to rewrite the text and inferred a program from it. Instead they restricted program to deletion only.
+</english>
+
 #synthetic-data #pretraining #corpus 
