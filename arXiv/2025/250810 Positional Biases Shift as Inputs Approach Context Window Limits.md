@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2508.07479
+
+*Positional Biases Shift as Inputs Approach Context Window Limits* (Blerta Veseli, Julian Chibane, Mariya Toneva, Alexander Koller)
+
+> Large Language Models (LLMs) often struggle to use information across long inputs effectively. Prior work has identified positional biases, such as the Lost in the Middle (LiM) effect, where models perform better when information appears at the beginning (primacy bias) or end (recency bias) of the input, rather than in the middle. However, long-context studies have not consistently replicated these effects, raising questions about their intensity and the conditions under which they manifest. To address this, we conducted a comprehensive analysis using relative rather than absolute input lengths, defined with respect to each model's context window. Our findings reveal that the LiM effect is strongest when inputs occupy up to 50% of a model's context window. Beyond that, the primacy bias weakens, while recency bias remains relatively stable. This effectively eliminates the LiM effect; instead, we observe a distance-based bias, where model performance is better when relevant information is closer to the end of the input. Furthermore, our results suggest that successful retrieval is a prerequisite for reasoning in LLMs, and that the observed positional biases in reasoning are largely inherited from retrieval. These insights have implications for long-context tasks, the design of future LLM benchmarks, and evaluation methodologies for LLMs handling extended inputs.
+
+Lost in the Middle 현상이 Context Length의 50% 정도의 시퀀스에서 가장 강했다가 Context Length가 증가할수록 시퀀스 초반부에 대한 성능이 감소하는 형태로 사라진다는 것을 발견. 논문에서는 프리트레이닝에서 접하는 짧은 시퀀스들의 특성 때문이 아닐까 추측.
+
+The study found that the lost in the middle is most prominent when sequence is about 50% of the context length, and diminishes as context length increases due to decreased performance in the front part of sequences. The paper speculates that this may be due to the characteristics of short sequences encountered during pretraining.
+
+#long-context 

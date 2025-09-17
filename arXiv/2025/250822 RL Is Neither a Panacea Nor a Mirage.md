@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2508.16546
+
+*RL Is Neither a Panacea Nor a Mirage: Understanding Supervised vs. Reinforcement Learning Fine-Tuning for LLMs* (Hangzhan Jin, Sicheng Lv, Sifan Wu, Mohammad Hamdaqa)
+
+> Training large language models (LLMs) from scratch is increasingly impractical, making post-training methods such as supervised fine-tuning (SFT) and reinforcement-learning fine-tuning (RL-FT, e.g., PPO) central to modern practice. Using an out-of-distribution (OOD) variant of the 24-point card game and new spectrum-based diagnostics, we revisit how these two stages reshape model representation and OOD performance. Our key findings are- (1) RL-FT can restore much of the OOD performance loss from SFT (e.g., Llama-11B 8.97% to 15.38%, Qwen-7B 17.09% to 19.66%). But when SFT induces severe overfitting and a clear distribution shift, RL-FT cannot fully recover OOD performance. (2) Direction shifts of singular vectors matter more than singular value magnitudes. These shifts concentrate on directions linked to the largest and smallest singular values, leaving the bulk spectrum intact. (3) Low-rank and shallow recovery is effective: restoring singular vector directions for the top 20% of values or first 25% of layers recovers 70-80% of OOD performance. (4) Stronger SFT checkpoints enable better recovery by RL, while overfitted ones resist restoration. These results reconcile prior reports of RL superior OOD performance: RL primarily counteracts SFT-induced directional drift rather than finding new solutions. Our spectrum-aware analysis highlights inexpensive recovery knobs low-rank UV merging and shallow-layer resets that practitioners can use before costly RL fine-tuning.
+
+장기 SFT는 OOD 성능을 감소시키는데 RL이 그걸 복구할 수 있음. 여기서는 Singular vector의 회전과 관련이 있는 것 같다고 추정. 다만 논문은 현재 Draft 단계.
+
+Prolonged SFT degrades OOD performance. RL can recover it. This paper suggests that it may be related to the rotation of singular vectors. By the way, the paper is currently in draft stage.
+
+#rl #generalization 

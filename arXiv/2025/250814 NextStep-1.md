@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2508.10711
+
+*NextStep-1: Toward Autoregressive Image Generation with Continuous Tokens at Scale* (NextStep Team: Chunrui Han, Guopeng Li, Jingwei Wu, Quan Sun, Yan Cai, Yuang Peng, Zheng Ge, Deyu Zhou, Haomiao Tang, Hongyu Zhou, Kenkun Liu, Ailin Huang, Bin Wang, Changxin Miao, Deshan Sun, En Yu, Fukun Yin, Gang Yu, Hao Nie, Haoran Lv, Hanpeng Hu, Jia Wang, Jian Zhou, Jianjian Sun, Kaijun Tan, Kang An, Kangheng Lin, Liang Zhao, Mei Chen, Peng Xing, Rui Wang, Shiyu Liu, Shutao Xia, Tianhao You, Wei Ji, Xianfang Zeng, Xin Han, Xuelin Zhang, Yana Wei, Yanming Xu, Yimin Jiang, Yingming Wang, Yu Zhou, Yucheng Han, Ziyang Meng, Binxing Jiao, Daxin Jiang, Xiangyu Zhang, Yibo Zhu)
+
+> Prevailing autoregressive (AR) models for text-to-image generation either rely on heavy, computationally-intensive diffusion models to process continuous image tokens, or employ vector quantization (VQ) to obtain discrete tokens with quantization loss. In this paper, we push the autoregressive paradigm forward with NextStep-1, a 14B autoregressive model paired with a 157M flow matching head, training on discrete text tokens and continuous image tokens with next-token prediction objectives. NextStep-1 achieves state-of-the-art performance for autoregressive models in text-to-image generation tasks, exhibiting strong capabilities in high-fidelity image synthesis. Furthermore, our method shows strong performance in image editing, highlighting the power and versatility of our unified approach. To facilitate open research, we will release our code and models to the community.
+
+Flow matching 헤드를 사용하는 Autoregressive 이미지 생성 (https://arxiv.org/abs/2406.11838). 이미지 토크나이저와 생성 속도, 불안정성이 문제. Autoregressive 생성 자체가 느린데 Flow matching을 또한 토큰별로 수행한다는 것은 까다로운 부분. Few step Diffusion에 대한 연구는 많이 있으니 참조할 수 있겠지만.
+
+Autoregressive image generation using flow matching head (https://arxiv.org/abs/2406.11838). Image tokenizers, generation speed, and instability are issues. The requirement to perform flow matching at the token level is cumbersome, when autoregressive generation itself is already slow. Maybe the research on few-step diffusion could be leveraged.
+
+#diffusion #autoregressive-model #image-generation 

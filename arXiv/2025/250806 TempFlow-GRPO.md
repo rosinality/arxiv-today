@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2508.04324
+
+*TempFlow-GRPO: When Timing Matters for GRPO in Flow Models* (Xiaoxuan He, Siming Fu, Yuke Zhao, Wanli Li, Jian Yang, Dacheng Yin, Fengyun Rao, Bo Zhang)
+
+> Recent flow matching models for text-to-image generation have achieved remarkable quality, yet their integration with reinforcement learning for human preference alignment remains suboptimal, hindering fine-grained reward-based optimization. We observe that the key impediment to effective GRPO training of flow models is the temporal uniformity assumption in existing approaches: sparse terminal rewards with uniform credit assignment fail to capture the varying criticality of decisions across generation timesteps, resulting in inefficient exploration and suboptimal convergence. To remedy this shortcoming, we introduce \textbf{TempFlow-GRPO} (Temporal Flow GRPO), a principled GRPO framework that captures and exploits the temporal structure inherent in flow-based generation. TempFlow-GRPO introduces two key innovations: (i) a trajectory branching mechanism that provides process rewards by concentrating stochasticity at designated branching points, enabling precise credit assignment without requiring specialized intermediate reward models; and (ii) a noise-aware weighting scheme that modulates policy optimization according to the intrinsic exploration potential of each timestep, prioritizing learning during high-impact early stages while ensuring stable refinement in later phases. These innovations endow the model with temporally-aware optimization that respects the underlying generative dynamics, leading to state-of-the-art performance in human preference alignment and standard text-to-image benchmarks.
+
+Flow Matching을 위한 Credit Assignment 방법. 특정 시점에서 샘플링에 노이즈를 결합해 분기시키고 각 시점의 노이즈 수준에 따라 Reward에 가중치를 적용.
+
+Credit assignment for flow matching. Branches at specific time points by incorporating noise into the sampling process and applies weights to rewards based on the noise level at each timestep.
+
+#rl #flow-matching 

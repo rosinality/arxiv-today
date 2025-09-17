@@ -10,4 +10,4 @@ LM에 추론을 컨텍스트로 제공했을 때의 정답의 확률을 사용�
 Improvement on the method of assigning reward using probability of the answer given reasoning as context to LM. The idea is use separated tokens which is largely influenced from actual reasonings.
 </english>
 
-#reasoning #rl 
+#reasoning #rl #reward-model 

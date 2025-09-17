@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2509.06941
+
+*Outcome-based Exploration for LLM Reasoning* (Yuda Song, Julia Kempe, Remi Munos)
+
+> Reinforcement learning (RL) has emerged as a powerful method for improving the reasoning abilities of large language models (LLMs). Outcome-based RL, which rewards policies solely for the correctness of the final answer, yields substantial accuracy gains but also induces a systematic loss in generation diversity. This collapse undermines real-world performance, where diversity is critical for test-time scaling. We analyze this phenomenon by viewing RL post-training as a sampling process and show that, strikingly, RL can reduce effective diversity even on the training set relative to the base model. Our study highlights two central findings: (i) a transfer of diversity degradation, where reduced diversity on solved problems propagates to unsolved ones, and (ii) the tractability of the outcome space, since reasoning tasks admit only a limited set of distinct answers. Motivated by these insights, we propose outcome-based exploration, which assigns exploration bonuses according to final outcomes. We introduce two complementary algorithms: historical exploration, which encourages rarely observed answers via UCB-style bonuses, and batch exploration, which penalizes within-batch repetition to promote test-time diversity. Experiments on standard competition math with Llama and Qwen models demonstrate that both methods improve accuracy while mitigating diversity collapse. On the theoretical side, we formalize the benefit of outcome-based exploration through a new model of outcome-based bandits. Together, these contributions chart a practical path toward RL methods that enhance reasoning without sacrificing the diversity essential for scalable deployment.
+
+응답에 대한 UCB를 사용해 RL로 인한 다양성 감소에 대처. 요즘 이 계통 연구들이 많은데 (https://arxiv.org/abs/2509.02534) 특히 창조적 과제에 대해서라면 중요한 문제일지도.
+
+Mitigating reduction of diversity due to RL involves using UCB on answers. There are many studies on this recently (https://arxiv.org/abs/2509.02534) and it could be important for creative tasks.
+
+#rl #post-training

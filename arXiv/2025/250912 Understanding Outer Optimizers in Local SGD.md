@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2509.10439
+
+*Understanding Outer Optimizers in Local SGD: Learning Rates, Momentum, and Acceleration* (Ahmed Khaled, Satyen Kale, Arthur Douillard, Chi Jin, Rob Fergus, Manzil Zaheer)
+
+> Modern machine learning often requires training with large batch size, distributed data, and massively parallel compute hardware (like mobile and other edge devices or distributed data centers). Communication becomes a major bottleneck in such settings but methods like Local Stochastic Gradient Descent (Local SGD) show great promise in reducing this additional communication overhead. Local SGD consists of three parts: a local optimization process, an aggregation mechanism, and an outer optimizer that uses the aggregated updates from the nodes to produce a new model. While there exists an extensive literature on understanding the impact of hyperparameters in the local optimization process, the choice of outer optimizer and its hyperparameters is less clear. We study the role of the outer optimizer in Local SGD, and prove new convergence guarantees for the algorithm. In particular, we show that tuning the outer learning rate allows us to (a) trade off between optimization error and stochastic gradient noise variance, and (b) make up for ill-tuning of the inner learning rate. Our theory suggests that the outer learning rate should sometimes be set to values greater than $1$. We extend our results to settings where we use momentum in the outer optimizer, and we show a similar role for the momentum-adjusted outer learning rate. We also study acceleration in the outer optimizer and show that it improves the convergence rate as a function of the number of communication rounds, improving upon the convergence rate of prior algorithms that apply acceleration locally. Finally, we also introduce a novel data-dependent analysis of Local SGD that yields further insights on outer learning rate tuning. We conduct comprehensive experiments with standard language models and various outer optimizers to validate our theory.
+
+Local SGD의 외부 Optimizer의 최적 LR이 노이즈 규모가 작다면 1 이상일 수 있다는 분석 (Momentum이 사용된다면 작아질 수 있음).
+
+Analysis shows that the optimal learning rate of the outer optimizer in Local SGD could be larger than 1 if the noise scale is small enough (and could be smaller if momentum is used).
+
+#optimization #distributed-training 

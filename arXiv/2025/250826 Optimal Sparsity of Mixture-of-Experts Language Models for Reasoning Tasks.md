@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2508.18672
+
+*Optimal Sparsity of Mixture-of-Experts Language Models for Reasoning Tasks* (Taishi Nakamura, Satoki Ishikawa, Masaki Kawamura, Takumi Okamoto, Daisuke Nohara, Jun Suzuki, Rio Yokota)
+
+> Empirical scaling laws have driven the evolution of large language models (LLMs), yet their coefficients shift whenever the model architecture or data pipeline changes. Mixture-of-Experts (MoE) models, now standard in state-of-the-art systems, introduce a new sparsity dimension that current dense-model frontiers overlook. We investigate how MoE sparsity influences two distinct capability regimes: memorization and reasoning. We train families of MoE Transformers that systematically vary total parameters, active parameters, and top-$k$ routing while holding the compute budget fixed. For every model we record pre-training loss, downstream task loss, and task accuracy, allowing us to separate the train-test generalization gap from the loss-accuracy gap. Memorization benchmarks improve monotonically with total parameters, mirroring training loss. By contrast, reasoning performance saturates and can even regress despite continued gains in both total parameters and training loss. Altering top-$k$ alone has little effect when active parameters are constant, and classic hyperparameters such as learning rate and initialization modulate the generalization gap in the same direction as sparsity. Neither post-training reinforcement learning (GRPO) nor extra test-time compute rescues the reasoning deficit of overly sparse models. Our model checkpoints, code and logs are open-source at https://github.com/rioyokotalab/optimal-sparsity.
+
+활성화되는 Expert나 전체 Expert의 수를 증가시켰을 때 Train/Valid Loss는 감소하더라도 GSM 같은 벤치마크의 성능이 감소하는 현상을 발견. 또한 하이퍼파라미터에 더 민감해짐. 어쩌면 모델이 그다지 도움이 되지 않는 패턴들을 학습하거나 학습할 수 있게 되는 것일지도. (또한 불안정한 방식으로.)
+
+Increasing the number of activated experts or the total number of experts can lead to a decrease in downstream task (GSM) performance even when train/valid loss itself decreases. It is also more sensitive to hyperparameters. Maybe the model tends to (or is able to) memorize more patterns that are not very helpful, in an unstable manner.
+
+#moe #scaling-law #generalization 

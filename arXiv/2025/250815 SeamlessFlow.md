@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2508.11553
+
+*SeamlessFlow: A Trainer Agent Isolation RL Framework Achieving Bubble-Free Pipelines via Tag Scheduling* (Jinghui Wang, Shaojie Wang, Yinghan Cui, Xuxing Chen, Chao Wang, Xiaojiang Zhang, Minglei Zhang, Jiarong Zhang, Wenhao Zhuang, Yuchen Cao, Wankang Bao, Haimo Li, Zheng Lin, Huiming Wang, Haoyang Huang, Zongxian Feng, Zizheng Zhan, Ken Deng, Wen Xiang, Huaixi Tang, Kun Wu, Mengtong Li, Mengfei Xie, Junyi Peng, Haotian Zhang, Bin Chen, Bing Yu)
+
+> We introduce SeamlessFlow, a server based reinforcement learning (RL) framework that addresses two core challenges in industrial scale RL: (1) decoupling RL training from the complex execution flow of agents; (2) maximizing GPU utilization with minimal idle time while preserving the stability and scalability required for large-scale deployments. First, SeamlessFlow introduces a data plane that decouples the RL trainer from diverse, complex agent implementations while sustaining high throughput. A central trajectory manager maintains complete interaction histories and supports partial rollout, allowing rollout to pause for weight updates and resume seamlessly, keeping agents unaware of service interruptions. Second, we propose a tag driven scheduling paradigm that abstracts hardware into capability tagged resources, unifying colocated and disaggregated architectures. Based on this, SeamlessFlow introduces a spatiotemporal multiplexing pipeline that dynamically reassigns idle training nodes to rollout in a train rollout separated setup, eliminating pipeline bubbles and fully exploiting heterogeneous cluster resources. By combining these innovations, SeamlessFlow delivers both stability and high performance, making it well suited for multi agent, long horizon, and other complex RL tasks.
+
+생성과 학습 워커를 분리시키되 파이프라인 버블을 막기 위해 학습 워커가 쉬는 중에는 생성하도록 디자인.
+
+Separate generation and training workers by design, but to prevent pipeline bubbles, assign generation tasks to training workers during idle.
+
+#rl #reasoning #framework 

@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2507.15225
+
+*Solving Formal Math Problems by Decomposition and Iterative Reflection* (Yichi Zhou, Jianqiu Zhao, Yongxin Zhang, Bohan Wang, Siran Wang, Luoxin Chen, Jiahui Wang, Haowei Chen, Allan Jie, Xinbo Zhang, Haocheng Wang, Luong Trung, Rong Ye, Phan Nhat Hoang, Huishuai Zhang, Peng Sun, Hang Li)
+
+> General-purpose Large Language Models (LLMs) have achieved remarkable success in intelligence, performing comparably to human experts on complex reasoning tasks such as coding and mathematical reasoning. However, generating formal proofs in specialized languages like Lean 4 remains a significant challenge for these models, limiting their application in complex theorem proving and automated verification. Current approaches typically require specializing models through fine-tuning on dedicated formal corpora, incurring high costs for data collection and training. In this work, we introduce \textbf{Delta Prover}, an agent-based framework that orchestrates the interaction between a general-purpose LLM and the Lean 4 proof environment. Delta Prover leverages the reflection and reasoning capabilities of general-purpose LLMs to interactively construct formal proofs in Lean 4, circumventing the need for model specialization. At its core, the agent integrates two novel, interdependent components: an algorithmic framework for reflective decomposition and iterative proof repair, and a custom Domain-Specific Language (DSL) built upon Lean 4 for streamlined subproblem management. \textbf{Delta Prover achieves a state-of-the-art 95.9\% success rate on the miniF2F-test benchmark, surpassing all existing approaches, including those requiring model specialization.} Furthermore, Delta Prover exhibits a significantly stronger test-time scaling law compared to standard Best-of-N proof strategies. Crucially, our findings demonstrate that general-purpose LLMs, when guided by an effective agentic structure, possess substantial untapped theorem-proving capabilities. This presents a computationally efficient alternative to specialized models for robust automated reasoning in formal environments.
+
+Gemini 2.5 Pro에 Lean 4 컴파일러 피드백과 문제 분해를 결합해 miniF2F를 돌파.
+
+Breaking miniF2F using Gemini 2.5 Pro with Lean 4 compiler feedback and problem decomposition.
+
+#agent #math 

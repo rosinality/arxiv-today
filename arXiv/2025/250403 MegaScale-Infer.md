@@ -10,4 +10,4 @@ ByteDance의 MoE 서빙 프레임워크. Attention과 FFN을 분리하고 Pipeli
 MoE serving framework from ByteDance. They decoupled attention and ffn and used pipeline parallel to communicate with each other. Considering open source is adopting even decoupling of prefill and decode pretty recently, there seems siginificant gap between it and company internal solution on serving frameworks.
 </english>
 
-#efficiency 
+#efficiency #moe 

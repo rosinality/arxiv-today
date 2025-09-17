@@ -11,3 +11,5 @@ Using SFT data with RL training by split it into prefixes and generate rollout f
 </english>
 
 #rl #reasoning 
+
+https://arxiv.org/abs/2507.06573

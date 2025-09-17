@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2508.18756
+
+*UltraMemV2: Memory Networks Scaling to 120B Parameters with Superior Long-Context Learning* (Zihao Huang, Yu Bao, Qiyang Min, Siyan Chen, Ran Guo, Hongzhi Huang, Defa Zhu, Yutao Zeng, Banggu Wu, Xun Zhou, Siyuan Qiao)
+
+> While Mixture of Experts (MoE) models achieve remarkable efficiency by activating only subsets of parameters, they suffer from high memory access costs during inference. Memory-layer architectures offer an appealing alternative with very few memory access, but previous attempts like UltraMem have only matched the performance of 2-expert MoE models, falling significantly short of state-of-the-art 8-expert configurations. We present UltraMemV2, a redesigned memory-layer architecture that closes this performance gap. Our approach introduces five key improvements: integrating memory layers into every transformer block, simplifying value expansion with single linear projections, adopting FFN-based value processing from PEER, implementing principled parameter initialization, and rebalancing memory-to-FFN computation ratios. Through extensive evaluation, we demonstrate that UltraMemV2 achieves performance parity with 8-expert MoE models under same computation and parameters but significantly low memory access. Notably, UltraMemV2 shows superior performance on memory-intensive tasks, with improvements of +1.6 points on long-context memorization, +6.2 points on multi-round memorization, and +7.9 points on in-context learning. We validate our approach at scale with models up to 2.5B activated parameters from 120B total parameters, and establish that activation density has greater impact on performance than total sparse parameter count. Our work brings memory-layer architectures to performance parity with state-of-the-art MoE models, presenting a compelling alternative for efficient sparse computation.
+
+Product Key Memory + Tensor Decomposition 모델에 대한 개선 (https://arxiv.org/abs/2411.12364). FFN 채택과 (https://arxiv.org/abs/2407.04153) 더 나은 초기화. MoE와 경쟁력이 있는 성능.
+
+Improved product key memory + tensor decomposition (https://arxiv.org/abs/2411.12364) with FFN (https://arxiv.org/abs/2407.04153) and initialization. Competitive with MoE.
+
+#moe #sparsity 

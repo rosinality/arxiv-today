@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2509.02046
+
+*Fantastic Pretraining Optimizers and Where to Find Them* (Kaiyue Wen, David Hall, Tengyu Ma, Percy Liang)
+
+> AdamW has long been the dominant optimizer in language model pretraining, despite numerous claims that alternative optimizers offer 1.4 to 2x speedup. We posit that two methodological shortcomings have obscured fair comparisons and hindered practical adoption: (i) unequal hyperparameter tuning and (ii) limited or misleading evaluation setups. To address these two issues, we conduct a systematic study of ten deep learning optimizers across four model scales (0.1B-1.2B parameters) and data-to-model ratios (1-8x the Chinchilla optimum). We find that fair and informative comparisons require rigorous hyperparameter tuning and evaluations across a range of model scales and data-to-model ratios, performed at the end of training. First, optimal hyperparameters for one optimizer may be suboptimal for another, making blind hyperparameter transfer unfair. Second, the actual speedup of many proposed optimizers over well-tuned baselines is lower than claimed and decreases with model size to only 1.1x for 1.2B parameter models. Thirdly, comparing intermediate checkpoints before reaching the target training budgets can be misleading, as rankings between two optimizers can flip during training due to learning rate decay. Through our thorough investigation, we find that all the fastest optimizers such as Muon and Soap, use matrices as preconditioners -- multiplying gradients with matrices rather than entry-wise scalars. However, the speedup of matrix-based optimizers is inversely proportional to model scale, decreasing from 1.4x over AdamW for 0.1B parameter models to merely 1.1x for 1.2B parameter models.
+
+Optimizer 벤치마크 2. 하이퍼파라미터 튜닝과 모델과 데이터 크기의 충분한 Scaling이 중요하다는 것을 다시 한 번 보여줌. 사실 Chinchilla 최적 휴리스틱은 (20x 룰) 최근 기준에서는 연산 최적 관점에서도 Undertraining일 수 있음.
+
+Optimizer benchmark 2. This again shows that proper hyperparameter tuning and sufficient scaling of both model and data are crucial for correctly comparing optimizers. Actually, the chinchilla optimal heuristic (20x rule) could be undertraining by modern standards, even with respect to compute optimality.
+
+#optimizer 
