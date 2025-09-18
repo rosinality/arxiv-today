@@ -6,4 +6,6 @@ https://www.nature.com/articles/s41586-025-09422-z
 
 DeepSeek R1이 네이처 논문으로 나왔군요. Supplementary Material에 SFT 데이터의 구축 과정이 나와있습니다. (https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-025-09422-z/MediaObjects/41586_2025_9422_MOESM1_ESM.pdf)
 
+DeepSeek R1 has been published as a Nature article. The process of SFT data construction is presented in the supplementary material (https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-025-09422-z/MediaObjects/41586_2025_9422_MOESM1_ESM.pdf).
+
 #rl #reasoning 
