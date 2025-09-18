@@ -6,8 +6,6 @@ https://arxiv.org/abs/2509.14234
 
 정답 없이 RL. 롤아웃을 여러 개 생성한 다음 초기 Policy로 종합. 종합하는 모델 또한 학습될 수 있음 (https://arxiv.org/abs/2509.06870).
 
-<english>
-RL without references by generating multiple rollouts and aggregate it with initial policy. Aggregator itself could be trained (https://arxiv.org/abs/2509.06870).
-</english>
+RL without reference by generating multiple rollouts and aggregating them with the initial policy. The aggregator itself could be trained (https://arxiv.org/abs/2509.06870).
 
 #rl #synthetic-data 
