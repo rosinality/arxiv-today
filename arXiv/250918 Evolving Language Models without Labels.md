@@ -6,8 +6,6 @@ https://arxiv.org/abs/2509.15194
 
 Majority Voting 레이블을 사용한 레이블 없는 RL. 임베딩을 사용한 추론의 다양성을 통해 탐색 보너스를 적용.
 
-<english>
-Label-free RL using majority voted labels and exploration bonus calculated from diversity of reasoning measured using embeddings.
-</english>
+Label-free RL using majority voting labels. Applies exploration bonus from diversity of reasoning using embeddings.
 
 #rl #reasoning 
