@@ -1,0 +1,13 @@
+https://arxiv.org/abs/2509.16197
+
+*MANZANO: A Simple and Scalable Unified Multimodal Model with a Hybrid Vision Tokenizer* (Yanghao Li, Rui Qian, Bowen Pan, Haotian Zhang, Haoshuo Huang, Bowen Zhang, Jialing Tong, Haoxuan You, Xianzhi Du, Zhe Gan, Hyunjik Kim, Chao Jia, Zhenbang Wang, Yinfei Yang, Mingfei Gao, Zi-Yi Dou, Wenze Hu, Chang Gao, Dongxu Li, Philipp Dufter, Zirui Wang, Guoli Yin, Zhengdong Zhang, Chen Chen, Yang Zhao, Ruoming Pang, Zhifeng Chen)
+
+> Unified multimodal Large Language Models (LLMs) that can both understand and generate visual content hold immense potential. However, existing open-source models often suffer from a performance trade-off between these capabilities. We present Manzano, a simple and scalable unified framework that substantially reduces this tension by coupling a hybrid image tokenizer with a well-curated training recipe. A single shared vision encoder feeds two lightweight adapters that produce continuous embeddings for image-to-text understanding and discrete tokens for text-to-image generation within a common semantic space. A unified autoregressive LLM predicts high-level semantics in the form of text and image tokens, with an auxiliary diffusion decoder subsequently translating the image tokens into pixels. The architecture, together with a unified training recipe over understanding and generation data, enables scalable joint learning of both capabilities. Manzano achieves state-of-the-art results among unified models, and is competitive with specialist models, particularly on text-rich evaluation. Our studies show minimal task conflicts and consistent gains from scaling model size, validating our design choice of a hybrid tokenizer.
+
+이미지 이해-생성 통합 모델. Continuous와 Discrete 토큰을 모두 지원하도록 토크나이저 학습. 토크나이저는 텍스트 생성 Objective로 학습됨. (이미지 디코더는 학습 이후에 부착.)
+
+<english>
+Unified image understanding-generation model. Tokenizer is trained to support both continuous/discrete tokens, using text generation objective. (Image decoder attached on top of this after the training)
+</english>
+
+#tokenizer #vq #image-generation #multimodal 
