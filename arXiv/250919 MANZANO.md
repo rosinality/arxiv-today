@@ -6,8 +6,6 @@ https://arxiv.org/abs/2509.16197
 
 이미지 이해-생성 통합 모델. Continuous와 Discrete 토큰을 모두 지원하도록 토크나이저 학습. 토크나이저는 텍스트 생성 Objective로 학습됨. (이미지 디코더는 학습 이후에 부착.)
 
-<english>
-Unified image understanding-generation model. Tokenizer is trained to support both continuous/discrete tokens, using text generation objective. (Image decoder attached on top of this after the training)
-</english>
+Unified image understanding-generation model. Tokenizer is trained to support both continuous and discrete tokens, using text generation objective. (Image decoder is attached after the training.)
 
 #tokenizer #vq #image-generation #multimodal 

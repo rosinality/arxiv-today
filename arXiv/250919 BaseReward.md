@@ -6,8 +6,6 @@ https://arxiv.org/abs/2509.16127
 
 Value 헤드 vs Generative RM과 같은 Multimodal RM에 대한 Ablation. 여기서는 MLP Value 헤드를 쓴 단순한 선택이 가장 나았다고.
 
-<english>
-Ablations on multimodal RM, such as value head vs generative RM. For them simple value head with MLP worked best.
-</english>
+Ablation study on multimodal RM, such as value head vs generative RM. They found that a simple choice using an MLP value head worked best for them.
 
 #reward-model #multimodal 
