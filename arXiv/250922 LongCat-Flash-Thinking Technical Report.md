@@ -1,0 +1,11 @@
+https://github.com/meituan-longcat/LongCat-Flash-Thinking/blob/main/tech_report.pdf
+
+*LongCat-Flash-Thinking Technical Report* (Meitual LongCat Team)
+
+> We present LongCat-Flash-Thinking, an efficient 560-billion-parameter open-source Mixture-of-Experts (MoE) reasoning model. Its advanced capabilities are cultivated through a meticulously crafted training process, beginning with long Chain-of-Thought (CoT) data cold-start and culminating in large-scale Reinforcement Learning (RL). We first employ a well-designed cold-start training strategy, which significantly enhances the reasoning potential and equips the model with specialized skills in both formal and agentic reasoning. Then, a core innovation is our domain-parallel training scheme, which decouples optimization across distinct domains (e.g., STEM, Code, Agentic) and subsequently fuses the resulting expert models into a single, nearly Pareto-optimal model. This entire process is powered by our Dynamic ORchestration for Asynchronous rollout (DORA) system, a large-scale RL framework that delivers a greater than threefold training speedup over synchronous methods on tens of thousands of accelerators. As a result, LongCat-Flash-Thinking achieves state-of-the-art performance among open-source models on a suite of complex reasoning tasks. The model exhibits exceptional efficiency in agentic reasoning, reducing average token consumption by 64.5% (from 19, 653 to 6, 965) on AIME-25, without degrading task accuracy. We release LongCat-Flash-Thinking to promote further advances in reasoning systems and agentic AI research.
+
+증명 생성과 Agentic 궤적 합성. Async RL. 여러 개의 Policy 체크포인트를 유지해 롤아웃 내에서의 일고나성을 유지. Generator 그룹을 Colocated와 Separated로 분할. Generative Reasoning RM 사용. Model merging 사용. 중국의 배달앱 회사가 LLM을 만든다는 것 자체에 놀라는 사람들이 많았지만 그보다 더 놀라운 것은 그 배달앱 회사가 LLM을 잘 만든다는 것.
+
+Proof synthesis and synthetic agentic trajectories. Asynchronous RL with multiple policy checkpoints to keep consistency in rollouts and mix of colocated/separated generator groups. Generative reasoning RM. And model merging. What surprises me is not that various Chinese companies build LLMs, but that they do it well.
+
+#rl #reasoning #mid-training 
