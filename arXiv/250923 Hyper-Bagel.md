@@ -6,8 +6,6 @@ https://arxiv.org/abs/2509.18824
 
 이미지 이해 및 생성 통합 모형을 Speculative Decoding과 (https://arxiv.org/abs/2503.01840) Diffusion Distillation으로 가속.
 
-<english>
-Acclerating unified image understanding and generation mode through speculative decoding (https://arxiv.org/abs/2503.01840) and diffusion distillation.
-</english>
+Accelerating unified image understanding and generation model through speculative decoding (https://arxiv.org/abs/2503.01840) and diffusion distillation.
 
 #efficiency #image-generation #multimodal 
