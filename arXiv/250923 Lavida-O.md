@@ -6,8 +6,6 @@ https://arxiv.org/abs/2509.19244
 
 Vision-Language Masked Diffusion 모델을 이미지 생성을 지원하도록 확장.
 
-<english>
 Extending vision-language masked diffusion to support image generation.
-</english>
 
 #image-generation #diffusion #multimodal 

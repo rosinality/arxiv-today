@@ -6,8 +6,6 @@ https://arxiv.org/abs/2509.19199
 
 (토큰 단위가 아닌) 스텝 단위 Implict PRM (https://arxiv.org/abs/2502.01456).
 
-<english>
-Step level (not token level) reward using implicit PRM (https://arxiv.org/abs/2502.01456).
-</english>
+Step-level (not token-level) reward using implicit PRM (https://arxiv.org/abs/2502.01456).
 
 #reward-model #rl #agent 
