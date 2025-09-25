@@ -6,6 +6,6 @@ https://arxiv.org/abs/2509.20186
 
 프리트레이닝 코퍼스에 사고 궤적을 부착. 아주 단순하게 프롬프팅으로 해결. OpenAI는 분명히 이런 접근을 시도했을 텐데, 성공적이었을지?
 
-Attaching thinking trajectories to pretraining corpus. They did it simply by prompting. I believe OpenAI definitely tried this approach. Were they successful?
+Attaching thinking trajectories to the pretraining corpus. They did this simply by prompting. I believe OpenAI definitely tried to synthesize these data. Were they successful?
 
 #synthetic-data 
