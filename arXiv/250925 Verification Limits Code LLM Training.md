@@ -6,8 +6,6 @@ https://arxiv.org/abs/2509.20837
 
 샘플을 유닛 테스트를 사용해 선택하거나 보상을 부여한다면 유닛 테스트 자체가 샘플의 퀄리티를 충분히 반영할 정도로 정교해야 할 것. 이 연구는 합성한 유닛 테스트로 필터링해서 SFT를 하는 것을 주로 다루기는 함. 다만 이 문제는 유닛 테스트를 수작업으로 만든다고 하더라도 비슷하게 존재하리라고 생각. (그리고 그런 경우에도 합성한 유닛 테스트로 보강하는 것을 고려할 수도.)
 
-<english>
-If we choose or reward sample using unit tests then unit test itself should be delicate enough to reflect the quality of samples. This study mainly deals with SFT using filtered samples with synthetic unit tests. Though I think this problem would remain even when we hand-made unit tests. (And we may want to supplement it with synthesized one.)
-</english>
+If we choose or reward samples using unit tests then unit tests themselves should be delicate enough to reflect the quality of samples. This study mainly deals with SFT using filtered samples with synthetic unit tests. Though I think this problem would remain even when we hand-make unit tests. (And we may want to supplement it with synthesized ones.)
 
 #synthetic-data #reward-model 
