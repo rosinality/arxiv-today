@@ -4,7 +4,8 @@ https://arxiv.org/abs/2509.23962
 
 > Reinforcement Learning with Verifiable Rewards (RLVR) for large language models (LLMs) has achieved remarkable progress in enhancing LLMs' reasoning capabilities on tasks with clear correctness criteria, such as mathematical reasoning tasks. Several training metrics, such as entropy or response length, have been observed to correlate with different reasoning behaviors in reinforcement learning. Prior approaches incorporate such priors through reward or advantage shaping, which often relies on hand-crafted penalties and preferences (e.g., higher-is-better or lower-is-better). However, without careful hyperparameter tuning, these directional priors can be overly biased and may lead to failure. To this end, we introduce Conditional advANtage estimatiON (CANON), amplifying the impact of the target metric without presuming its direction. Specifically, CANON regroups the sampled responses into two groups based on the higher or lower value of a target metric, measures which metric trend contributes to better performance through inter-group comparison, and identifies the better response within the same group. In summary, CANON based on entropy consistently outperforms prior methods across three LLMs on both math reasoning and high-complexity logic tasks. When applied to response length, CANON further improves token efficiency, yielding a more favorable Pareto frontier in the performance-cost trade-off.
 
-<english>
-Makes subgroup of samples according to desired conditions and adjust advantages usi
+원하는 조건에 따라 샘플들을 서브그룹으로 나누고 Advantage를 그에 따라 조절. 원하는 특성에 따라 서브샘플링을 한 것과 (https://arxiv.org/abs/2508.09726) 비슷한 접근일지도. 또한 서브그룹을 만든 다음 Contrast를 구성한 것은 모델이 추론 모드를 자동 전환하도록 한 시도에서도 비슷하게 등장 (https://arxiv.org/abs/2509.23967).
+
+Separates samples into subgroups according to desired conditions and adjusts advantages. This could be a similar approach to subsampling according to desired properties (https://arxiv.org/abs/2508.09726). Also, using subgroups to create contrasts appears in attempts to train models to adaptively switch reasoning modes (https://arxiv.org/abs/2509.23967).
 
 #rl #reasoning 
