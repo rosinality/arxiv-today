@@ -6,8 +6,6 @@ https://arxiv.org/abs/2509.25133
 
 RL 과정의 엔트로피 통제를 위한 또다른 방법. 엔트로피 보너스를 무차별적으로 적용하는 것은 부적절할 것. 따라서 top-P 토큰과 엔트로피가 Trajectory 내에서 top-T Quantile 내에 들어오는 토큰을 제외하곤 마스킹. 엔트로피를 통제하는 더 나은 방법이 있을지?
 
-<english>
-Yet another method of control the entropy during RL. Indisciminatively applying entropy bonus would be inadequate. Thus masking it except top-P tokens, and top-T quantile of entropy over the trajectory. Would be there better method for controlling the entropy?
-</english>
+Yet another method to control the entropy during RL. Indiscriminately applying entropy bonus would be inadequate. Thus masking except for top-P tokens and tokens whose entropy falls within the top-T quantile over the trajectory. Would there be a better method for controlling the entropy?
 
 #rl #reasoning 
