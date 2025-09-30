@@ -6,8 +6,6 @@ https://arxiv.org/abs/2509.25087
 
 최종 Loss로 나눠주면 Loss 커브의 개형이 일치한다는 결과에 대한 확장 (https://arxiv.org/abs/2507.02119). 토큰 대 파라미터 비율과 최적화의 타임스케일, LR 스케줄이 일치하면 Loss 커브의 일치가 일어난다는 것을 발견. 따라서 전체 학습 커브가 작은 규모의 학습을 통해 예측 가능함. 
 
-<english>
-Expansion of the result of collapse of loss curves into same form if it is divided by the final loss (https://arxiv.org/abs/2507.02119). They found that if token-per-parameter ratio and timescale of optimization, LR schedule is same then collapse occurs. Thus entire training trajectory is predictable from the smaller training runs.
-</english>
+An extension of the result that loss curves collapse into the same form when divided by the final loss (https://arxiv.org/abs/2507.02119). They found that collapse occurs when the token-to-parameter ratio, optimization timescale, and LR schedule are matched. Thus the entire training trajectory is predictable from smaller training runs.
 
 #scaling-law #optimization 
