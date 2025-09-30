@@ -1,0 +1,13 @@
+https://arxiv.org/abs/2509.25133
+
+*Rethinking Entropy Regularization in Large Reasoning Models* (Yuxian Jiang, Yafu Li, Guanxu Chen, Dongrui Liu, Yu Cheng, Jing Shao)
+
+> Reinforcement learning with verifiable rewards (RLVR) has shown great promise in enhancing the reasoning abilities of large reasoning models (LRMs). However, it suffers from a critical issue: entropy collapse and premature convergence. Naive entropy regularization, a common approach for encouraging exploration in the traditional RL literature, fails to address this problem in the context of LRM. Our analysis reveals that this failure stems from the vast action space and long trajectories in LRMs, which easily trigger a global entropy explosion as the model indiscriminately explores all possible actions and states. To address this, we propose SIREN (SelectIve entRopy rEgularizatioN), a method that confines exploration to a meaningful subset of actions and states. SIREN achieves this through a two-step entropy masking mechanism, consisting of a top-p mask and a peak-entropy mask. In addition, regularization is transformed into a self-anchored form to stabilize training. Across five mathematical benchmarks, SIREN attains superior average performance over previous entropy-related RLVR approaches, exemplified by a +6.6 maj@k improvement on AIME24/25 with Qwen2.5-Math-7B. Further analysis confirms that SIREN promotes greater response diversity and maintains entropy at an appropriate level, which helps to preserve the validation pass@k throughout training. This effectively mitigates the premature convergence problem common in RLVR for LRM.
+
+RL 과정의 엔트로피 통제를 위한 또다른 방법. 엔트로피 보너스를 무차별적으로 적용하는 것은 부적절할 것. 따라서 top-P 토큰과 엔트로피가 Trajectory 내에서 top-T Quantile 내에 들어오는 토큰을 제외하곤 마스킹. 엔트로피를 통제하는 더 나은 방법이 있을지?
+
+<english>
+Yet another method of control the entropy during RL. Indisciminatively applying entropy bonus would be inadequate. Thus masking it except top-P tokens, and top-T quantile of entropy over the trajectory. Would be there better method for controlling the entropy?
+</english>
+
+#rl #reasoning 
