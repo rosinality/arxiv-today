@@ -6,8 +6,6 @@ https://arxiv.org/abs/2509.25050
 
 Denoising Diffusion Policy Optimization이 노이즈 데이터에 대한 Denoising Score Matching과 동일하다는 것을 발견. 그리고 이는 깨끗한 데이터에 대한 Score Matching과 일치. 그렇다면 프리트레이닝 Objective와 같은 Score Matching을 포스트트레이닝에 사용할 수 있지 않을까?
 
-<english>
-The authors found that Denoising Diffusion Policy Optimization is equivalent to Denoising Score Matching with noisy data, and this is also equivalent to Score Matching with clean data. Then wouldn't it possible to use Score Matching for the post-training which is same with pretraining objective?
-</english>
+The authors found that Denoising Diffusion Policy Optimization is equivalent to Denoising Score Matching with noisy data, and this is also equivalent to Score Matching on clean data. Then wouldn't it be possible to use Score Matching for post-training which is the same as the pretraining objective?
 
 #diffusion #rl #post-training 
