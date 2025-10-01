@@ -6,8 +6,6 @@ https://arxiv.org/abs/2509.26625
 
 VLM 학습 데이터의 구성의 효과에 대한 분석. 코드나 수학 같은 추론 데이터가 VQA에 대해 가장 효과적이었다고 주장 (다만 효과는 1-2% 정도). 추론 코퍼스는 모달리티를 넘어서는 어떤 근본적인 능력을 반영하고 있는 것일지?
 
-<english>
-Analysis on the effect of the composition of training data for VLMs. This insists that reasoning data like code or math is most beneficial for VQA (thought effect is around 1-2%p). Why this happens? Does reasoning corpus contains fundamental skills beyond the modality?
-</english>
+Analysis of the effect of training data composition for VLMs. This argues that reasoning data like code or math is most beneficial for VQA (though the effect is around 1-2%p). Why does this happen? Does reasoning corpus contain fundamental skills that transcend modality?
 
 #multimodal 
