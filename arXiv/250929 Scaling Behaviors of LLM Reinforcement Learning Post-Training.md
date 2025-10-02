@@ -4,5 +4,10 @@ https://arxiv.org/abs/2509.25300
 
 > While scaling laws for large language models (LLMs) during pre-training have been extensively studied, their behavior under reinforcement learning (RL) post-training remains largely unexplored. This paper presents a systematic empirical investigation of scaling behaviors in RL-based post-training, with a particular focus on mathematical reasoning. Based on 54 experiments across diverse model sizes and training settings, we characterize how model scale, data volume, and computational budget interact to shape performance. Our analysis leads to four key findings: (1). Under a fixed computational budget, larger models trained for fewer steps consistently outperform smaller models trained for more steps. (2). Given a fixed amount of training data, larger models achieve superior sample efficiency, yielding lower loss. (3). In data-constrained regimes, repeated reuse of high-quality data proves highly effective, as final performance is primarily governed by the total number of optimization steps rather than the uniqueness of samples. (4). These scaling behaviors are robust across both base and instruction-tuned models, which share similar learning dynamics (e.g., larger models show faster convergence) even while differing in absolute accuracy. Collectively, these results provide a principled foundation and practical guidelines for efficiently scaling the reasoning capabilities of LLMs through RL post-training.
 
+RL 포스트트레이닝의 Scaling 특성에 대한 분석. 큰 모델이 낫고, 멀티 에폭 학습이 가능하고, 감당할 수 있다면 그룹 크기가 큰 것이 좋다.
+
 <english>
-Analysis on the scaling behavior or RL post-training. Larger models is better
+Analysis on the scaling behavior or RL post-training. Larger models is better, you can do multi epochs, and larger group size is better if you can afford it.
+</english>
+
+#scaling-law #rl #reasoning 
