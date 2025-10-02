@@ -6,8 +6,6 @@ https://arxiv.org/abs/2509.25300
 
 RL 포스트트레이닝의 Scaling 특성에 대한 분석. 큰 모델이 낫고, 멀티 에폭 학습이 가능하고, 감당할 수 있다면 그룹 크기가 큰 것이 좋다.
 
-<english>
-Analysis on the scaling behavior or RL post-training. Larger models is better, you can do multi epochs, and larger group size is better if you can afford it.
-</english>
+Analysis of the scaling behaviors of RL post-training. Larger models are better, multi-epoch training is okay, and larger groups are better if you can afford them.
 
 #scaling-law #rl #reasoning 

@@ -6,8 +6,6 @@ https://arxiv.org/abs/2509.25808
 
 샘플 효율성 향상. 최소한 하나의 응답이 정답일 때까지만 응답 그룹을 샘플링. 리플레이 버퍼 사용.
 
-<english>
-Enhancing sampling efficiency. Adaptively sample groups of responses until at least one of them is correct. And use replay buffer.
-</english>
+Enhancing sampling efficiency. Adaptively sample groups of responses until at least one of them is correct. Use a replay buffer.
 
 #rl #reasoning 
