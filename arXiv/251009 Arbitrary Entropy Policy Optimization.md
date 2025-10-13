@@ -6,8 +6,6 @@ https://arxiv.org/abs/2510.08141
 
 Temperature를 조정한 샘플을 사용해 계산한 REINFORCE Loss를 Regularizer로 사용해 엔트로피의 거동을 통제.
 
-<english>
-Control entropy dynamics using REINFORCE loss computed using samples from temperature-adjusted policy as a regularization.
-</english>
+Control entropy dynamics using REINFORCE loss computed from temperature-adjusted samples as regularization.
 
-#rl 
+#rl #reasoning 

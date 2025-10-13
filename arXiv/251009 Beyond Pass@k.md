@@ -6,8 +6,6 @@ https://arxiv.org/abs/2510.08325
 
 Pass@K의 베이스라인 문제를 해소하기 위한 새로운 척도. 특정 역치 이상의 확률로 풀 수 있는 문제의 비율을 측정.
 
-<english>
-Designing new metric to resolve baseline problem of Pass@K. This metric measures the fraction of problems that can be solved with probability more than certain threshold.
-</english>
+A new metric to resolve the baseline problem of Pass@K. This metric measures the fraction of problems that can be solved with a probability above a certain threshold.
 
 #benchmark 

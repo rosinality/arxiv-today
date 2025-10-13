@@ -6,8 +6,6 @@ https://arxiv.org/abs/2510.06673
 
 Autoregressive 이미지 생성 모델이 장거리 관계를 고려하도록 하기 위해 다음 토큰 뿐만 아니라 남은 토큰 모두를 예측하도록 강제.
 
-<english>
-Enforcing autoregressive image generation model to consider long-range dependencies by make it predict all of remaining tokens, not just a next token.
-</english>
+Enforcing autoregressive image generation models to consider long-range dependencies by making them predict all remaining tokens not just the next token.
 
 #image-generation #autoregressive-model 

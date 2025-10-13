@@ -6,8 +6,6 @@ https://arxiv.org/abs/2510.08191
 
 파라미터 업데이트 대신 샘플링된 응답을 요약해서 경험을 만들고 이를 컨텍스트로 사용해서 더 나은 추론 모델이 되도록 유도.
 
-<english>
-Instead of updating the parameters, summarizing sampled responses to build experiences and uses this as a context to make a model to be a better reasoner.
-</english>
+Instead of updating parameters sampled responses are summarized to build experiences which are then used as context to guide the model to become a better reasoner.
 
 #rl #reasoning 

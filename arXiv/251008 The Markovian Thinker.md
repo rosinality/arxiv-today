@@ -6,8 +6,6 @@ https://arxiv.org/abs/2510.06557
 
 추론 궤적의 크기를 통제. C개의 토큰을 생성한 다음 토큰 시퀀스의 일부만을 보존하고 다음 추론 시퀀스는 이 보존한 토큰을 사용해서 생성.
 
-<english>
-Bounding state size of reasoning trajectory. After generation C tokens, only part of tokens are retained, and next reasoning sequence is generated given these retained tokens.
-</english>
+Controlling the size of reasoning trajectories. After generating C tokens only a portion of the token sequence is retained and the next reasoning sequence is generated using these retained tokens.
 
 #rl #reasoning 

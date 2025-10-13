@@ -6,8 +6,6 @@ https://arxiv.org/abs/2510.06499
 
 웹 코퍼스로 검증 가능한 QA를 구축해 RL을 시도.
 
-<english>
 Building verifiable QA using web corpus and doing RL on it.
-</english>
 
 #synthetic-data #rl #corpus 

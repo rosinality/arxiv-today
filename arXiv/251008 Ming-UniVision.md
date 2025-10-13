@@ -6,8 +6,6 @@ https://arxiv.org/abs/2510.06590
 
 Diffusion Autoregressive 이미지 이해-생성 모형에서 ViT와 VAE를 통합. 인코더에서 추출한 작은 크기의 Latent 토큰에 대해 Causal Semantic 디코더를 적용하고 여기서 나온 Feature를 이해와 생성 모두에 사용.
 
-<english>
-Unifying ViT and VAE for diffusion autoregressive image understanding-generation model. Causal semantic decoder is applied on top of compact latent token extracted from the encoder, and this feature is used for both understanding and generation.
-</english>
+Unifying ViT and VAE in a diffusion autoregressive image understanding-generation model. A causal semantic decoder is applied to compact latent tokens extracted from the encoder and the resulting features are used for both understanding and generation.
 
 #tokenizer #autoregressive-model #image-generation 

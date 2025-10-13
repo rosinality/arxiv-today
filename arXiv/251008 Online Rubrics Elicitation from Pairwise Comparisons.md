@@ -6,8 +6,6 @@ https://arxiv.org/abs/2510.07284
 
 모델의 거동의 변화와 Reward Hacking에 대응하기 위해 루브릭을 모델의 학습 과정과 함께 생성. LLM이 현재 필요한 루브릭이 무엇인지 정확히 판단하도록 통제하는 것이 아무래도 까다로운 문제일 듯.
 
-<english>
-Generating rubrics along with model training to cover the changes in model behavior and reward hacking. Maybe controlling LLM's judgement on which rubrics are needed could be a hard problem.
-</english>
+Generating rubrics alongside model training to address changes in model behavior and reward hacking. Controlling how LLMs determine which rubrics are currently needed would likely be a hard problem.
 
 #rl 
