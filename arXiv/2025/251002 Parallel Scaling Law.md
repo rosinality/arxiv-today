@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2510.02272
+
+*Parallel Scaling Law: Unveiling Reasoning Generalization through A Cross-Linguistic Perspective* (Wen Yang, Junhong Wu, Chong Li, Chengqing Zong, Jiajun Zhang)
+
+> Recent advancements in Reinforcement Post-Training (RPT) have significantly enhanced the capabilities of Large Reasoning Models (LRMs), sparking increased interest in the generalization of RL-based reasoning. While existing work has primarily focused on investigating its generalization across tasks or modalities, this study proposes a novel cross-linguistic perspective to investigate reasoning generalization. This raises a crucial question: $\textit{Does the reasoning capability achieved from English RPT effectively transfer to other languages?}$ We address this by systematically evaluating English-centric LRMs on multilingual reasoning benchmarks and introducing a metric to quantify cross-lingual transferability. Our findings reveal that cross-lingual transferability varies significantly across initial model, target language, and training paradigm. Through interventional studies, we find that models with stronger initial English capabilities tend to over-rely on English-specific patterns, leading to diminished cross-lingual generalization. To address this, we conduct a thorough parallel training study. Experimental results yield three key findings: $\textbf{First-Parallel Leap}$, a substantial leap in performance when transitioning from monolingual to just a single parallel language, and a predictable $\textbf{Parallel Scaling Law}$, revealing that cross-lingual reasoning transfer follows a power-law with the number of training parallel languages. Moreover, we identify the discrepancy between actual monolingual performance and the power-law prediction as $\textbf{Monolingual Generalization Gap}$, indicating that English-centric LRMs fail to fully generalize across languages. Our study challenges the assumption that LRM reasoning mirrors human cognition, providing critical insights for the development of more language-agnostic LRMs.
+
+추론 모델의 타 언어에 대한 일반화 연구. 단 하나의 추가 언어를 학습에 사용하는 것으로도 다국어 성능이 크게 향상됨.
+
+Cross-lingual generalization of reasoning model. Incorporating just one additional language gives a large jump in multilingual capability.
+
+#reasoning #rl #multilingual 

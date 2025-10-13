@@ -1,0 +1,13 @@
+https://arxiv.org/abs/2510.06590
+
+*Ming-UniVision: Joint Image Understanding and Generation with a Unified Continuous Tokenizer* (Ziyuan Huang, DanDan Zheng, Cheng Zou, Rui Liu, Xiaolong Wang, Kaixiang Ji, Weilong Chai, Jianxin Sun, Libin Wang, Yongjie Lv, Taozhi Huang, Jiajia Liu, Qingpei Guo, Ming Yang, Jingdong Chen, Jun Zhou)
+
+> Visual tokenization remains a core challenge in unifying visual understanding and generation within the autoregressive paradigm. Existing methods typically employ tokenizers in discrete latent spaces to align with the tokens from large language models, where the quantization errors can limit semantic expressiveness and degrade the capability of vision-language understanding. To address this, we introduce MingTok, a new family of visual tokenizers with a continuous latent space, for unified autoregressive generation and understanding. While understanding tasks favor discriminative high-dimensional features, generation tasks prefer compact low-level codes. Thus, to reconcile these competing demands, MingTok adopts a three-stage sequential architecture involving low-level encoding, semantic expansion, and visual reconstruction. Built on top of it, Ming-UniVision eliminates the need for task-specific visual representations, and unifies diverse vision-language tasks under a single autoregrsssive prediction paradigm. By formulating both understanding and generation as next-token prediction in a shared continuous space, it seamlessly supports multi-round, in-context tasks such as iterative understanding, generation and editing. Empirically, we find that using a unified continuous visual representation reconciles the competing requirements on the tokenizers by the understanding and generation tasks, thereby leading to state-of-the-art level performance across both domains. We hope our findings will facilitate unified visual tokenization in the continuous domain. Inference code and model weights are released to benefit community.
+
+Diffusion Autoregressive 이미지 이해-생성 모형에서 ViT와 VAE를 통합. 인코더에서 추출한 작은 크기의 Latent 토큰에 대해 Causal Semantic 디코더를 적용하고 여기서 나온 Feature를 이해와 생성 모두에 사용.
+
+<english>
+Unifying ViT and VAE for diffusion autoregressive image understanding-generation model. Causal semantic decoder is applied on top of compact latent token extracted from the encoder, and this feature is used for both understanding and generation.
+</english>
+
+#tokenizer #autoregressive-model #image-generation 

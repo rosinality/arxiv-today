@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2510.01656
+
+*Asymmetric Proximal Policy Optimization: mini-critics boost LLM reasoning* (Jiashun Liu, Johan Obando-Ceron, Han Lu, Yancheng He, Weixun Wang, Wenbo Su, Bo Zheng, Pablo Samuel Castro, Aaron Courville, Ling Pan)
+
+> Most recent RL for LLMs (RL4LLM) methods avoid explicit critics, replacing them with average advantage baselines. This shift is largely pragmatic: conventional value functions are computationally expensive to train at LLM scale and often fail under sparse rewards and long reasoning horizons. We revisit this bottleneck from an architectural perspective and introduce Asymmetric Proximal Policy Optimization (AsyPPO), a simple and scalable framework that restores the critics role while remaining efficient in large-model settings. AsyPPO employs a set of lightweight mini-critics, each trained on disjoint prompt shards. This design encourages diversity while preserving calibration, reducing value-estimation bias. Beyond robust estimation, AsyPPO leverages inter-critic uncertainty to refine the policy update: (i) masking advantages in states where critics agree and gradients add little learning signal, and (ii) filtering high-divergence states from entropy regularization, suppressing spurious exploration. After training on open-source data with only 5,000 samples, AsyPPO consistently improves learning stability and performance across multiple benchmarks over strong baselines, such as GRPO, achieving performance gains of more than six percent on Qwen3-4b-Base and about three percent on Qwen3-8b-Base and Qwen3-14b-Base over classic PPO, without additional tricks. These results highlight the importance of architectural innovations for scalable, efficient algorithms.
+
+큰 Critic 하나를 사용하는 대신 작은 Critic들의 앙상블을 사용. 여러 Critic을 통해 추정된 Value에 대한 통계량을 사용해 Advantage나 엔트로피 보너스를 마스킹하는데 사용할 수도 있음.
+
+Using an ensemble of small critic models instead of a single large one. Using statistics of estimated value from multiple critics we can mask advantages or entropy bonus.
+
+#rl #reasoning 
