@@ -6,8 +6,6 @@ https://arxiv.org/abs/2510.12402
 
 파라미터가 Optimizer의 업데이트와 부호가 같은 경우에만 Weight Decay를 적용.
 
-<english>
-Applying weight decay only when the sign of parameter matches with optimizer updates.
-</english>
+Apply weight decay only when the sign of parameter matches the optimizer update.
 
 #optimization #regularization 
