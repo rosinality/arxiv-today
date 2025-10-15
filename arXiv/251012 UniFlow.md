@@ -6,8 +6,6 @@ https://arxiv.org/abs/2510.10575
 
 이해를 위해 Teacher 모델에서 Distill하고, 생성을 위해 픽셀 단위 Flow로 학습된 이미지 토크나이저. 생성을 위한 토크나이저의 차원 제약이 해소되었지만 여전히 두 가지 문제에 대해 잘 동작하는 토크나이저를 찾아야 할 필요는 있음.
 
-<english>
-Image tokenizer distilled from teacher for the understanding, and trained with pixel-level flow for the generation. Now we relieved dimension restriction of tokenizer for generation - but we can still need to find out the tokenizer which works well for both problems.
-</english>
+Image tokenizer distilled for understanding and trained with pixel-level flow for generation. Now we have relieved the dimension restriction of tokenizers for generation but we still need to find a tokenizer that works well for both problems.
 
 #tokenizer #diffusion 

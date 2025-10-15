@@ -6,8 +6,6 @@ https://arxiv.org/abs/2510.10489
 
 더 나은 공간 모델링을 위해 RoPE 전에 헤드별 Linear Projection을 추가.
 
-<english>
-Adding head-specific linear projection before RoPE for better spatial relation modeling.
-</english>
+Adding head-specific linear projection before RoPE for better spatial modeling.
 
 #positional-encoding #diffusion #image-generation 
