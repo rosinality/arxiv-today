@@ -8,8 +8,10 @@ RL 레시피에 대한 대규모 Ablation. 각 선택들은 점근선 혹은 연
 
 무엇보다 안정적인 RL 세팅을 통해 학습 초기 결과로 점근선을 외삽하는 것이 가능. RL에 대한 Scaling Law 시대의 시작?
 
-Large scale ablations on RL recipes. Each choice shifts asymptotes or compute efficiency. When optimal choices are combined ablations on each modification mainly affect compute efficiency and training stability.
+<english>
+Large scale ablations on RL recipes. Each choices shifts asymptotes or compute efficiency. When optimal choices are combined ablations on each modifications shift mainly compute efficiency and training stability.
 
-And stable RL settings allow estimation of asymptotes from early training results. The beginning of scaling laws for RL?
+And stable RL run allows extrapolation to estimate asymptotes. The beginning of scaling law of RL?
+</english>
 
 #rl #reasoning #scaling-law 
