@@ -6,8 +6,6 @@ https://arxiv.org/abs/2510.14686
 
 JD.com의 추론 프레임워크. Ascend 위에서 작동함. PD Disaggregation이 표준이 되었으니 이제 MLLM을 위해 EPD disaggregation으로 나아갈 때.
 
-<english>
-Inference framework from JD.com. And this runs on Ascend. After PD disaggregation become a standard, we need to push it further toward EPD disaggregation for MLLMs.
-</english>
+Inference framework from JD.com. And this runs on Ascend. Now that PD disaggregation has become standard we need to push further toward EPD disaggregation for MLLMs.
 
 #efficiency 

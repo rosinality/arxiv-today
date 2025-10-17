@@ -6,8 +6,6 @@ https://arxiv.org/abs/2510.14961
 
 Looped Autoregressive Transformer에 대한 Block Diffusion과 유사한 샘플링. Looped Transformer는 저자가 지적하는 것처럼 일종의 Latent Diffusion 모델일지도?
 
-<english>
-Block diffusion like sampling on looped autoregressive transformer. Maybe looped transformer, as the authors suggested, is a kind of latent diffusion model?
-</english>
+Block diffusion-like sampling for looped autoregressive transformers. Maybe looped transformers, as the authors suggest, are a kind of latent diffusion model?
 
 #diffusion #transformer #autoregressive-model 

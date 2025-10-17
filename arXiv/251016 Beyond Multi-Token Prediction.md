@@ -6,8 +6,6 @@ https://arxiv.org/abs/2510.14751
 
 Bag of Tokens나 Reverse LM의 Feature를 예측하게 하는 것으로 MTP 개선. Speculative Decoding을 고려했을 때 Block Diffusion과 같은 구조를 MTP와 연결하는 것은 괜찮은 방법일지도?
 
-<english>
-Improving MTP by let model to predict future bag of tokens or a feature from reverse LM. Considering speculative decoding, something like block diffusion could be a nice way to deal with this?
-</english>
+Improving MTP by letting the model predict future bag of tokens or features from reverse LM. Considering speculative decoding could something like block diffusion be a nice way to deal with this?
 
 #pretraining 
