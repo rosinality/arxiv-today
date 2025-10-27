@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2510.15262
+
+*Robust Layerwise Scaling Rules by Proper Weight Decay Tuning* (Zhiyuan Fan, Yifeng Liu, Qingyue Zhao, Angela Yuan, Quanquan Gu)
+
+> Empirical scaling laws prescribe how to allocate parameters, data, and compute, while maximal-update parameterization ($\mu$P) enables learning-rate transfer across widths by equalizing early-time update magnitudes. However, in modern scale-invariant architectures, training quickly enters an optimizer-governed steady state where normalization layers create backward scale sensitivity and the effective learning rate becomes width dependent, degrading $\mu$P transfer. We address this by introducing a weight-decay scaling rule for AdamW that preserves sublayer gain across widths. Empirically, the singular-value spectrum of each matrix parameter scales in norm as $\sqrt{\eta/\lambda}$ with an approximately invariant shape; under width scaling $d$, we observe that the top singular value scales approximately as $\sqrt{\eta/\lambda}\cdot d^{0.75}$. Combining this observation with the $\mu$P learning-rate rule $\eta_2\propto d^{-1}$ for matrix-like parameters implies an empirical weight-decay scaling rule $\lambda_2\propto \sqrt{d}$ that approximately keeps sublayer gains width invariant. Together with vector-like parameters trained at $\eta_1=\Theta_d(1)$ and $\lambda_1=0$, this yields \emph{zero-shot} transfer of both learning rate and weight decay from proxy to target widths, removing per-width sweeps. We validate the rule on LLaMA-style Transformers and in a minimal synthetic setting, and we provide a simple diagnostic, matching top singular values, to check sublayer-gain invariance. Our results extend $\mu$P beyond the near-init regime by explicitly controlling steady-state scales set by the optimizer, offering a practical recipe for width-robust hyperparameter transfer under AdamW.
+
+µP에 대해서 Weight Decay를 sqrt(d)로 조절하는 것이 좋다는 주장. 이유는 Weight 행렬의 특이값이 sqrt(η/λ)을 따르기 때문. 다만 특이값이 Weight Decay가 d로 조정되었을 때 증가하는 이유는 무엇일지?
+
+For µP it could be better to scale weight decay according to sqrt(d) as singular values of weight matrices follows sqrt(η/λ). But why singular values increase when weight decay scaled as d?
+
+#hyperparameter 
