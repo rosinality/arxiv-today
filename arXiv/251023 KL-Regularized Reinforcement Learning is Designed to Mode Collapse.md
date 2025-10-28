@@ -1,0 +1,9 @@
+https://arxiv.org/abs/2510.20817
+
+*KL-Regularized Reinforcement Learning is Designed to Mode Collapse* (Anthony GX-Chen, Jatin Prakash, Jeff Guo, Rob Fergus, Rajesh Ranganath)
+
+> It is commonly believed that optimizing the reverse KL divergence results in "mode seeking", while optimizing forward KL results in "mass covering", with the latter being preferred if the goal is to sample from multiple diverse modes. We show -- mathematically and empirically -- that this intuition does not necessarily transfer well to doing reinforcement learning with reverse/forward KL regularization (e.g. as commonly used with language models). Instead, the choice of reverse/forward KL determines the family of optimal target distributions, parameterized by the regularization coefficient. Mode coverage depends primarily on other factors, such as regularization strength, and relative scales between rewards and reference probabilities. Further, we show commonly used settings such as low regularization strength and equal verifiable rewards tend to specify unimodal target distributions, meaning the optimization objective is, by construction, non-diverse. We leverage these insights to construct a simple, scalable, and theoretically justified algorithm. It makes minimal changes to reward magnitudes, yet optimizes for a target distribution which puts high probability over all high-quality sampling modes. In experiments, this simple modification works to post-train both Large Language Models and Chemical Language Models to have higher solution quality and diversity, without any external signals of diversity, and works with both forward and reverse KL when using either naively fails.
+
+The reverse KL → mode seeking, forward KL → mode covering principle does not necessarily work in LLM RL. Actually, it is possible for both KL regularizations to not promote low support samples.
+
+#rl #regularization 
