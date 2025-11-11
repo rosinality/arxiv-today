@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2511.06876
+
+*Generating an Image From 1,000 Words: Enhancing Text-to-Image With Structured Captions* (Eyal Gutflaish, Eliran Kachlon, Hezi Zisman, Tal Hacham, Nimrod Sarid, Alexander Visheratin, Saar Huberman, Gal Davidi, Guy Bukchin, Kfir Goldberg, Ron Mokady)
+
+> Text-to-image models have rapidly evolved from casual creative tools to professional-grade systems, achieving unprecedented levels of image quality and realism. Yet, most models are trained to map short prompts into detailed images, creating a gap between sparse textual input and rich visual outputs. This mismatch reduces controllability, as models often fill in missing details arbitrarily, biasing toward average user preferences and limiting precision for professional use. We address this limitation by training the first open-source text-to-image model on long structured captions, where every training sample is annotated with the same set of fine-grained attributes. This design maximizes expressive coverage and enables disentangled control over visual factors. To process long captions efficiently, we propose DimFusion, a fusion mechanism that integrates intermediate tokens from a lightweight LLM without increasing token length. We also introduce the Text-as-a-Bottleneck Reconstruction (TaBR) evaluation protocol. By assessing how well real images can be reconstructed through a captioning-generation loop, TaBR directly measures controllability and expressiveness, even for very long captions where existing evaluation methods fail. Finally, we demonstrate our contributions by training the large-scale model FIBO, achieving state-of-the-art prompt alignment among open-source models. Model weights are publicly available at https://huggingface.co/briaai/FIBO
+
+이미지의 속성에 대한 자세한, 구조화된 캡션. Sora에 대해 JSON으로 프롬프팅하는 것을 접한 이후 이런 형태의 캡션에 대해 생각해봤음. 이런 캡션을 기반으로 평가 메트릭을 개발하는 것도 가능할 것. (저자들이 한 것처럼.)
+
+Detailed, structured captioning of attributes in images. I thought about this kind of captioning after I found people use JSON for prompting Sora. With these captions it could be possible to make eval metrics around this as the authors did in this work.
+
+#captioning #image-generation 
