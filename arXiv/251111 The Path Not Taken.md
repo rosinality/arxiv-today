@@ -1,11 +1,15 @@
-https://export.arxiv.org/abs/2511.08567
+https://arxiv.org/abs/2511.08567
 
 *The Path Not Taken: RLVR Provably Learns Off the Principals* (Hanqing Zhu, Zhenyu Zhang, Hanxian Huang, DiJia Su, Zechun Liu, Jiawei Zhao, Igor Fedorov, Hamed Pirsiavash, Zhizhou Sha, Jinwon Lee, David Z. Pan, Zhangyang Wang, Yuandong Tian, Kai Sheng Tai)
 
 > Reinforcement Learning with Verifiable Rewards (RLVR) reliably improves the reasoning performance of large language models, yet it appears to modify only a small fraction of parameters. We revisit this paradox and show that sparsity is a surface artifact of a model-conditioned optimization bias: for a fixed pretrained model, updates consistently localize to preferred parameter regions, highly consistent across runs and largely invariant to datasets and RL recipes. We mechanistically explain these dynamics with a Three-Gate Theory: Gate I (KL Anchor) imposes a KL-constrained update; Gate II (Model Geometry) steers the step off principal directions into low-curvature, spectrum-preserving subspaces; and Gate III (Precision) hides micro-updates in non-preferred regions, making the off-principal bias appear as sparsity. We then validate this theory and, for the first time, provide a parameter-level characterization of RLVR's learning dynamics: RLVR learns off principal directions in weight space, achieving gains via minimal spectral drift, reduced principal-subspace rotation, and off-principal update alignment. In contrast, SFT targets principal weights, distorts the spectrum, and even lags RLVR. Together, these results provide the first parameter-space account of RLVR's training dynamics, revealing clear regularities in how parameters evolve. Crucially, we show that RL operates in a distinct optimization regime from SFT, so directly adapting SFT-era parameter-efficient fine-tuning (PEFT) methods can be flawed, as evidenced by our case studies on advanced sparse fine-tuning and LoRA variants. We hope this work charts a path toward a white-box understanding of RLVR and the design of geometry-aware, RLVR-native learning algorithms, rather than repurposed SFT-era heuristics.
 
+왜 RL은 Sparse한 업데이트를 유도하는가? RL은 업데이트를 KL 제약으로 Bound 시키고 이에 따라 프리트레이닝된 Weight의 구조를 보존하는 경향이 있음. (그리고 bfloat16이 작은 업데이트는 숨겨버리는 효과도 있음.) 이것이 왜 LoRA가 RL에 대해 잘 작동하는지에 대한 설명이 될 수 있음.
+
+이 논문은 이전 논문의 연장으로 생각할 수 있음. (https://arxiv.org/abs/2509.04259, https://arxiv.org/abs/2509.12235). RL의 업데이트가 SFT에 대해 정보량이 적다고 한다면 그것은 Fisher Information을 통해 해석될 수 있을 것.
+
 Why does RL induce sparse updates? RL bounds updates under a KL constraint and tends to preserve pretrained weight structure. (And bfloat16 hides small updates). This could explain why LoRA works well with RL.
 
-This work would be an extension of previous works (https://arxiv.org/pdf/2509.04259, https://arxiv.org/abs/2509.12235) If we say that update of RL contains less information than SFT, that information would be Fisher information.
+This work would be an extension of previous works (https://arxiv.org/abs/2509.04259, https://arxiv.org/abs/2509.12235). If we say that the update of RL is less informative compared to SFT then it could be interpreted in terms of Fisher information.
 
 #rl #generalization 
