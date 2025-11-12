@@ -6,4 +6,6 @@ https://export.arxiv.org/abs/2511.08567
 
 Why does RL induce sparse updates? RL bounds updates under a KL constraint and tends to preserve pretrained weight structure. (And bfloat16 hides small updates). This could explain why LoRA works well with RL.
 
+This work would be an extension of previous works (https://arxiv.org/pdf/2509.04259, https://arxiv.org/abs/2509.12235) If we say that update of RL contains less information than SFT, that information would be Fisher information.
+
 #rl #generalization 
