@@ -1,7 +1,11 @@
-https://export.arxiv.org/abs/2511.11571
+https://arxiv.org/abs/2511.11571
 
 *Optimizing Mixture of Block Attention* (Guangxuan Xiao, Junxian Guo, Kasra Mazaheri, Song Han)
 
 > Mixture of Block Attention (MoBA) (Lu et al., 2025) is a promising building block for efficiently processing long contexts in LLMs by enabling queries to sparsely attend to a small subset of key-value blocks, drastically reducing computational cost. However, the design principles governing MoBA's performance are poorly understood, and it lacks an efficient GPU implementation, hindering its practical adoption. In this paper, we first develop a statistical model to analyze MoBA's underlying mechanics. Our model reveals that performance critically depends on the router's ability to accurately distinguish relevant from irrelevant blocks based on query-key affinities. We derive a signal-to-noise ratio that formally connects architectural parameters to this retrieval accuracy. Guided by our analysis, we identify two key pathways for improvement: using smaller block sizes and applying a short convolution on keys to cluster relevant signals, which enhances routing accuracy. While theoretically better, small block sizes are inefficient on GPUs. To bridge this gap, we introduce FlashMoBA, a hardware-aware CUDA kernel that enables efficient MoBA execution even with the small block sizes our theory recommends. We validate our insights by training LLMs from scratch, showing that our improved MoBA models match the performance of dense attention baselines. FlashMoBA achieves up to 14.7x speedup over FlashAttention-2 for small blocks, making our theoretically-grounded improvements practical. Code is available at: https://github.com/mit-han-lab/flash-moba.
 
-Analysis on sparse attention. Ratio between head dim and block size
+Sparse Attention 분석. 정확한 블럭을 획득하기 위해서는 헤드 차원과 블럭 크기의 비율이 커야할 필요가 있음. 따라서 블럭 크기는 작아야 함. 이 작은 블럭 크기를 효율적으로 지원하기 위한 커널을 구현.
+
+Analysis of sparse attention. Ratio of head dim to block size should be large to retrieve correct blocks - thus block size should be small. They built a kernel to support small block sizes efficiently.
+
+#sparsity #efficiency #long-context 
