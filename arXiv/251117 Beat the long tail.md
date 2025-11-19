@@ -4,6 +4,8 @@ https://arxiv.org/abs/2511.13841
 
 > Reinforcement learning(RL) post-training has become essential for aligning large language models (LLMs), yet its efficiency is increasingly constrained by the rollout phase, where long trajectories are generated token by token. We identify a major bottleneck:the long-tail distribution of rollout lengths, where a small fraction of long generations dominates wall clock time and a complementary opportunity; the availability of historical rollouts that reveal stable prompt level patterns across training epochs. Motivated by these observations, we propose DAS, a Distribution Aware Speculative decoding framework that accelerates RL rollouts without altering model outputs. DAS integrates two key ideas: an adaptive, nonparametric drafter built from recent rollouts using an incrementally maintained suffix tree, and a length aware speculation policy that allocates more aggressive draft budgets to long trajectories that dominate makespan. This design exploits rollout history to sustain acceptance while balancing base and token level costs during decoding. Experiments on math and code reasoning tasks show that DAS reduces rollout time up to 50% while preserving identical training curves, demonstrating that distribution-aware speculative decoding can significantly accelerate RL post training without compromising learning quality.
 
+RL을 위한 Speculative Decoding. 드래프트 모델을 사용하는 대신 과거 롤아웃에 대한 Suffix Tree를 구축하고 매치된 경로를 사용해 드래프트를 작성. 또한 길이 예측을 사용해 적절한 드래프트의 길이를 지정.
+
 Speculative decoding for RL. Instead of a drafter model they used a suffix tree over past rollouts and proposed drafts using the matched path. And adaptively decided the length of drafts using length prediction.
 
 #rl #efficiency 
