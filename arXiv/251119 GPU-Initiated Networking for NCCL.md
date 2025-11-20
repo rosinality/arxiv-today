@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2511.15076
+
+*GPU-Initiated Networking for NCCL* (Khaled Hamidouche (1), John Bachan (1), Pak Markthub (1), Peter-Jan Gootzen (1), Elena Agostini (1), Sylvain Jeaugey (1), Aamir Shafi (1), Georgios Theodorakis (1), Manjunath Gorentla Venkata (1) ((1) NVIDIA Corporation))
+
+> Modern AI workloads, especially Mixture-of-Experts (MoE) architectures, increasingly demand low-latency, fine-grained GPU-to-GPU communication with device-side control. Traditional GPU communication follows a host-initiated model, where the CPU orchestrates all communication operations - a characteristic of the CUDA runtime. Although robust for collective operations, applications requiring tight integration of computation and communication can benefit from device-initiated communication that eliminates CPU coordination overhead. NCCL 2.28 introduces the Device API with three operation modes: Load/Store Accessible (LSA) for NVLink/PCIe, Multimem for NVLink SHARP, and GPU-Initiated Networking (GIN) for network RDMA. This paper presents the GIN architecture, design, semantics, and highlights its impact on MoE communication. GIN builds on a three-layer architecture: i) NCCL Core host-side APIs for device communicator setup and collective memory window registration; ii) Device-side APIs for remote memory operations callable from CUDA kernels; and iii) A network plugin architecture with dual semantics (GPUDirect Async Kernel-Initiated and Proxy) for broad hardware support. The GPUDirect Async Kernel-Initiated backend leverages DOCA GPUNetIO for direct GPU-to-NIC communication, while the Proxy backend provides equivalent functionality via lock-free GPU-to-CPU queues over standard RDMA networks. We demonstrate GIN's practicality through integration with DeepEP, an MoE communication library. Comprehensive benchmarking shows that GIN provides device-initiated communication within NCCL's unified runtime, combining low-latency operations with NCCL's collective algorithms and production infrastructure.
+
+NCCL 2.28에 도입된 GPU Inititated Networking. NCCL을 벗어나지 않으면서 경쟁력을 유지하려는 노력인 듯.
+
+GPU initiated networking, which was introduced in NCCL 2.28. They want to become competitive while still within the boundary of NCCL.
+
+#efficiency 
