@@ -1,0 +1,11 @@
+https://arxiv.org/abs/2511.16665
+
+*Taming the Long-Tail: Efficient Reasoning RL Training with Adaptive Drafter* (Qinghao Hu, Shang Yang, Junxian Guo, Xiaozhe Yao, Yujun Lin, Yuxian Gu, Han Cai, Chuang Gan, Ana Klimovic, Song Han)
+
+> The emergence of Large Language Models (LLMs) with strong reasoning capabilities marks a significant milestone, unlocking new frontiers in complex problem-solving. However, training these reasoning models, typically using Reinforcement Learning (RL), encounters critical efficiency bottlenecks: response generation during RL training exhibits a persistent long-tail distribution, where a few very long responses dominate execution time, wasting resources and inflating costs. To address this, we propose TLT, a system that accelerates reasoning RL training losslessly by integrating adaptive speculative decoding. Applying speculative decoding in RL is challenging due to the dynamic workloads, evolving target model, and draft model training overhead. TLT overcomes these obstacles with two synergistic components: (1) Adaptive Drafter, a lightweight draft model trained continuously on idle GPUs during long-tail generation to maintain alignment with the target model at no extra cost; and (2) Adaptive Rollout Engine, which maintains a memory-efficient pool of pre-captured CUDAGraphs and adaptively select suitable SD strategies for each input batch. Evaluations demonstrate that TLT achieves over 1.7x end-to-end RL training speedup over state-of-the-art systems, preserves the model accuracy, and yields a high-quality draft model as a free byproduct suitable for efficient deployment. Code is released at https://github.com/mit-han-lab/fastrl.
+
+이제 모두가 롱테일 롤아웃 때문에 Speculative Decoding을 쓰고 있음. 그리고 이제 문제는 두 개가 됨. Drafter 모델을 학습할 타이밍을 찾고, Speculative Decoding 파라미터를 조정하고, 그리고 여러 개의 Drafter를 두고 상황에 맞게 사용해야함.
+
+Now everyone uses speculative decoding to deal with long-tail rollouts. We now have two problems. We need to find opportunities to train the drafter model, adaptively adjust speculative decoding parameters, and employ multiple drafters according to the cases.
+
+#rl #efficiency 
