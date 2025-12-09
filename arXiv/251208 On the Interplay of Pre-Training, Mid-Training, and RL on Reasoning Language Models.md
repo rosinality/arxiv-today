@@ -6,5 +6,11 @@ https://arxiv.org/abs/2512.07783
 
 Very interesting observations on the interaction between pre/mid/post-training.
 
-1. Gain from RL is largest when the task is neither too easy nor too hard.
-2. Pretraining should focus on cultivating 
+1. The gain from RL is largest when the task is neither too easy nor too hard.
+2. Pretraining should focus on cultivating broader atomic skills - RL can combine them to solve composite problems.
+3. For tasks near the pretraining distribution heavy mid-training is effective. For harder tasks assigning more compute to RL is effective.
+4. Process rewards are helpful for generalization (if we can utilize them!)
+
+How can we define atomic skills in general reasoning? And how can we further promote that, potentially using synthetic data? This could be an interesting area to explore in the atomic vs composite skills view of RL.
+
+#rl #pretraining #post-training #mid-training 
