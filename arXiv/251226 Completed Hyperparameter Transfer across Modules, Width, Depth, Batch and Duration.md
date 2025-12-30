@@ -4,6 +4,8 @@ https://arxiv.org/abs/2512.22382
 
 > Hyperparameter tuning can dramatically impact training stability and final performance of large-scale models. Recent works on neural network parameterisations, such as $\mu$P, have enabled transfer of optimal global hyperparameters across model sizes. These works propose an empirical practice of search for optimal global base hyperparameters at a small model size, and transfer to a large size. We extend these works in two key ways. To handle scaling along most important scaling axes, we propose the Complete$^{(d)}$ Parameterisation that unifies scaling in width and depth -- using an adaptation of CompleteP -- as well as in batch-size and training duration. Secondly, with our parameterisation, we investigate per-module hyperparameter optimisation and transfer. We characterise the empirical challenges of navigating the high-dimensional hyperparameter landscape, and propose practical guidelines for tackling this optimisation problem. We demonstrate that, with the right parameterisation, hyperparameter transfer holds even in the per-module hyperparameter regime. Our study covers an extensive range of optimisation hyperparameters of modern models: learning rates, AdamW parameters, weight decay, initialisation scales, and residual block multipliers. Our experiments demonstrate significant training speed improvements in Large Language Models with the transferred per-module hyperparameters.
 
+너비, 깊이, 배치 크기, 학습 토큰량에 대한 하이퍼파라미터 Transfer. 추가적으로 모듈 단위 하이퍼파라미터 또한 Transfer가 가능.
+
 Hyperparameter transfer across width, depth, batch sizes, and number of tokens. Additionally even per-module hyperparameters can be transferred.
 
 #hyperparameter #optimization 
